@@ -25,6 +25,7 @@ namespace Squeeze
 
         private void label1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             CadastroUsuario cad = new CadastroUsuario();
             cad.ShowDialog();
         }
@@ -41,16 +42,15 @@ namespace Squeeze
 
             if (logado)
             {
-               
-                MessageBox.Show("Seja bem vindo!");
-
+                this.Hide();
                 switch (perfil) {
                     case 0:
                         Form1 nav = new Form1();
                         nav.ShowDialog();
                         break;
                     case 1:
-
+                        Form2 cad = new Form2();
+                        cad.ShowDialog();
                         break;
                 }
             }

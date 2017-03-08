@@ -28,7 +28,7 @@ namespace Squeeze.Formulários
             senha = txtSenha.Text;
 
 
-            Usuario u = new Usuario(nome, email, senha);
+            Usuario u = new Usuario(nome, email, senha, 0);
             DAOUsuario d = new DAOUsuario();
             d.salvar(u);
 
@@ -68,6 +68,13 @@ namespace Squeeze.Formulários
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login log = new Login();
+            log.ShowDialog();
         }
     }
 }

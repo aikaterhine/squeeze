@@ -1,5 +1,6 @@
 ﻿using Squeeze.DAO;
 using Squeeze.Modelo;
+using Squeeze.Formulários;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Documents;
 
 namespace Squeeze
 {
@@ -26,7 +28,9 @@ namespace Squeeze
             DAOGenero dg = new DAOGenero();
             List<Genero> listaG = dg.ListarDados();
             for (int x = 0; x < listaG.Count; x++) {
-                cmbGenero.Items.Add(listaG[x].NomeGen);
+                
+                clbGenero.Items.Insert(x, listaG[x].NomeGen);
+
             }
 
             DAOCarreira dc = new DAOCarreira();
@@ -42,18 +46,15 @@ namespace Squeeze
         private void button1_Click(object sender, EventArgs e)
         {
             string nome;
-            string nas;
-            string gen;
-            string gr;
+            string dt;
             string car;
+            List<String> gen = new List<String>();
 
             nome = txtNome.Text;
-            nas = dtpNascimento.Text;
-            gen = cmbGenero.Text;
-            gr = txtGrupo.Text;
+            dt = dtpNascimento.Text;
             car = cmbCarreira.Text;
 
-            if (nome.Equals("") || gr.Equals(""))
+            if (nome.Equals(""))
             {
                 MessageBox.Show("Preencha todos os campos.");
                 limpar();
@@ -61,9 +62,18 @@ namespace Squeeze
             else
             {
 
-                Artista a = new Artista(nome, nas, gr, car, gen);
+                DAOCarreira dc = new DAOCarreira();
+                int idc = dc.validar(car);
+
+                Artista a = new Artista(nome, idc, dt);
                 DAOArtista d = new DAOArtista();
                 d.salvar(a);
+
+                foreach (object item in clbGenero.CheckedItems)
+                {
+                    Genero castedItem = (Genero)item;
+                    d.salvarGeneroArtista(a, castedItem);
+                }
                 limpar();
             }
         }
@@ -71,8 +81,6 @@ namespace Squeeze
         public void limpar()
         {
             txtNome.Text = ("");
-            cmbGenero.Text = ("");
-            txtGrupo.Text = ("");
             cmbCarreira.Text = ("");
         }
 
@@ -101,6 +109,13 @@ namespace Squeeze
         private void frmArtista_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f = new Form1();
+            f.Visible = true;
         }
     }
 }

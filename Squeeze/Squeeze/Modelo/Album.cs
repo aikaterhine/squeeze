@@ -33,8 +33,6 @@ namespace Squeeze
         public string Dt { get { return this.dt; } set { dt = value; } }
         public string Dimensoes { get { return this.dimensoes; } set { dimensoes = value; } }
 
-        public frmPrincipal MdiParent { get; internal set; }
-
         internal void Show()
         {
             throw new NotImplementedException();

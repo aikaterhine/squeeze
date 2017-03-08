@@ -41,7 +41,8 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(73, 281);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(191, 22);
@@ -54,8 +55,10 @@
             // 
             this.txtSenha.Location = new System.Drawing.Point(73, 235);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(191, 20);
             this.txtSenha.TabIndex = 6;
+            this.txtSenha.UseSystemPasswordChar = true;
             this.txtSenha.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtLogin
@@ -119,6 +122,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(340, 345);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);

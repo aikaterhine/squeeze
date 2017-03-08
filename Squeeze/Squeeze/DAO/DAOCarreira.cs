@@ -35,11 +35,9 @@ namespace Squeeze.DAO
 
         public List<Carreira> ListarDados()
         {
-            //abre a conexão
-            con.Open();
 
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
-            comando = "Select * from carreiramusical";
+            comando = "Select * from tipocarreira";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
@@ -47,11 +45,20 @@ namespace Squeeze.DAO
 
             while (cursor.Read())
             {
-                Carreira cat = new Carreira(cursor.GetInt32("idCarreira"), cursor.GetString("nomeCarreira"));
+                Carreira cat = new Carreira(cursor.GetInt32("id"), cursor.GetString("nome"));
                 lista.Add(cat);
             }
 
             return lista;
+        }
+
+        public int validar(String c)
+        {
+            comando = "select * from tipocarreira where nome = '" + c + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+            return cursor.GetInt32("id");
         }
     }
 }

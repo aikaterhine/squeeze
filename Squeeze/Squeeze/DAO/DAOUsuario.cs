@@ -26,12 +26,15 @@ namespace Squeeze.DAO
 
         public void salvar(Usuario u)
         {
-            comando = "insert into usuarios (nomeU, emailU, senhaU) values (@nome,@email,@senha)";
+            comando = "insert into usuario (nome, email, senha, tipo) values (@nome,@email,@senha,@tipo)";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
             comandoSQL.Parameters.AddWithValue("@nome", u.Nome);
             comandoSQL.Parameters.AddWithValue("@email", u.Email);
             comandoSQL.Parameters.AddWithValue("@senha", u.Senha);
+            comandoSQL.Parameters.AddWithValue("@tipo", u.Tipo);
+
+
 
             comandoSQL.Prepare();
             comandoSQL.ExecuteNonQuery();
@@ -40,8 +43,7 @@ namespace Squeeze.DAO
 
         public bool validar(Usuario u)
         {
-            con.Open();
-            comando = "select * from usuarios where emailU = '" + u.Email + "' and senhaU = '" + u.Senha + "';";
+            comando = "select * from usuario where email = '" + u.Email + "' and senha = '" + u.Senha + "';";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
             cursor = comandoSQL.ExecuteReader();
@@ -52,14 +54,17 @@ namespace Squeeze.DAO
 
         public int acesso(Usuario u)
         {
-            con.Open();
-            comando = "select * from usuarios where emailU = '" + u.Email + "' and senhaU = '" + u.Senha + "';";
+            con = conex.obterConexao();
+
+            comando = "select * from usuario where email = '" + u.Email + "' and senha = '" + u.Senha + "';";
+
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
             cursor = comandoSQL.ExecuteReader();
+
             while (cursor.Read())
             {
-                perfil = Convert.ToInt32(cursor["IdCliente"].ToString());
+                perfil = Convert.ToInt32(cursor["tipo"].ToString());
             }
 
             return perfil;

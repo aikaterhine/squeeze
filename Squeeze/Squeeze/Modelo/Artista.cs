@@ -10,42 +10,34 @@ namespace Squeeze.Modelo
     {
         int idartista;
         string nome;
-        string nascimento;
-        string grupo;
-        string genero;
-        string carreira;
-     
+        string dt;
+        int tipoc;
 
-        public Artista(string n, string nas, string gr, string car, string gen)
+
+
+        public Artista(string n, int t, string dt)
         {
             this.nome = n;
-            this.nascimento = nas;
-            this.grupo = gr;
-            this.carreira = car;
-            this.genero = gen;
+            this.tipoc = t;
+            this.dt = dt;
+
         }
 
-        public Artista(int id, string n, string nas, string gr, string car, string gen)
+        public Artista(int id, string n, int t, string dt)
         {
             this.idartista = id;
             this.nome = n;
-            this.nascimento = nas;
-            this.grupo = gr;
-            this.carreira = car;
-            this.genero = gen;
+            this.tipoc = t;
+            this.dt = dt;
         }
 
         public int IdArtista { get { return this.idartista; } set { idartista = value; } }
 
         public string Nome { get { return this.nome; } set { nome = value; } }
 
-        public string Nascimento { get { return this.nascimento; } set { nascimento = value; } }
+        public int Tipoc { get { return this.tipoc; } set { tipoc = value; } }
 
-        public string Grupo { get { return this.grupo; } set { grupo = value; } }
-
-        public string Carreira { get { return this.carreira; } set {  carreira = value; } }
-
-        public string Genero { get { return this.genero; } set { genero = value; } }
+        public string Dt { get { return this.dt; } set { dt = value; } }
 
     }
 }

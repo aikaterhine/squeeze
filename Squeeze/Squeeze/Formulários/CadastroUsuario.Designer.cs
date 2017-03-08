@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroUsuario));
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSal = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -42,7 +45,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(58, 50);
+            this.label1.Location = new System.Drawing.Point(67, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 24);
             this.label1.TabIndex = 29;
@@ -51,7 +54,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(165, 261);
+            this.btnCancelar.Location = new System.Drawing.Point(168, 259);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(79, 25);
             this.btnCancelar.TabIndex = 28;
@@ -61,7 +64,7 @@
             // 
             // btnSal
             // 
-            this.btnSal.Location = new System.Drawing.Point(61, 261);
+            this.btnSal.Location = new System.Drawing.Point(64, 259);
             this.btnSal.Name = "btnSal";
             this.btnSal.Size = new System.Drawing.Size(79, 25);
             this.btnSal.TabIndex = 27;
@@ -72,7 +75,7 @@
             // txtSenha
             // 
             this.txtSenha.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtSenha.Location = new System.Drawing.Point(61, 220);
+            this.txtSenha.Location = new System.Drawing.Point(64, 218);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(183, 20);
@@ -83,7 +86,7 @@
             // txtEmail
             // 
             this.txtEmail.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtEmail.Location = new System.Drawing.Point(61, 165);
+            this.txtEmail.Location = new System.Drawing.Point(64, 163);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(183, 20);
             this.txtEmail.TabIndex = 26;
@@ -94,19 +97,33 @@
             // 
             this.txtNome.BackColor = System.Drawing.SystemColors.Window;
             this.txtNome.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtNome.Location = new System.Drawing.Point(61, 113);
+            this.txtNome.Location = new System.Drawing.Point(64, 111);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(183, 20);
             this.txtNome.TabIndex = 24;
             this.txtNome.Text = "Nome";
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 36);
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // CadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(313, 322);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSal);
@@ -115,6 +132,7 @@
             this.Controls.Add(this.txtNome);
             this.Name = "CadastroUsuario";
             this.Text = "CadastroUsuario";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,5 +146,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

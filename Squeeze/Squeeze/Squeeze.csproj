@@ -128,18 +128,6 @@
     <Compile Include="Formulários\frmArtista.Designer.cs">
       <DependentUpon>frmArtista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\frmPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formulários\frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formulários\frmUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formulários\frmUsuario.Designer.cs">
-      <DependentUpon>frmUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formulários\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,12 +162,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmGenero.resx">
       <DependentUpon>frmGenero.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\frmUsuario.resx">
-      <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

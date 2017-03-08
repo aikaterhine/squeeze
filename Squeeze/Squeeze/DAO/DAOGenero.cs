@@ -25,8 +25,10 @@ namespace Squeeze.DAO
 
         public List<Genero> ListarDados()
         {
+            con = conex.obterConexao();
+
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
-            comando = "Select * from generos";
+            comando = "Select * from tipogenero";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
@@ -34,7 +36,7 @@ namespace Squeeze.DAO
 
             while (cursor.Read())
             {
-                Genero gen = new Genero(cursor.GetInt32("idGeneros"), cursor.GetString("nomeGeneros"));
+                Genero gen = new Genero(cursor.GetInt32("id"), cursor.GetString("nome"));
                 lista.Add(gen);
             }
 

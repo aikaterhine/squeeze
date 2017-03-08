@@ -19,7 +19,37 @@ namespace Squeeze.Formulários
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            frmGenero gen = new frmGenero();
+            gen.ShowDialog();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmArtista art = new Squeeze.frmArtista();
+            art.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAlbum alb = new frmAlbum();
+            alb.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmFaixas fai = new frmFaixas();
+            fai.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmCarreira car = new frmCarreira();
+            car.ShowDialog();
         }
     }
 }
