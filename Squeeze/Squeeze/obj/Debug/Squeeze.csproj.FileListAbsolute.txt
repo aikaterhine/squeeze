@@ -1,0 +1,73 @@
+c:\users\s-l_s-v\documents\visual studio 2015\Projects\Squeeze\Squeeze\bin\Debug\Squeeze.exe.config
+c:\users\s-l_s-v\documents\visual studio 2015\Projects\Squeeze\Squeeze\bin\Debug\Squeeze.exe
+c:\users\s-l_s-v\documents\visual studio 2015\Projects\Squeeze\Squeeze\bin\Debug\Squeeze.pdb
+c:\users\s-l_s-v\documents\visual studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.csprojResolveAssemblyReference.cache
+c:\users\s-l_s-v\documents\visual studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.frmPrincipal.resources
+c:\users\s-l_s-v\documents\visual studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.frmUsuario.resources
+c:\users\s-l_s-v\documents\visual studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.Properties.Resources.resources
+c:\users\s-l_s-v\documents\visual studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.csproj.GenerateResource.Cache
+c:\users\s-l_s-v\documents\visual studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.exe
+c:\users\s-l_s-v\documents\visual studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.pdb
+c:\users\s-l_s-v\documents\visual studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.frmArtista.resources
+C:\Users\S-L_S-V\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\bin\Debug\MySql.Data.dll
+F:\Squeeze\Squeeze\bin\Debug\Squeeze.exe.config
+F:\Squeeze\Squeeze\obj\Debug\Squeeze.exe
+F:\Squeeze\Squeeze\obj\Debug\Squeeze.pdb
+F:\Squeeze\Squeeze\bin\Debug\Squeeze.exe
+F:\Squeeze\Squeeze\bin\Debug\Squeeze.pdb
+F:\Squeeze\Squeeze\bin\Debug\MySql.Data.dll
+F:\Squeeze\Squeeze\obj\Debug\Squeeze.csprojResolveAssemblyReference.cache
+F:\Squeeze\Squeeze\obj\Debug\Squeeze.frmArtista.resources
+F:\Squeeze\Squeeze\obj\Debug\Squeeze.frmPrincipal.resources
+F:\Squeeze\Squeeze\obj\Debug\Squeeze.frmUsuario.resources
+F:\Squeeze\Squeeze\obj\Debug\Squeeze.Properties.Resources.resources
+F:\Squeeze\Squeeze\obj\Debug\Squeeze.csproj.GenerateResource.Cache
+F:\Squeeze\Squeeze\obj\Debug\Squeeze.Login.resources
+F:\Squeeze\Squeeze\obj\Debug\Squeeze.EditarArtista.resources
+G:\Squeeze\Squeeze\bin\Debug\Squeeze.exe.config
+G:\Squeeze\Squeeze\obj\Debug\Squeeze.exe
+G:\Squeeze\Squeeze\obj\Debug\Squeeze.pdb
+G:\Squeeze\Squeeze\bin\Debug\Squeeze.exe
+G:\Squeeze\Squeeze\bin\Debug\Squeeze.pdb
+G:\Squeeze\Squeeze\bin\Debug\MySql.Data.dll
+G:\Squeeze\Squeeze\obj\Debug\Squeeze.csprojResolveAssemblyReference.cache
+G:\Squeeze\Squeeze\obj\Debug\Squeeze.EditarArtista.resources
+G:\Squeeze\Squeeze\obj\Debug\Squeeze.frmArtista.resources
+G:\Squeeze\Squeeze\obj\Debug\Squeeze.frmPrincipal.resources
+G:\Squeeze\Squeeze\obj\Debug\Squeeze.frmUsuario.resources
+G:\Squeeze\Squeeze\obj\Debug\Squeeze.Login.resources
+G:\Squeeze\Squeeze\obj\Debug\Squeeze.Properties.Resources.resources
+G:\Squeeze\Squeeze\obj\Debug\Squeeze.csproj.GenerateResource.Cache
+E:\Squeeze\Squeeze\bin\Debug\Squeeze.exe.config
+E:\Squeeze\Squeeze\obj\Debug\Squeeze.exe
+E:\Squeeze\Squeeze\obj\Debug\Squeeze.pdb
+E:\Squeeze\Squeeze\obj\Debug\Squeeze.csprojResolveAssemblyReference.cache
+E:\Squeeze\Squeeze\obj\Debug\Squeeze.EditarArtista.resources
+E:\Squeeze\Squeeze\obj\Debug\Squeeze.frmArtista.resources
+E:\Squeeze\Squeeze\obj\Debug\Squeeze.frmPrincipal.resources
+E:\Squeeze\Squeeze\obj\Debug\Squeeze.frmUsuario.resources
+E:\Squeeze\Squeeze\obj\Debug\Squeeze.Login.resources
+E:\Squeeze\Squeeze\obj\Debug\Squeeze.Properties.Resources.resources
+E:\Squeeze\Squeeze\obj\Debug\Squeeze.csproj.GenerateResource.Cache
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\bin\Debug\Squeeze.exe.config
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.exe
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.pdb
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.csprojResolveAssemblyReference.cache
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.EditarArtista.resources
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.frmArtista.resources
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.frmPrincipal.resources
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.frmUsuario.resources
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.Login.resources
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.Properties.Resources.resources
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.csproj.GenerateResource.Cache
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\bin\Debug\Squeeze.exe
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\bin\Debug\Squeeze.pdb
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.frmAlbum.resources
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.Formulários.frmFaixas.resources
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.Formulários.frmGenero.resources
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.Formulários.frmCarreira.resources
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze.Formulários.Browse.resources
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Browse.g.cs
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze_MarkupCompile.cache
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze_MarkupCompile.lref
+C:\Users\CAT-CAR-TUL\Documents\Visual Studio 2015\Projects\Squeeze\Squeeze\obj\Debug\Squeeze_Content.g.cs
