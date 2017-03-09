@@ -17,9 +17,9 @@ namespace Squeeze
 {
     public partial class frmArtista : Form
     {
+        DAOGenero dg1 = new DAOGenero();
         public frmArtista()
         {
-
             
             InitializeComponent();
             DAOArtista da = new DAOArtista();
@@ -70,9 +70,8 @@ namespace Squeeze
                 d.salvar(a);
 
                 foreach (object item in clbGenero.CheckedItems)
-                {
-                    Genero castedItem = (Genero)item;
-                    d.salvarGeneroArtista(a, castedItem);
+                {                        
+                        d.salvarGeneroArtista(d.procurar(a), dg1.procurar(item.ToString()));
                 }
                 limpar();
             }
@@ -114,7 +113,7 @@ namespace Squeeze
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 f = new Form1();
+            Form2 f = new Form2();
             f.Visible = true;
         }
     }

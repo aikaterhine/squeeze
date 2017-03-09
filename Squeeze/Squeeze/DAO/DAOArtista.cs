@@ -17,6 +17,7 @@ namespace Squeeze.DAO
         private MySqlDataReader cursor;
         private List<Artista> lista = new List<Artista>();
         Conexao conex = new Conexao();
+        private Artista art = new Artista();
 
         public DAOArtista()
         {
@@ -31,20 +32,24 @@ namespace Squeeze.DAO
             comandoSQL.Parameters.AddWithValue("@nome", a.Nome);
             comandoSQL.Parameters.AddWithValue("@tipo", a.Tipoc);
             comandoSQL.Parameters.AddWithValue("@dt", a.Dt);
-            
+
 
             comandoSQL.Prepare();
             comandoSQL.ExecuteNonQuery();
             con.Close();
         }
 
-        public void salvarGeneroArtista(Artista a, Genero g) {
+        public void salvarGeneroArtista(Artista a, Genero g)
+        {
+            con = conex.obterConexao();
+
 
             comando = "insert into generoartista (idartista, idgenero) values (@ida,@idg)";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
             comandoSQL.Parameters.AddWithValue("@ida", a.IdArtista);
             comandoSQL.Parameters.AddWithValue("@idg", g.IdGenero);
+
 
 
             comandoSQL.Prepare();
@@ -69,6 +74,25 @@ namespace Squeeze.DAO
             }
 
             return lista;
+        }
+
+        public Artista procurar(Artista a)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from artista where nome = '" + a.Nome + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                art = new Artista(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetInt32("tipocarreira"), cursor.GetString("dtcarreira"));
+                lista.Add(art);
+            }
+
+            return art;
         }
     }
 }

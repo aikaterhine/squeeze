@@ -15,6 +15,7 @@ namespace Squeeze.DAO
         private MySqlDataReader cursor;
         private List<Carreira> lista = new List<Carreira>();
         private Conexao conex = new Conexao();
+        private int id;
 
 
         public DAOCarreira()
@@ -58,7 +59,12 @@ namespace Squeeze.DAO
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
             cursor = comandoSQL.ExecuteReader();
-            return cursor.GetInt32("id");
+
+            while (cursor.Read()) {
+               id = cursor.GetInt32("id");
+            }
+
+            return id;
         }
     }
 }

@@ -31,6 +31,7 @@ namespace Squeeze.Modelo
             this.dt = dt;
         }
 
+        public Artista() { }
         public int IdArtista { get { return this.idartista; } set { idartista = value; } }
 
         public string Nome { get { return this.nome; } set { nome = value; } }
