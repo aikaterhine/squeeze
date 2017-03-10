@@ -5,37 +5,35 @@ namespace Squeeze
      class Album
     {
          int id;
-         string albuns;
-         string dimensoes;
+         string nome;
          string dt;
          string estudio;
 
-        public Album(string album, string estudio, string dtLancamento, string dimensoes)
-        {
-            this.albuns = album;
-            this.estudio = estudio;
-            this.dt = dtLancamento;
-            this.dimensoes = dimensoes;
+        public Album() { }
+
+        public Album(string nome) {
+            this.nome = nome;
         }
 
-        public Album(int idAlbum, string album, string estudio, string dtLancamento, string dimensoes)
+        public Album(string nome, string estudio, string dtLancamento)
         {
-            this.id = idAlbum;
-            this.albuns = album;
+            this.nome = nome;
             this.estudio = estudio;
             this.dt = dtLancamento;
-            this.dimensoes = dimensoes;
+        }
+
+        public Album(int idAlbum, string nome, string estudio, string dtLancamento)
+        {
+            this.id = idAlbum;
+            this.nome = nome;
+            this.estudio = estudio;
+            this.dt = dtLancamento;
         }
 
         public int Id { get { return this.id; }  set {id = value; } }
-        public string Albuns { get { return this.albuns; } set { albuns = value; } }
+        public string Nome { get { return this.nome; } set { nome = value; } }
         public string Estudio { get { return this.estudio; } set { estudio = value; } }
         public string Dt { get { return this.dt; } set { dt = value; } }
-        public string Dimensoes { get { return this.dimensoes; } set { dimensoes = value; } }
-
-        internal void Show()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

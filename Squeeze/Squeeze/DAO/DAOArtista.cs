@@ -89,7 +89,6 @@ namespace Squeeze.DAO
             while (cursor.Read())
             {
                 art = new Artista(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetInt32("tipocarreira"), cursor.GetString("dtcarreira"));
-                lista.Add(art);
             }
 
             return art;

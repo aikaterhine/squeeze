@@ -13,6 +13,9 @@ namespace Squeeze.Modelo
         string dt;
         int tipoc;
 
+        public Artista(string n) {
+            this.nome = n;
+        }
 
 
         public Artista(string n, int t, string dt)

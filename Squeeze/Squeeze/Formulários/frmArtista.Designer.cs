@@ -93,12 +93,15 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(199, 365);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 24);
             this.button1.TabIndex = 26;
             this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvArtista
@@ -114,12 +117,15 @@
             // 
             // btnListar
             // 
+            this.btnListar.BackColor = System.Drawing.Color.Transparent;
+            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListar.ForeColor = System.Drawing.Color.White;
             this.btnListar.Location = new System.Drawing.Point(415, 365);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(162, 25);
             this.btnListar.TabIndex = 28;
             this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.UseVisualStyleBackColor = false;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // cmbCarreira

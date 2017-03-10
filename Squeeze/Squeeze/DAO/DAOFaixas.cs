@@ -12,7 +12,7 @@ namespace Squeeze.DAO
         private MySqlConnection con;
         private string comando;
         private MySqlDataReader cursor;
-        private List<Album> lista = new List<Album>();
+        private List<Faixa> lista = new List<Faixa>();
         private Conexao conex = new Conexao();
 
 
@@ -23,18 +23,36 @@ namespace Squeeze.DAO
 
         public void salvar(Faixa f)
         {
-            comando = "insert into faixas (nomeF, duracaoF, artistas_idArtistas, albuns_idArtistas) values (@nome,@dur,@art, @alb)";
+            comando = "insert into faixa (nome, duracao, idalbum) values (@nome,@dur,@alb)";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
             comandoSQL.Parameters.AddWithValue("@nome", f.Nome);
             comandoSQL.Parameters.AddWithValue("@dur", f.Duracao);
-            comandoSQL.Parameters.AddWithValue("@art", f.Artista_faixa);
-            comandoSQL.Parameters.AddWithValue("@alb", f.Album_faixa);
+            comandoSQL.Parameters.AddWithValue("@alb", f.Idalbum);
 
 
             comandoSQL.Prepare();
             comandoSQL.ExecuteNonQuery();
             con.Close();
+        }
+
+        public List<Faixa> ListarDados(Album al)
+        {
+
+            //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
+            comando = "select * from faixa where idalbum = '" + al.Id+ "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                Faixa f = new Faixa(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("duracao"), cursor.GetString("idalbum"));
+                lista.Add(f);
+            }
+
+            return lista;
         }
     }
 }
