@@ -48,10 +48,10 @@ namespace Squeeze.Formulários
             faixa = txtFaixa.Text;
             duracao = txtDuracao.Text;
 
-          /*  Artista art = new Artista(artista);
-            DAOArtista da = new DAOArtista();
+            /*  Artista art = new Artista(artista);
+              DAOArtista da = new DAOArtista();
 
-            d.salvarAlbumArtista(da.procurar(art), d.procurar(al));*/
+              d.salvarAlbumArtista(da.procurar(art), d.procurar(al));*/
         }
 
         private void cmbAlbum_SelectedValueChanged(object sender, EventArgs e)
@@ -72,15 +72,29 @@ namespace Squeeze.Formulários
 
             Artista al = new Artista(artista);
             DAOArtista d = new DAOArtista();
-
             DAOAlbum da = new DAOAlbum();
-            List<Album> listaG = da.ListarDados(d.procurar(al));
-            for (int x = 0; x < listaG.Count; x++)
+
+
+            // LISTA COM RELAÇÃO DE ARTISTAS E RESPECTIVOS ALBUNS
+            List<Album> listaAl = da.ListarDados(d.procurar(al)); /*   LISTA COM ARTISTAS QUE TENHAM O NOME SELECIONADO NA COMBOBOX)*/
+
+            //AQUI NAO TA FUNCIONANDO
+
+            for (int x = 0; x < listaAl.Count; x++)
             {
 
-                cmbAlbum.Items.Insert(x, listaG[x].Nome);
+                Album alb = new Album(listaAl[x].Id);
 
+                List<Album> a = new List<Album>();
+
+                a.Add(da.procurarId(alb));
+                    
+                cmbAlbum.Items.Insert(x, a[x].Nome);
             }
+
+
         }
+
+
     }
 }

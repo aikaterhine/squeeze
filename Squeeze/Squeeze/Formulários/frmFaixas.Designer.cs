@@ -219,6 +219,7 @@
             this.Controls.Add(this.dgvFaixas);
             this.Name = "frmFaixas";
             this.Text = "Cadastro de Faixas";
+            //this.Load += new System.EventHandler(this.frmFaixas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaixas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

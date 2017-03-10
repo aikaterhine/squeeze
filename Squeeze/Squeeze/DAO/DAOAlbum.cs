@@ -3,6 +3,7 @@ using Squeeze.DAO;
 using Squeeze.Modelo;
 using System;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace Squeeze
 {
@@ -75,6 +76,24 @@ namespace Squeeze
             return al;
         }
 
+        public Album procurarId(Album al)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from album where id = '" + al.Id + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                al = new Album(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("estudio"), cursor.GetString("dtlancamento"));
+            }
+
+            return al;
+        }
+
         public List<Album> ListarDados(Artista art)
         {
 
@@ -87,7 +106,7 @@ namespace Squeeze
 
             while (cursor.Read())
             {
-                Album cat = new Album(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("estudio"), cursor.GetString("dtlancamento"));
+                Album cat = new Album(cursor.GetInt32("idartista"), cursor.GetInt32("idalbum"));
                 lista.Add(cat);
             }
 
