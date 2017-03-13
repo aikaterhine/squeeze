@@ -53,5 +53,12 @@ namespace Squeeze.Formulários
             DAOGenero dg = new DAOGenero();
             dgvGenero.DataSource = dg.ListarDados();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 f = new Form2();
+            f.Visible = true;
+        }
     }
     }

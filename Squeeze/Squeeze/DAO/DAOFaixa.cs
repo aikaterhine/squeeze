@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Squeeze.DAO
 {
-    class DAOFaixas
+    class DAOFaixa
     {
         private MySqlConnection con;
         private string comando;
@@ -16,7 +16,7 @@ namespace Squeeze.DAO
         private Conexao conex = new Conexao();
 
 
-        public DAOFaixas()
+        public DAOFaixa()
         {
             con = conex.obterConexao();
         }
@@ -40,7 +40,7 @@ namespace Squeeze.DAO
         {
 
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
-            comando = "select * from faixa where idalbum = '" + al.Id+ "';";
+            comando = "select * from faixa where idalbum = '" + al.IdAlbum+ "';";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
@@ -48,7 +48,7 @@ namespace Squeeze.DAO
 
             while (cursor.Read())
             {
-                Faixa f = new Faixa(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("duracao"), cursor.GetString("idalbum"));
+                Faixa f = new Faixa(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("duracao"), cursor.GetInt32("idalbum"));
                 lista.Add(f);
             }
 

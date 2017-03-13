@@ -16,7 +16,6 @@ namespace Squeeze.DAO
         private MySqlDataReader cursor;
         private List<Genero> lista = new List<Genero>();
         private Conexao conex = new Conexao();
-        private int id;
         private Genero cat;
 
 
@@ -47,8 +46,7 @@ namespace Squeeze.DAO
 
         public void salvar(Genero g)
         {
-            con.Open();
-            comando = "insert into generos (nomeGeneros) values (@nome)";
+            comando = "insert into tipogenero (nome) values (@nome)";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
             comandoSQL.Parameters.AddWithValue("@nome", g.NomeGen);

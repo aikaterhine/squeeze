@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFaixas));
             this.dgvFaixas = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duracaoF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Album = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbAlbum = new System.Windows.Forms.ComboBox();
@@ -45,6 +40,10 @@
             this.lblAlbum = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbArtistas = new System.Windows.Forms.ComboBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duracaoF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Album = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaixas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +53,6 @@
             this.dgvFaixas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFaixas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.Nome,
             this.nomeF,
             this.duracaoF,
             this.Album});
@@ -63,36 +61,6 @@
             this.dgvFaixas.Size = new System.Drawing.Size(240, 240);
             this.dgvFaixas.TabIndex = 11;
             this.dgvFaixas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // nomeF
-            // 
-            this.nomeF.DataPropertyName = "nome";
-            this.nomeF.HeaderText = "Faixa";
-            this.nomeF.Name = "nomeF";
-            // 
-            // duracaoF
-            // 
-            this.duracaoF.DataPropertyName = "duracao";
-            this.duracaoF.HeaderText = "Duração";
-            this.duracaoF.Name = "duracaoF";
-            // 
-            // Album
-            // 
-            this.Album.DataPropertyName = "idalbum";
-            this.Album.HeaderText = "Album";
-            this.Album.Name = "Album";
             // 
             // pictureBox1
             // 
@@ -199,6 +167,30 @@
             this.cmbArtistas.TabIndex = 42;
             this.cmbArtistas.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // nomeF
+            // 
+            this.nomeF.DataPropertyName = "nome";
+            this.nomeF.HeaderText = "Faixa";
+            this.nomeF.Name = "nomeF";
+            // 
+            // duracaoF
+            // 
+            this.duracaoF.DataPropertyName = "duracao";
+            this.duracaoF.HeaderText = "Duração";
+            this.duracaoF.Name = "duracaoF";
+            // 
+            // Album
+            // 
+            this.Album.DataPropertyName = "idalbum";
+            this.Album.HeaderText = "Album";
+            this.Album.Name = "Album";
+            // 
             // frmFaixas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,7 +211,6 @@
             this.Controls.Add(this.dgvFaixas);
             this.Name = "frmFaixas";
             this.Text = "Cadastro de Faixas";
-            //this.Load += new System.EventHandler(this.frmFaixas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaixas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -230,11 +221,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvFaixas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn duracaoF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Album;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbAlbum;
@@ -245,5 +231,9 @@
         private System.Windows.Forms.Label lblAlbum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbArtistas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duracaoF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Album;
     }
 }

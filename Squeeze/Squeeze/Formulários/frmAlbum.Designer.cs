@@ -57,7 +57,7 @@
             this.lblAlbum.Size = new System.Drawing.Size(39, 13);
             this.lblAlbum.TabIndex = 0;
             this.lblAlbum.Text = "Album:";
-            this.lblAlbum.Click += new System.EventHandler(this.lblAlbum_Click);
+          //  this.lblAlbum.Click += new System.EventHandler(this.lblAlbum_Click);
             // 
             // txtAlbum
             // 
@@ -65,7 +65,7 @@
             this.txtAlbum.Name = "txtAlbum";
             this.txtAlbum.Size = new System.Drawing.Size(167, 20);
             this.txtAlbum.TabIndex = 1;
-            this.txtAlbum.TextChanged += new System.EventHandler(this.txtAlbum_TextChanged);
+          //  this.txtAlbum.TextChanged += new System.EventHandler(this.txtAlbum_TextChanged);
             // 
             // txtEstudio
             // 
@@ -73,7 +73,7 @@
             this.txtEstudio.Name = "txtEstudio";
             this.txtEstudio.Size = new System.Drawing.Size(167, 20);
             this.txtEstudio.TabIndex = 3;
-            this.txtEstudio.TextChanged += new System.EventHandler(this.txtEstudio_TextChanged);
+          //  this.txtEstudio.TextChanged += new System.EventHandler(this.txtEstudio_TextChanged);
             // 
             // lblEstudio
             // 
@@ -85,7 +85,7 @@
             this.lblEstudio.Size = new System.Drawing.Size(45, 13);
             this.lblEstudio.TabIndex = 2;
             this.lblEstudio.Text = "Estúdio:";
-            this.lblEstudio.Click += new System.EventHandler(this.lblEstudio_Click);
+         //   this.lblEstudio.Click += new System.EventHandler(this.lblEstudio_Click);
             // 
             // lblLancamento
             // 
@@ -97,7 +97,7 @@
             this.lblLancamento.Size = new System.Drawing.Size(69, 13);
             this.lblLancamento.TabIndex = 4;
             this.lblLancamento.Text = "Lançamento:";
-            this.lblLancamento.Click += new System.EventHandler(this.lblLancamento_Click);
+           // this.lblLancamento.Click += new System.EventHandler(this.lblLancamento_Click);
             // 
             // dtmLancamento
             // 
@@ -105,7 +105,7 @@
             this.dtmLancamento.Name = "dtmLancamento";
             this.dtmLancamento.Size = new System.Drawing.Size(167, 20);
             this.dtmLancamento.TabIndex = 5;
-            this.dtmLancamento.ValueChanged += new System.EventHandler(this.dtmLancamento_ValueChanged);
+           // this.dtmLancamento.ValueChanged += new System.EventHandler(this.dtmLancamento_ValueChanged);
             // 
             // btnCadastrar
             // 
@@ -129,7 +129,7 @@
             this.cmbArtista.Name = "cmbArtista";
             this.cmbArtista.Size = new System.Drawing.Size(167, 21);
             this.cmbArtista.TabIndex = 11;
-            this.cmbArtista.SelectedIndexChanged += new System.EventHandler(this.cmbArtista_SelectedIndexChanged);
+          //  this.cmbArtista.SelectedIndexChanged += new System.EventHandler(this.cmbArtista_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -141,7 +141,7 @@
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Artista:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+           // this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvAlbum
             // 
@@ -154,7 +154,7 @@
             this.dgvAlbum.Name = "dgvAlbum";
             this.dgvAlbum.Size = new System.Drawing.Size(240, 245);
             this.dgvAlbum.TabIndex = 13;
-            this.dgvAlbum.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlbum_CellContentClick);
+           // this.dgvAlbum.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlbum_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 

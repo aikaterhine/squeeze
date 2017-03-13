@@ -4,7 +4,7 @@ namespace Squeeze
 {
      class Album
     {
-         int id;
+         int idalbum;
          int idartista;
          string nome;
          string dt;
@@ -19,7 +19,7 @@ namespace Squeeze
 
         public Album(int id)
         {
-            this.id = id;
+            this.idalbum = id;
         }
 
 
@@ -32,19 +32,20 @@ namespace Squeeze
 
         public Album(int idAlbum, string nome, string estudio, string dtLancamento)
         {
-            this.id = idAlbum;
+            this.idalbum = idAlbum;
             this.nome = nome;
             this.estudio = estudio;
             this.dt = dtLancamento;
         }
 
-        public Album(int id, int idartista)
+        public Album(int idartista, int idalbum)
         {
-            this.id = id;
+            this.idalbum = idalbum;
             this.idartista = idartista;
         }
 
-        public int Id { get { return this.id; }  set {id = value; } }
+        public int IdAlbum { get { return this.idalbum; }  set {idalbum = value; } }
+
         public int Idartista { get { return this.idartista; } set { idartista = value; } }
 
         public string Nome { get { return this.nome; } set { nome = value; } }

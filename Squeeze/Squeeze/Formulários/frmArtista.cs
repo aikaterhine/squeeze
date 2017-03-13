@@ -99,22 +99,21 @@ namespace Squeeze
             EditarArtista form = new EditarArtista();
             form.Show();
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmArtista_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form2 f = new Form2();
             f.Visible = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string pesquisa = txtPesquisa.Text;
+
+            DAOArtista da = new DAOArtista();
+
+            dgvArtista.DataSource = da.pesquisar(pesquisa);
         }
     }
 }

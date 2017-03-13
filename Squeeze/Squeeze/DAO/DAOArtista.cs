@@ -47,7 +47,7 @@ namespace Squeeze.DAO
             comando = "insert into generoartista (idartista, idgenero) values (@ida,@idg)";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
-            comandoSQL.Parameters.AddWithValue("@ida", a.IdArtista);
+            comandoSQL.Parameters.AddWithValue("@ida", a.Id);
             comandoSQL.Parameters.AddWithValue("@idg", g.IdGenero);
 
 
@@ -92,6 +92,23 @@ namespace Squeeze.DAO
             }
 
             return art;
+        }
+
+        public List<Artista> pesquisar(string nome) {
+            comando = "select * from artista where nome like '" + nome + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                art = new Artista(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetInt32("tipocarreira"), cursor.GetString("dtcarreira"));
+                lista.Add(art);
+            }
+
+            return lista;
+
         }
     }
 }

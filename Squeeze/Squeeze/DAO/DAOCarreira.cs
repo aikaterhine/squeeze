@@ -25,7 +25,7 @@ namespace Squeeze.DAO
 
         public void salvar(Carreira c)
         {
-            comando = "insert into carreiramusical (nomeCarreira) values (@nome)";
+            comando = "insert into tipocarreira (nome) values (@nome)";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
             comandoSQL.Parameters.AddWithValue("@nome", c.Nome);

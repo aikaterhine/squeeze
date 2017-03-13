@@ -44,14 +44,35 @@ namespace Squeeze.Formulários
         {
             string duracao;
             string faixa;
+            string nomeart;
+            string nomealb;
 
+            nomealb = cmbAlbum.Text;
             faixa = txtFaixa.Text;
             duracao = txtDuracao.Text;
+            nomeart = cmbArtistas.Text;
 
-            /*  Artista art = new Artista(artista);
-              DAOArtista da = new DAOArtista();
+            if (nomealb.Equals("") || nomeart.Equals("") || faixa.Equals("") || duracao.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos.");
 
-              d.salvarAlbumArtista(da.procurar(art), d.procurar(al));*/
+            }
+
+            else
+            {
+
+                Album alb = new Album(nomealb);
+
+                DAOAlbum da = new DAOAlbum();
+                Album al = da.procurar(alb);
+
+
+                Faixa f = new Faixa(faixa, duracao, al.IdAlbum);
+                DAOFaixa df = new DAOFaixa();
+                df.salvar(f);
+                limpar();
+            }
+
         }
 
         private void cmbAlbum_SelectedValueChanged(object sender, EventArgs e)
@@ -61,7 +82,7 @@ namespace Squeeze.Formulários
             Album al = new Album(album);
             DAOAlbum d = new DAOAlbum();
 
-            DAOFaixas daf = new DAOFaixas();
+            DAOFaixa daf = new DAOFaixa();
             dgvFaixas.DataSource = daf.ListarDados(d.procurar(al));
 
         }
@@ -70,28 +91,31 @@ namespace Squeeze.Formulários
         {
             string artista = cmbArtistas.Text;
 
+            DAOArtista daoart = new DAOArtista();
             Artista al = new Artista(artista);
-            DAOArtista d = new DAOArtista();
-            DAOAlbum da = new DAOAlbum();
+          
+            DAOAlbum daoalb = new DAOAlbum();
 
+            Artista al1 = daoart.procurar(al);
+            
+            List<Album> listaAl = daoalb.ListarDados(al1);
 
-            // LISTA COM RELAÇÃO DE ARTISTAS E RESPECTIVOS ALBUNS
-            List<Album> listaAl = da.ListarDados(d.procurar(al)); /*   LISTA COM ARTISTAS QUE TENHAM O NOME SELECIONADO NA COMBOBOX)*/
-
-            //AQUI NAO TA FUNCIONANDO
-
-            for (int x = 0; x < listaAl.Count; x++)
+                for (int x = 0; x < listaAl.Count; x++)
             {
 
-                Album alb = new Album(listaAl[x].Id);
+               Album alb = daoalb.procurarId(listaAl[x].IdAlbum);
 
-                List<Album> a = new List<Album>();
-
-                a.Add(da.procurarId(alb));
-                    
-                cmbAlbum.Items.Insert(x, a[x].Nome);
+                cmbAlbum.Items.Insert(x, alb.Nome);
             }
 
+
+        }
+
+        public void limpar() {
+            txtFaixa .Text = ("");
+            cmbArtistas.Text = ("");
+            cmbAlbum.Text = ("");
+            txtDuracao.Text = ("");
 
         }
 

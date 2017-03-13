@@ -48,8 +48,8 @@ namespace Squeeze
             comando = "insert into albumartista (idartista, idalbum) values (@idar,@idal)";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
-            comandoSQL.Parameters.AddWithValue("@idar", ar.IdArtista);
-            comandoSQL.Parameters.AddWithValue("@idal", al.Id);
+            comandoSQL.Parameters.AddWithValue("@idar", ar.Id);
+            comandoSQL.Parameters.AddWithValue("@idal", al.IdAlbum);
 
             //ERRO BEM AQ (FORENG KEY - IDALBUM)
 
@@ -76,11 +76,11 @@ namespace Squeeze
             return al;
         }
 
-        public Album procurarId(Album al)
+        public Album procurarId(int id)
         {
             con = conex.obterConexao();
 
-            comando = "select * from album where id = '" + al.Id + "';";
+            comando = "select * from album where id = '" + id + "';";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
@@ -98,7 +98,7 @@ namespace Squeeze
         {
 
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
-            comando = "select * from albumartista where idartista = '" + art.IdArtista + "';";
+            comando = "select * from albumartista where idartista = '" + art.Id + "';";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
