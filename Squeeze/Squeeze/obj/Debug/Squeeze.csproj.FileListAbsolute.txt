@@ -247,3 +247,4 @@ C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.For
 C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.Login.resources
 C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.Properties.Resources.resources
 C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.csproj.GenerateResource.Cache
+C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.Formulários.Form1.resources

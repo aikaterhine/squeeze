@@ -33,9 +33,9 @@ namespace Squeeze.Formulários
             d.salvar(u);
 
             Login login = new Login();
+            this.Hide();
             login.ShowDialog();
 
-            this.Hide();
         }
 
         public void limpar()

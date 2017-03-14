@@ -145,6 +145,9 @@
     <EmbeddedResource Include="Formulários\EditarArtista.resx">
       <DependentUpon>EditarArtista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulários\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
