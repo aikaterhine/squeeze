@@ -31,12 +31,6 @@ namespace Squeeze
 
             }
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             string artista;
@@ -72,11 +66,6 @@ namespace Squeeze
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -84,54 +73,11 @@ namespace Squeeze
             f.Visible = true;
         }
 
-        private void dgvAlbum_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbArtista_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dtmLancamento_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLancamento_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEstudio_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEstudio_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAlbum_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblAlbum_Click(object sender, EventArgs e)
-        {
-
+            DAOAlbum da = new DAOAlbum();
+            dgvAlbum.DataSource = da.ListarDados();
         }
     }
 }
+ 

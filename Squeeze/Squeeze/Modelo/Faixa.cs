@@ -3,25 +3,25 @@
     public class Faixa
     {
         int id;
+        int idalbum;
         string nome;
         string duracao;
-        string idalbum;
 
 
-        public Faixa(string nome, string duracao, string album_faixa)
+        public Faixa(string nome, string duracao, int album)
         {
             this.nome = nome;
             this.duracao = duracao;
-            this.idalbum = album_faixa;
+            this.idalbum = album;
 
 
         }
-        public Faixa(int id, string nome, string duracao, string album_faixa)
+        public Faixa(int id, string nome, string duracao, int album)
         {
             this.id = id;
             this.nome = nome;
             this.duracao = duracao;
-            this.idalbum = album_faixa;
+            this.idalbum = album;
 
 
         }
@@ -31,7 +31,7 @@
 
         public string Duracao { get { return this.duracao; } set { duracao = value; } }
 
-        public string Idalbum { get { return this.idalbum; } set { idalbum = value; } }
+        public int Idalbum { get { return this.idalbum; } set { idalbum = value; } }
 
     }
 }

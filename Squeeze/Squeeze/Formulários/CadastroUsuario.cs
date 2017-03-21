@@ -33,9 +33,9 @@ namespace Squeeze.Formulários
             d.salvar(u);
 
             Login login = new Login();
+            this.Hide();
             login.ShowDialog();
 
-            this.Hide();
         }
 
         public void limpar()
@@ -48,26 +48,6 @@ namespace Squeeze.Formulários
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpar();
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

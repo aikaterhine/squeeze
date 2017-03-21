@@ -3,6 +3,7 @@ using Squeeze.DAO;
 using Squeeze.Modelo;
 using System;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace Squeeze
 {
@@ -47,8 +48,8 @@ namespace Squeeze
             comando = "insert into albumartista (idartista, idalbum) values (@idar,@idal)";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
-            comandoSQL.Parameters.AddWithValue("@idar", ar.IdArtista);
-            comandoSQL.Parameters.AddWithValue("@idal", al.Id);
+            comandoSQL.Parameters.AddWithValue("@idar", ar.Id);
+            comandoSQL.Parameters.AddWithValue("@idal", al.IdAlbum);
 
             //ERRO BEM AQ (FORENG KEY - IDALBUM)
 
@@ -75,11 +76,11 @@ namespace Squeeze
             return al;
         }
 
-        public List<Album> ListarDados(Artista art)
+        public Album procurarId(int id)
         {
+            con = conex.obterConexao();
 
-            //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
-            comando = "select * from albumartista where idartista = '" + art.IdArtista + "';";
+            comando = "select * from album where id = '" + id + "';";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
@@ -87,7 +88,25 @@ namespace Squeeze
 
             while (cursor.Read())
             {
-                Album cat = new Album(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("estudio"), cursor.GetString("dtlancamento"));
+                al = new Album(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("estudio"), cursor.GetString("dtlancamento"));
+            }
+
+            return al;
+        }
+
+        public List<Album> ListarDados(Artista art)
+        {
+
+            //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
+            comando = "select * from albumartista where idartista = '" + art.Id + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                Album cat = new Album(cursor.GetInt32("idartista"), cursor.GetInt32("idalbum"));
                 lista.Add(cat);
             }
 

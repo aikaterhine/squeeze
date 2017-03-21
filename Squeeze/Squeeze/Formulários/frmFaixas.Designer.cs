@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFaixas));
             this.dgvFaixas = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracaoF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Album = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +44,7 @@
             this.lblAlbum = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbArtistas = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaixas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,6 @@
             this.dgvFaixas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFaixas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.Nome,
             this.nomeF,
             this.duracaoF,
             this.Album});
@@ -62,19 +61,12 @@
             this.dgvFaixas.Name = "dgvFaixas";
             this.dgvFaixas.Size = new System.Drawing.Size(240, 240);
             this.dgvFaixas.TabIndex = 11;
-            this.dgvFaixas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Id
             // 
             this.Id.DataPropertyName = "id";
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
             // 
             // nomeF
             // 
@@ -199,13 +191,27 @@
             this.cmbArtistas.TabIndex = 42;
             this.cmbArtistas.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(309, 351);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 25);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Listar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmFaixas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(517, 360);
+            this.ClientSize = new System.Drawing.Size(517, 388);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbArtistas);
             this.Controls.Add(this.pictureBox1);
@@ -229,11 +235,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvFaixas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn duracaoF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Album;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbAlbum;
@@ -244,5 +245,10 @@
         private System.Windows.Forms.Label lblAlbum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbArtistas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duracaoF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Album;
+        private System.Windows.Forms.Button button1;
     }
 }

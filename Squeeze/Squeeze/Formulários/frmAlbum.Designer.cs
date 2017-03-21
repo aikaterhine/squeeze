@@ -43,6 +43,7 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlbum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +58,6 @@
             this.lblAlbum.Size = new System.Drawing.Size(39, 13);
             this.lblAlbum.TabIndex = 0;
             this.lblAlbum.Text = "Album:";
-            this.lblAlbum.Click += new System.EventHandler(this.lblAlbum_Click);
             // 
             // txtAlbum
             // 
@@ -65,7 +65,6 @@
             this.txtAlbum.Name = "txtAlbum";
             this.txtAlbum.Size = new System.Drawing.Size(167, 20);
             this.txtAlbum.TabIndex = 1;
-            this.txtAlbum.TextChanged += new System.EventHandler(this.txtAlbum_TextChanged);
             // 
             // txtEstudio
             // 
@@ -73,7 +72,6 @@
             this.txtEstudio.Name = "txtEstudio";
             this.txtEstudio.Size = new System.Drawing.Size(167, 20);
             this.txtEstudio.TabIndex = 3;
-            this.txtEstudio.TextChanged += new System.EventHandler(this.txtEstudio_TextChanged);
             // 
             // lblEstudio
             // 
@@ -85,7 +83,6 @@
             this.lblEstudio.Size = new System.Drawing.Size(45, 13);
             this.lblEstudio.TabIndex = 2;
             this.lblEstudio.Text = "Estúdio:";
-            this.lblEstudio.Click += new System.EventHandler(this.lblEstudio_Click);
             // 
             // lblLancamento
             // 
@@ -97,7 +94,6 @@
             this.lblLancamento.Size = new System.Drawing.Size(69, 13);
             this.lblLancamento.TabIndex = 4;
             this.lblLancamento.Text = "Lançamento:";
-            this.lblLancamento.Click += new System.EventHandler(this.lblLancamento_Click);
             // 
             // dtmLancamento
             // 
@@ -105,7 +101,6 @@
             this.dtmLancamento.Name = "dtmLancamento";
             this.dtmLancamento.Size = new System.Drawing.Size(167, 20);
             this.dtmLancamento.TabIndex = 5;
-            this.dtmLancamento.ValueChanged += new System.EventHandler(this.dtmLancamento_ValueChanged);
             // 
             // btnCadastrar
             // 
@@ -129,7 +124,6 @@
             this.cmbArtista.Name = "cmbArtista";
             this.cmbArtista.Size = new System.Drawing.Size(167, 21);
             this.cmbArtista.TabIndex = 11;
-            this.cmbArtista.SelectedIndexChanged += new System.EventHandler(this.cmbArtista_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -141,7 +135,6 @@
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Artista:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvAlbum
             // 
@@ -154,7 +147,6 @@
             this.dgvAlbum.Name = "dgvAlbum";
             this.dgvAlbum.Size = new System.Drawing.Size(240, 245);
             this.dgvAlbum.TabIndex = 13;
-            this.dgvAlbum.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlbum_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -186,13 +178,27 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(314, 348);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 25);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Listar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmAlbum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(504, 356);
+            this.ClientSize = new System.Drawing.Size(507, 394);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvAlbum);
             this.Controls.Add(this.label1);
@@ -229,5 +235,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estudio;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

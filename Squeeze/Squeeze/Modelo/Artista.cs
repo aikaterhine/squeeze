@@ -8,10 +8,12 @@ namespace Squeeze.Modelo
 {
     class Artista
     {
-        int idartista;
+        int id;
         string nome;
         string dt;
         int tipoc;
+
+        public Artista() { }
 
         public Artista(string n) {
             this.nome = n;
@@ -28,14 +30,13 @@ namespace Squeeze.Modelo
 
         public Artista(int id, string n, int t, string dt)
         {
-            this.idartista = id;
+            this.id = id;
             this.nome = n;
             this.tipoc = t;
             this.dt = dt;
         }
 
-        public Artista() { }
-        public int IdArtista { get { return this.idartista; } set { idartista = value; } }
+        public int Id { get { return this.id; } set { id = value; } }
 
         public string Nome { get { return this.nome; } set { nome = value; } }
 

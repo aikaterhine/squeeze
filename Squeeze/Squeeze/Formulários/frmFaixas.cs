@@ -28,11 +28,6 @@ namespace Squeeze.Formulários
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -44,14 +39,35 @@ namespace Squeeze.Formulários
         {
             string duracao;
             string faixa;
+            string nomeart;
+            string nomealb;
 
+            nomealb = cmbAlbum.Text;
             faixa = txtFaixa.Text;
             duracao = txtDuracao.Text;
+            nomeart = cmbArtistas.Text;
 
-          /*  Artista art = new Artista(artista);
-            DAOArtista da = new DAOArtista();
+            if (nomealb.Equals("") || nomeart.Equals("") || faixa.Equals("") || duracao.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos.");
 
-            d.salvarAlbumArtista(da.procurar(art), d.procurar(al));*/
+            }
+
+            else
+            {
+
+                Album alb = new Album(nomealb);
+
+                DAOAlbum da = new DAOAlbum();
+                Album al = da.procurar(alb);
+
+
+                Faixa f = new Faixa(faixa, duracao, al.IdAlbum);
+                DAOFaixa df = new DAOFaixa();
+                df.salvar(f);
+                limpar();
+            }
+
         }
 
         private void cmbAlbum_SelectedValueChanged(object sender, EventArgs e)
@@ -61,7 +77,7 @@ namespace Squeeze.Formulários
             Album al = new Album(album);
             DAOAlbum d = new DAOAlbum();
 
-            DAOFaixas daf = new DAOFaixas();
+            DAOFaixa daf = new DAOFaixa();
             dgvFaixas.DataSource = daf.ListarDados(d.procurar(al));
 
         }
@@ -70,17 +86,38 @@ namespace Squeeze.Formulários
         {
             string artista = cmbArtistas.Text;
 
+            DAOArtista daoart = new DAOArtista();
             Artista al = new Artista(artista);
-            DAOArtista d = new DAOArtista();
+          
+            DAOAlbum daoalb = new DAOAlbum();
 
-            DAOAlbum da = new DAOAlbum();
-            List<Album> listaG = da.ListarDados(d.procurar(al));
-            for (int x = 0; x < listaG.Count; x++)
+            Artista al1 = daoart.procurar(al);
+            
+            List<Album> listaAl = daoalb.ListarDados(al1);
+
+            cmbAlbum.Items.Clear();
+
+            for (int x = 0; x < listaAl.Count; x++)
             {
 
-                cmbAlbum.Items.Insert(x, listaG[x].Nome);
+               Album alb = daoalb.procurarId(listaAl[x].IdAlbum);
 
+                cmbAlbum.Items.Insert(x, alb.Nome);
             }
+        }
+
+        public void limpar() {
+            txtFaixa .Text = ("");
+            cmbArtistas.Text = ("");
+            cmbAlbum.Text = ("");
+            txtDuracao.Text = ("");
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DAOFaixa df = new DAOFaixa();
+            dgvFaixas.DataSource = df.ListarDados();
         }
     }
 }
