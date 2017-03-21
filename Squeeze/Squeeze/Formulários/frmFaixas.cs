@@ -28,11 +28,6 @@ namespace Squeeze.Formulários
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -107,8 +102,6 @@ namespace Squeeze.Formulários
 
                 cmbAlbum.Items.Insert(x, alb.Nome);
             }
-
-
         }
 
         public void limpar() {
@@ -118,7 +111,5 @@ namespace Squeeze.Formulários
             txtDuracao.Text = ("");
 
         }
-
-
     }
 }

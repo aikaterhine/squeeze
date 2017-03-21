@@ -59,7 +59,7 @@
             this.txtSenha.Size = new System.Drawing.Size(191, 20);
             this.txtSenha.TabIndex = 6;
             this.txtSenha.UseSystemPasswordChar = true;
-            this.txtSenha.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+//            this.txtSenha.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtLogin
             // 
@@ -67,7 +67,7 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(191, 20);
             this.txtLogin.TabIndex = 7;
-            this.txtLogin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+ //           this.txtLogin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -91,7 +91,7 @@
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Senha:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+     //       this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label6
             // 
@@ -103,7 +103,7 @@
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Usuário:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+     //       this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBox1
             // 
@@ -115,7 +115,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+      //      this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Login
             // 

@@ -112,7 +112,7 @@
             this.Controls.Add(this.lblCarreira);
             this.Name = "frmCarreira";
             this.Text = "Carreira Musical";
-            this.Load += new System.EventHandler(this.frmCarreira_Load);
+//            this.Load += new System.EventHandler(this.frmCarreira_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarreira)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -60,7 +60,7 @@
             this.dgvFaixas.Name = "dgvFaixas";
             this.dgvFaixas.Size = new System.Drawing.Size(240, 240);
             this.dgvFaixas.TabIndex = 11;
-            this.dgvFaixas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+//            this.dgvFaixas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pictureBox1
             // 

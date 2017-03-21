@@ -31,12 +31,6 @@ namespace Squeeze
 
             }
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             string artista;

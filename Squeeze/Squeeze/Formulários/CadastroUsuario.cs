@@ -50,26 +50,6 @@ namespace Squeeze.Formulários
             limpar();
         }
 
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();

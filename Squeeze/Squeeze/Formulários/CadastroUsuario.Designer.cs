@@ -50,7 +50,7 @@
             this.label1.Size = new System.Drawing.Size(110, 24);
             this.label1.TabIndex = 29;
             this.label1.Text = "Cadastre-se";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+//            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCancelar
             // 
@@ -81,7 +81,7 @@
             this.txtSenha.Size = new System.Drawing.Size(183, 20);
             this.txtSenha.TabIndex = 25;
             this.txtSenha.Text = "Senha";
-            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
+       //     this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // txtEmail
             // 
@@ -91,7 +91,7 @@
             this.txtEmail.Size = new System.Drawing.Size(183, 20);
             this.txtEmail.TabIndex = 26;
             this.txtEmail.Text = "Email";
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+       //     this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtNome
             // 
@@ -102,7 +102,7 @@
             this.txtNome.Size = new System.Drawing.Size(183, 20);
             this.txtNome.TabIndex = 24;
             this.txtNome.Text = "Nome";
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
+          //  this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // pictureBox1
             // 

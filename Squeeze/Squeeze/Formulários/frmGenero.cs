@@ -20,7 +20,6 @@ namespace Squeeze.Formulários
 
             DAOGenero dg = new DAOGenero();
             dgvGenero.DataSource = dg.ListarDados();
-
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -35,7 +34,6 @@ namespace Squeeze.Formulários
             }
             else
             {
-
                 Genero g = new Genero(nomeG);
                 DAOGenero d = new DAOGenero();
                 d.salvar(g);

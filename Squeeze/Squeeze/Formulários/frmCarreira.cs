@@ -58,10 +58,5 @@ namespace Squeeze.Formulários
             Form2 f = new Form2();
             f.Visible = true;
         }
-
-        private void frmCarreira_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

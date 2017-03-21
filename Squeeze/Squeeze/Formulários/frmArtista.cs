@@ -39,8 +39,6 @@ namespace Squeeze
             {
                 cmbCarreira.Items.Add(listaC[x].Nome);
             }
-
-
         }
      
         private void button1_Click(object sender, EventArgs e)
@@ -94,10 +92,7 @@ namespace Squeeze
             /* AQUI TEM QUE PEGAR A ID DA LINHA SELECIONADA 
              * E MANDAR COMO ARGUMENTO PARA EDITAR ARTISTA, 
              * PARA ATUALIZAR OS CAMPOS
-             */
-
-            EditarArtista form = new EditarArtista();
-            form.Show();
+             */            
         }
         
         private void pictureBox1_Click(object sender, EventArgs e)

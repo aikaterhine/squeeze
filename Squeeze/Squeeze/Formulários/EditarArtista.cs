@@ -17,10 +17,5 @@ namespace Squeeze
         {
             InitializeComponent();
         }
-
-        private void EditarArtista_Load(object sender, EventArgs e, int id)
-        {
-
-        }
     }
 }
