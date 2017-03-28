@@ -39,11 +39,12 @@
             this.cmbArtista = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAlbum = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlbum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -140,31 +141,14 @@
             // 
             this.dgvAlbum.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlbum.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.Estudio});
+            this.Id,
+            this.Nome,
+            this.Estudio,
+            this.Data});
             this.dgvAlbum.Location = new System.Drawing.Point(23, 84);
             this.dgvAlbum.Name = "dgvAlbum";
             this.dgvAlbum.Size = new System.Drawing.Size(240, 245);
             this.dgvAlbum.TabIndex = 13;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // Estudio
-            // 
-            this.Estudio.DataPropertyName = "estudio";
-            this.Estudio.HeaderText = "Estudio";
-            this.Estudio.Name = "Estudio";
             // 
             // pictureBox1
             // 
@@ -190,6 +174,30 @@
             this.button1.Text = "Listar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "idalbum";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Estudio
+            // 
+            this.Estudio.DataPropertyName = "estudio";
+            this.Estudio.HeaderText = "Estudio";
+            this.Estudio.Name = "Estudio";
+            // 
+            // Data
+            // 
+            this.Data.DataPropertyName = "dt";
+            this.Data.HeaderText = "Data";
+            this.Data.Name = "Data";
             // 
             // frmAlbum
             // 
@@ -231,10 +239,11 @@
         private System.Windows.Forms.ComboBox cmbArtista;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvAlbum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estudio;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estudio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Data;
     }
 }

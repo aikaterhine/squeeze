@@ -76,7 +76,9 @@ namespace Squeeze
         private void button1_Click(object sender, EventArgs e)
         {
             DAOAlbum da = new DAOAlbum();
+             dgvAlbum.AutoGenerateColumns = false;
             dgvAlbum.DataSource = da.ListarDados();
+           
         }
     }
 }
