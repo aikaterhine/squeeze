@@ -72,5 +72,17 @@ namespace Squeeze
             Form2 f = new Form2();
             f.Visible = true;
         }
+<<<<<<< HEAD
+=======
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DAOAlbum da = new DAOAlbum();
+             dgvAlbum.AutoGenerateColumns = false;
+            dgvAlbum.DataSource = da.ListarDados();
+           
+        }
+>>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
     }
 }
+ 

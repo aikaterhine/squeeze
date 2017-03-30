@@ -3,6 +3,7 @@
     partial class Form1
     {
         private void InitializeComponent() {
+<<<<<<< HEAD
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
@@ -54,15 +55,38 @@
             this.Controls.Add(this.metroProgressSpinner1);
             this.Controls.Add(this.metroProgressBar1);
             this.Controls.Add(this.metroPanel1);
+=======
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(1, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(252, 698);
+            this.panel1.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.BackgroundImage = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(886, 700);
+            this.Controls.Add(this.panel1);
+>>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
 
         }
 
+<<<<<<< HEAD
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
         private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner1;
         private MetroFramework.Controls.MetroButton metroButton1;
+=======
+        private System.Windows.Forms.Panel panel1;
+>>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
     }
 }

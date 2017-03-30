@@ -4,7 +4,11 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\obj\Debug\
+=======
+C:\Users\01aluno\Documents\Git\squeeze\Squeeze\Squeeze\obj\Debug\
+>>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
 Squeeze
 none
 false
@@ -13,7 +17,11 @@ DEBUG;TRACE
 11733307788
 1351456314
 381750071036
+<<<<<<< HEAD
 272108657691
+=======
+271146725946
+>>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
 Browse.xaml;
 
 False

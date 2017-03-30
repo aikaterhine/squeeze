@@ -54,5 +54,24 @@ namespace Squeeze.DAO
 
             return lista;
         }
+
+        public List<Faixa> ListarDados()
+        {
+            //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
+            comando = "select * from faixa;";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                Faixa cat = new Faixa(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("duracao"), cursor.GetInt32("idalbum"));
+                lista.Add(cat);
+            }
+
+            return lista;
+
+        }
     }
 }

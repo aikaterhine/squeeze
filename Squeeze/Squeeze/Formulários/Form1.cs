@@ -10,7 +10,11 @@ using System.Windows.Forms;
 
 namespace Squeeze.Formulários
 {
+<<<<<<< HEAD
     public partial class Form1 :MetroFramework.Forms.MetroForm
+=======
+    public partial class Form1 :Form
+>>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
     {
         public Form1()
         {
