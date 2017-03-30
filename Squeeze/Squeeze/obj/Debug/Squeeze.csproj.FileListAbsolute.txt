@@ -248,3 +248,6 @@ C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.Log
 C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.Properties.Resources.resources
 C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.csproj.GenerateResource.Cache
 C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.Formulários.Form1.resources
+C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\bin\Debug\MetroFramework.Design.dll
+C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\bin\Debug\MetroFramework.dll
+C:\Users\CAT-CAR-TUL\Documents\Git\squeeze\Squeeze\Squeeze\bin\Debug\MetroFramework.Fonts.dll
