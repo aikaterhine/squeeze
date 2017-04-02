@@ -45,9 +45,7 @@ namespace Squeeze
         }
 
         public int IdAlbum { get { return this.idalbum; }  set {idalbum = value; } }
-
         public int Idartista { get { return this.idartista; } set { idartista = value; } }
-
         public string Nome { get { return this.nome; } set { nome = value; } }
         public string Estudio { get { return this.estudio; } set { estudio = value; } }
         public string Dt { get { return this.dt; } set { dt = value; } }

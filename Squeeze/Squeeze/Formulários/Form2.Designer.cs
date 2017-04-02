@@ -28,93 +28,223 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.formSkin1 = new FlatUI.FormSkin();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCarreira = new FlatUI.FlatButton();
+            this.btnGenero = new FlatUI.FlatButton();
+            this.btnArtista = new FlatUI.FlatButton();
+            this.btnFaixa = new FlatUI.FlatButton();
+            this.btnAlbum = new FlatUI.FlatButton();
+            this.flatStatusBar1 = new FlatUI.FlatStatusBar();
+            this.flatMini1 = new FlatUI.FlatMini();
+            this.flatMax1 = new FlatUI.FlatMax();
+            this.flatClose1 = new FlatUI.FlatClose();
+            this.formSkin1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // formSkin1
             // 
-            this.button1.Image = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
-            this.button1.Location = new System.Drawing.Point(161, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 142);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Gênero";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.formSkin1.BackColor = System.Drawing.Color.White;
+            this.formSkin1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.formSkin1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.formSkin1.Controls.Add(this.panelPrincipal);
+            this.formSkin1.Controls.Add(this.panel1);
+            this.formSkin1.Controls.Add(this.flatStatusBar1);
+            this.formSkin1.Controls.Add(this.flatMini1);
+            this.formSkin1.Controls.Add(this.flatMax1);
+            this.formSkin1.Controls.Add(this.flatClose1);
+            this.formSkin1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.formSkin1.FlatColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.formSkin1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.formSkin1.HeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.formSkin1.HeaderMaximize = false;
+            this.formSkin1.Location = new System.Drawing.Point(0, 0);
+            this.formSkin1.Name = "formSkin1";
+            this.formSkin1.Size = new System.Drawing.Size(905, 484);
+            this.formSkin1.TabIndex = 2;
+            this.formSkin1.Text = "Squeeze";
             // 
-            // button2
+            // panelPrincipal
             // 
-            this.button2.Image = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
-            this.button2.Location = new System.Drawing.Point(264, 52);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 142);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Album";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.panelPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.panelPrincipal.Location = new System.Drawing.Point(217, 52);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(685, 409);
+            this.panelPrincipal.TabIndex = 8;
             // 
-            // button3
+            // panel1
             // 
-            this.button3.Image = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
-            this.button3.Location = new System.Drawing.Point(483, 52);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(189, 142);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Faixa";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnCarreira);
+            this.panel1.Controls.Add(this.btnGenero);
+            this.panel1.Controls.Add(this.btnArtista);
+            this.panel1.Controls.Add(this.btnFaixa);
+            this.panel1.Controls.Add(this.btnAlbum);
+            this.panel1.Location = new System.Drawing.Point(1, 50);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(216, 411);
+            this.panel1.TabIndex = 7;
             // 
-            // button4
+            // btnCarreira
             // 
-            this.button4.Image = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
-            this.button4.Location = new System.Drawing.Point(45, 52);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(189, 142);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Artista";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnCarreira.BackColor = System.Drawing.Color.Transparent;
+            this.btnCarreira.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.btnCarreira.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCarreira.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnCarreira.Location = new System.Drawing.Point(-1, 302);
+            this.btnCarreira.Name = "btnCarreira";
+            this.btnCarreira.Rounded = false;
+            this.btnCarreira.Size = new System.Drawing.Size(217, 58);
+            this.btnCarreira.TabIndex = 8;
+            this.btnCarreira.Text = "Carreira";
+            this.btnCarreira.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
-            // button5
+            // btnGenero
             // 
-            this.button5.Image = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
-            this.button5.Location = new System.Drawing.Point(380, 239);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(189, 142);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Carreira Musical";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnGenero.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenero.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.btnGenero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenero.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnGenero.Location = new System.Drawing.Point(-1, 242);
+            this.btnGenero.Name = "btnGenero";
+            this.btnGenero.Rounded = false;
+            this.btnGenero.Size = new System.Drawing.Size(217, 58);
+            this.btnGenero.TabIndex = 8;
+            this.btnGenero.Text = "Gênero";
+            this.btnGenero.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            // 
+            // btnArtista
+            // 
+            this.btnArtista.BackColor = System.Drawing.Color.Transparent;
+            this.btnArtista.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.btnArtista.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnArtista.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnArtista.Location = new System.Drawing.Point(-1, 62);
+            this.btnArtista.Name = "btnArtista";
+            this.btnArtista.Rounded = false;
+            this.btnArtista.Size = new System.Drawing.Size(217, 58);
+            this.btnArtista.TabIndex = 8;
+            this.btnArtista.Text = "Artista";
+            this.btnArtista.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.btnArtista.Click += new System.EventHandler(this.btnArtista_Click);
+            // 
+            // btnFaixa
+            // 
+            this.btnFaixa.BackColor = System.Drawing.Color.Transparent;
+            this.btnFaixa.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.btnFaixa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFaixa.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnFaixa.Location = new System.Drawing.Point(-1, 182);
+            this.btnFaixa.Name = "btnFaixa";
+            this.btnFaixa.Rounded = false;
+            this.btnFaixa.Size = new System.Drawing.Size(217, 58);
+            this.btnFaixa.TabIndex = 2;
+            this.btnFaixa.Text = "Faixa";
+            this.btnFaixa.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            // 
+            // btnAlbum
+            // 
+            this.btnAlbum.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlbum.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.btnAlbum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlbum.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAlbum.Location = new System.Drawing.Point(-1, 122);
+            this.btnAlbum.Name = "btnAlbum";
+            this.btnAlbum.Rounded = false;
+            this.btnAlbum.Size = new System.Drawing.Size(217, 58);
+            this.btnAlbum.TabIndex = 1;
+            this.btnAlbum.Text = "Album";
+            this.btnAlbum.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            // 
+            // flatStatusBar1
+            // 
+            this.flatStatusBar1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flatStatusBar1.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.flatStatusBar1.ForeColor = System.Drawing.Color.White;
+            this.flatStatusBar1.Location = new System.Drawing.Point(0, 461);
+            this.flatStatusBar1.Name = "flatStatusBar1";
+            this.flatStatusBar1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatStatusBar1.ShowTimeDate = false;
+            this.flatStatusBar1.Size = new System.Drawing.Size(905, 23);
+            this.flatStatusBar1.TabIndex = 6;
+            this.flatStatusBar1.Text = "flatStatusBar1";
+            this.flatStatusBar1.TextColor = System.Drawing.Color.White;
+            // 
+            // flatMini1
+            // 
+            this.flatMini1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flatMini1.BackColor = System.Drawing.Color.White;
+            this.flatMini1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatMini1.Font = new System.Drawing.Font("Marlett", 12F);
+            this.flatMini1.Location = new System.Drawing.Point(826, 0);
+            this.flatMini1.Name = "flatMini1";
+            this.flatMini1.Size = new System.Drawing.Size(18, 18);
+            this.flatMini1.TabIndex = 5;
+            this.flatMini1.Text = "flatMini1";
+            this.flatMini1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            // 
+            // flatMax1
+            // 
+            this.flatMax1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flatMax1.BackColor = System.Drawing.Color.White;
+            this.flatMax1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatMax1.Font = new System.Drawing.Font("Marlett", 12F);
+            this.flatMax1.Location = new System.Drawing.Point(856, 0);
+            this.flatMax1.Name = "flatMax1";
+            this.flatMax1.Size = new System.Drawing.Size(18, 18);
+            this.flatMax1.TabIndex = 4;
+            this.flatMax1.Text = "flatMax1";
+            this.flatMax1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            // 
+            // flatClose1
+            // 
+            this.flatClose1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flatClose1.BackColor = System.Drawing.Color.White;
+            this.flatClose1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.flatClose1.Font = new System.Drawing.Font("Marlett", 10F);
+            this.flatClose1.Location = new System.Drawing.Point(886, 0);
+            this.flatClose1.Name = "flatClose1";
+            this.flatClose1.Size = new System.Drawing.Size(18, 18);
+            this.flatClose1.TabIndex = 3;
+            this.flatClose1.Text = "flatClose1";
+            this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(722, 432);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(905, 484);
+            this.Controls.Add(this.formSkin1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.TransparencyKey = System.Drawing.Color.Fuchsia;
+            this.formSkin1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private FlatUI.FormSkin formSkin1;
+        private System.Windows.Forms.Panel panelPrincipal;
+        private System.Windows.Forms.Panel panel1;
+        private FlatUI.FlatButton btnCarreira;
+        private FlatUI.FlatButton btnGenero;
+        private FlatUI.FlatButton btnArtista;
+        private FlatUI.FlatButton btnFaixa;
+        private FlatUI.FlatButton btnAlbum;
+        private FlatUI.FlatStatusBar flatStatusBar1;
+        private FlatUI.FlatMini flatMini1;
+        private FlatUI.FlatMax flatMax1;
+        private FlatUI.FlatClose flatClose1;
     }
 }

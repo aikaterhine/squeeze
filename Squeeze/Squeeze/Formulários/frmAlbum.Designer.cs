@@ -39,12 +39,12 @@
             this.cmbArtista = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAlbum = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlbum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,10 +59,6 @@
             this.lblAlbum.Size = new System.Drawing.Size(39, 13);
             this.lblAlbum.TabIndex = 0;
             this.lblAlbum.Text = "Album:";
-<<<<<<< HEAD
-          //  this.lblAlbum.Click += new System.EventHandler(this.lblAlbum_Click);
-=======
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             // 
             // txtAlbum
             // 
@@ -70,10 +66,6 @@
             this.txtAlbum.Name = "txtAlbum";
             this.txtAlbum.Size = new System.Drawing.Size(167, 20);
             this.txtAlbum.TabIndex = 1;
-<<<<<<< HEAD
-          //  this.txtAlbum.TextChanged += new System.EventHandler(this.txtAlbum_TextChanged);
-=======
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             // 
             // txtEstudio
             // 
@@ -81,10 +73,6 @@
             this.txtEstudio.Name = "txtEstudio";
             this.txtEstudio.Size = new System.Drawing.Size(167, 20);
             this.txtEstudio.TabIndex = 3;
-<<<<<<< HEAD
-          //  this.txtEstudio.TextChanged += new System.EventHandler(this.txtEstudio_TextChanged);
-=======
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             // 
             // lblEstudio
             // 
@@ -96,10 +84,6 @@
             this.lblEstudio.Size = new System.Drawing.Size(45, 13);
             this.lblEstudio.TabIndex = 2;
             this.lblEstudio.Text = "Estúdio:";
-<<<<<<< HEAD
-         //   this.lblEstudio.Click += new System.EventHandler(this.lblEstudio_Click);
-=======
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             // 
             // lblLancamento
             // 
@@ -111,10 +95,6 @@
             this.lblLancamento.Size = new System.Drawing.Size(69, 13);
             this.lblLancamento.TabIndex = 4;
             this.lblLancamento.Text = "Lançamento:";
-<<<<<<< HEAD
-           // this.lblLancamento.Click += new System.EventHandler(this.lblLancamento_Click);
-=======
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             // 
             // dtmLancamento
             // 
@@ -122,10 +102,6 @@
             this.dtmLancamento.Name = "dtmLancamento";
             this.dtmLancamento.Size = new System.Drawing.Size(167, 20);
             this.dtmLancamento.TabIndex = 5;
-<<<<<<< HEAD
-           // this.dtmLancamento.ValueChanged += new System.EventHandler(this.dtmLancamento_ValueChanged);
-=======
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             // 
             // btnCadastrar
             // 
@@ -149,10 +125,6 @@
             this.cmbArtista.Name = "cmbArtista";
             this.cmbArtista.Size = new System.Drawing.Size(167, 21);
             this.cmbArtista.TabIndex = 11;
-<<<<<<< HEAD
-          //  this.cmbArtista.SelectedIndexChanged += new System.EventHandler(this.cmbArtista_SelectedIndexChanged);
-=======
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             // 
             // label1
             // 
@@ -164,10 +136,6 @@
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Artista:";
-<<<<<<< HEAD
-           // this.label1.Click += new System.EventHandler(this.label1_Click);
-=======
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             // 
             // dgvAlbum
             // 
@@ -179,55 +147,9 @@
             this.Data});
             this.dgvAlbum.Location = new System.Drawing.Point(23, 84);
             this.dgvAlbum.Name = "dgvAlbum";
+            this.dgvAlbum.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAlbum.Size = new System.Drawing.Size(240, 245);
             this.dgvAlbum.TabIndex = 13;
-<<<<<<< HEAD
-           // this.dgvAlbum.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlbum_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // Estudio
-            // 
-            this.Estudio.DataPropertyName = "estudio";
-            this.Estudio.HeaderText = "Estudio";
-            this.Estudio.Name = "Estudio";
-=======
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 36);
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(314, 348);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 25);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Listar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Id
             // 
@@ -253,6 +175,31 @@
             this.Data.HeaderText = "Data";
             this.Data.Name = "Data";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 36);
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(314, 348);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(166, 25);
+            this.btnExcluir.TabIndex = 34;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // frmAlbum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,7 +207,7 @@
             this.BackgroundImage = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(507, 394);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvAlbum);
             this.Controls.Add(this.label1);
@@ -274,6 +221,7 @@
             this.Controls.Add(this.lblAlbum);
             this.Name = "frmAlbum";
             this.Text = "Cadastro de Albuns";
+            this.Load += new System.EventHandler(this.frmAlbum_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlbum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -294,7 +242,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvAlbum;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estudio;

@@ -23,9 +23,11 @@ namespace Squeeze
         {
             con = conex.obterConexao();
         }
-
+        
         public void salvar(Album a)
         {
+            con = conex.obterConexao();
+
             comando = "insert into album (nome, estudio, dtlancamento) values (@nome,@est,@dt)";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
@@ -39,6 +41,19 @@ namespace Squeeze
             conex.fecharConexao();
 
         }
+
+        public void excluirAlbum(Album a)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from album where id = '" + a.IdAlbum + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
 
         public void salvarAlbumArtista(Artista ar, Album al)
         {
@@ -96,6 +111,7 @@ namespace Squeeze
 
         public List<Album> ListarDados(Artista art)
         {
+            con = conex.obterConexao();
 
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
             comando = "select * from albumartista where idartista = '" + art.Id + "';";
@@ -116,6 +132,7 @@ namespace Squeeze
 
         public List<Album> ListarDados()
         {
+            con = conex.obterConexao();
 
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
             comando = "select * from album;";

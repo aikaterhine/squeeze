@@ -7,24 +7,26 @@
         string nome;
         string duracao;
 
+        public Faixa(int id)
+        {
+            this.id = id;
+        }
 
         public Faixa(string nome, string duracao, int album)
         {
             this.nome = nome;
             this.duracao = duracao;
             this.idalbum = album;
-
-
         }
+
         public Faixa(int id, string nome, string duracao, int album)
         {
             this.id = id;
             this.nome = nome;
             this.duracao = duracao;
             this.idalbum = album;
-
-
         }
+
         public int Id { get { return this.id; } set { id = value; } }
 
         public string Nome { get { return this.nome; } set { nome = value; } }

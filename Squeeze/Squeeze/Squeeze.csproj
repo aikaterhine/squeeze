@@ -33,17 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="FlatUI">
+      <HintPath>..\..\..\..\..\Downloads\FlatUI-master\bin\Debug\FlatUI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -73,9 +64,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Browse.xaml.cs">
-      <DependentUpon>Browse.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DAO\Conexao.cs" />
     <Compile Include="DAO\DAOAlbum.cs" />
     <Compile Include="DAO\DAOCarreira.cs" />
@@ -85,12 +73,6 @@
     </Compile>
     <Compile Include="Formulários\CadastroUsuario.Designer.cs">
       <DependentUpon>CadastroUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formulários\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formulários\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulários\Form2.cs">
       <SubType>Form</SubType>
@@ -115,6 +97,18 @@
     </Compile>
     <Compile Include="Formulários\frmGenero.Designer.cs">
       <DependentUpon>frmGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\PanelArtista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulários\PanelArtista.Designer.cs">
+      <DependentUpon>PanelArtista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Squeeze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Squeeze.Designer.cs">
+      <DependentUpon>Squeeze.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Carreira.cs" />
     <Compile Include="Modelo\Faixa.cs" />
@@ -157,9 +151,6 @@
     <EmbeddedResource Include="Formulários\EditarArtista.resx">
       <DependentUpon>EditarArtista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formulários\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +171,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\PanelArtista.resx">
+      <DependentUpon>PanelArtista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Squeeze.resx">
+      <DependentUpon>Squeeze.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -242,13 +239,45 @@
     <None Include="Resources\QEWDSDFSDFFXF.png" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Browse.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Content Include="Imagens\150000_hk_Website_Transparent_Chainsmokers_NEW.png" />
+    <Content Include="Imagens\imagine_dragon___png___lb1817_by_juanchoperez-d79z6wb.png" />
+    <Content Include="Imagens\Katy-Perry-PNG-Picture.png" />
+    <Content Include="Imagens\lana_del_rey_png_by_maarcopngs-da7zzlt.png" />
+    <Content Include="Imagens\lorde.PNG" />
+    <Content Include="Imagens\emeli.PNG" />
+    <Content Include="Imagens\Steve_Aoki.png" />
+    <Content Include="Resources\01Intro.mp3" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\halsey_png_by_breathinparadise-d92vnik.png" />
+    <None Include="Resources\imageedit_5_9109841775.png" />
+    <None Include="Resources\sia_png_by_maarcopngs-da6y3v7.png" />
+    <None Include="Resources\alessia.png" />
+    <None Include="Resources\Steve_Aoki.png" />
+    <None Include="Resources\lana_del_rey_png_by_maarcopngs-da7zzlt.png" />
+    <None Include="Resources\Katy-Perry-PNG-Picture.png" />
+    <None Include="Resources\imagine_dragon___png___lb1817_by_juanchoperez-d79z6wb.png" />
+    <None Include="Resources\150000_hk_Website_Transparent_Chainsmokers_NEW.png" />
+    <None Include="Resources\O-x39.png" />
+    <None Include="Resources\lorde_png_2_by_zkresources-d7r6pzg.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images %282%29.jpg" />
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

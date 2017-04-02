@@ -14,13 +14,13 @@ namespace Squeeze.DAO
         public MySqlConnection obterConexao()
         {
 
-            string strconexao = "server=localhost;userid=root;password=;database=squeezebd";
+            string strconexao = "server=localhost;userid=root;password=12345;database=squeezebd";
             con = new MySqlConnection(strconexao);
             try
             {
                 con.Open();
             }
-            catch (MySqlException sqle)
+            catch (MySqlException)
             {
                 con = null;
             }

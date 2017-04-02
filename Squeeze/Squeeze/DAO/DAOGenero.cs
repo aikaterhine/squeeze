@@ -46,6 +46,8 @@ namespace Squeeze.DAO
 
         public void salvar(Genero g)
         {
+            con = conex.obterConexao();
+
             comando = "insert into tipogenero (nome) values (@nome)";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
@@ -56,6 +58,29 @@ namespace Squeeze.DAO
             con.Close();
         }
 
+        public void excluirGenero(Genero g)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from tipogenero where id = '" + g.IdGenero + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void excluirGeneroArtista(Genero g)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from generoartista where idgenero = '" + g.IdGenero + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
 
         public Genero procurar(string g) {
             con = conex.obterConexao();

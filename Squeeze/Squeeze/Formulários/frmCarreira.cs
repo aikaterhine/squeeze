@@ -1,4 +1,5 @@
-﻿using Squeeze.DAO;
+﻿using MySql.Data.MySqlClient;
+using Squeeze.DAO;
 using Squeeze.Modelo;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace Squeeze.Formulários
 {
     public partial class frmCarreira : Form
     {
+
+        DAOArtista da = new DAOArtista();
+
         public frmCarreira()
         {
             InitializeComponent();
-
             DAOCarreira dc = new DAOCarreira();
             dgvCarreira.DataSource = dc.ListarDados();
         }
@@ -34,10 +37,12 @@ namespace Squeeze.Formulários
             }
             else
             {
+                DAOCarreira dc = new DAOCarreira();
                 Carreira g = new Carreira(nomeC);
-                DAOCarreira d = new DAOCarreira();
-                d.salvar(g);
+                dc.salvar(g);
                 limpar();
+                dgvCarreira.DataSource = dc.ListarDados();
+
             }
         }
 
@@ -48,8 +53,27 @@ namespace Squeeze.Formulários
 
         private void btnListar_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(dgvCarreira.CurrentRow.Cells[0].Value);
             DAOCarreira dc = new DAOCarreira();
-            dgvCarreira.DataSource = dc.ListarDados();
+            Carreira c = new Carreira(id);
+            try
+            {
+                dc.excluirCarreira(c);
+            }
+            catch (MySqlException)
+            {
+                DialogResult confirm = MessageBox.Show("Há referências em outras tabelas. Prosseguir com a operação resultará"
+                    + "em perda de dados. Deseja continuar?", "Erro ao excluir registro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+                if (confirm.ToString().ToUpper() == "YES") {
+
+                    da.excluirCarreiraArtista(c);
+                    dc.excluirCarreira(c);
+                }
+            }
+
+            DAOCarreira dc1 = new DAOCarreira();
+            dgvCarreira.DataSource = dc1.ListarDados();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

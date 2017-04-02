@@ -8,12 +8,17 @@ namespace Squeeze.Modelo
 {
     class Usuario
     {
-        string idusuario;
+        int idusuario;
         string nome;
         string email;
         string senha;
         int tipo;
 
+        public Usuario() { }
+
+        public Usuario(string n) {
+            this.nome = n;
+        }
 
         public Usuario(string n, string e, string s, int t)
         {
@@ -23,7 +28,7 @@ namespace Squeeze.Modelo
             this.tipo = t;
         }
 
-        public Usuario(string id, string n, string e, string s, int t)
+        public Usuario(int id, string n, string e, string s, int t)
         {
             this.idusuario = id;
             this.nome = n;
@@ -38,7 +43,7 @@ namespace Squeeze.Modelo
             this.senha = senha;
         }
 
-        public string Idusuario { get { return this.idusuario; } set { idusuario = value; } }
+        public int Idusuario { get { return this.idusuario; } set { idusuario = value; } }
 
         public string Nome { get { return this.nome; } set { nome = value; } }
 

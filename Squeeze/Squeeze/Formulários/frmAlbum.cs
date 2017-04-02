@@ -10,19 +10,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Squeeze
 {
     public partial class frmAlbum : Form
     {
+        DAOAlbum d = new DAOAlbum();
+        DAOArtista da = new DAOArtista();
+        DAOFaixa df = new DAOFaixa();
+
+
         public frmAlbum()
         {
             InitializeComponent();
-            DAOAlbum dal = new DAOAlbum();
-            dgvAlbum.DataSource = dal.ListarDados();
+            dgvAlbum.DataSource = d.ListarDados();
 
 
-            DAOArtista da = new DAOArtista();
             List<Artista> listaG = da.ListarDados();
             for (int x = 0; x < listaG.Count; x++)
             {
@@ -45,17 +49,14 @@ namespace Squeeze
 
             ///SALVA O ALBUM BEM AQ
             Album al = new Album(album, estudio, dtLancamento);
-            DAOAlbum d = new DAOAlbum();
-            d.salvar(al);
-
-
             Artista art = new Artista(artista);
-            DAOArtista da = new DAOArtista();
 
+            d.salvar(al);
             d.salvarAlbumArtista(da.procurar(art), d.procurar(al));
-
-
+            
             limpar();
+
+            dgvAlbum.DataSource = d.ListarDados();
         }
 
         public void limpar()
@@ -72,17 +73,35 @@ namespace Squeeze
             Form2 f = new Form2();
             f.Visible = true;
         }
-<<<<<<< HEAD
-=======
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
-            DAOAlbum da = new DAOAlbum();
-             dgvAlbum.AutoGenerateColumns = false;
+            int id = Convert.ToInt32(dgvAlbum.CurrentRow.Cells[0].Value);
+            Album al = new Album(id);
+
+            try
+            {
+                d.excluirAlbum(al);
+            }
+            catch (MySqlException)
+            {
+                DialogResult confirm = MessageBox.Show("Há referências em outras tabelas. Prosseguir com a operação resultará"
+                    + "em perda de dados. Deseja continuar?", "Erro ao excluir registro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+                if (confirm.ToString().ToUpper() == "YES")
+                {
+                    df.excluirFaixa(al);
+                    d.excluirAlbum(al);
+                }
+            }
+
             dgvAlbum.DataSource = da.ListarDados();
-           
         }
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
+
+        private void frmAlbum_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
  

@@ -36,8 +36,33 @@ namespace Squeeze.DAO
             con.Close();
         }
 
+        public void excluirFaixa(Faixa f)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from faixa where id = '" + f.Id + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void excluirFaixa(Album a)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from faixa where idalbum = '" + a.IdAlbum + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
         public List<Faixa> ListarDados(Album al)
         {
+            con = conex.obterConexao();
 
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
             comando = "select * from faixa where idalbum = '" + al.IdAlbum+ "';";
@@ -57,6 +82,8 @@ namespace Squeeze.DAO
 
         public List<Faixa> ListarDados()
         {
+            con = conex.obterConexao();
+
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
             comando = "select * from faixa;";
 

@@ -11,9 +11,16 @@ namespace Squeeze.Modelo
         private int id;
         private string nome;
 
+        public Carreira() { }
+
         public Carreira(string nomeC)
         {
             this.nome = nomeC;
+        }
+
+        public Carreira(int id)
+        {
+            this.id = id;
         }
 
         public Carreira(int id, string nomeC)

@@ -16,6 +16,10 @@ namespace Squeeze.Modelo
 
         private string nomeGen;
 
+        public Genero(int gen)
+        {
+            this.idGenero = gen;
+        }
 
         public Genero(int art, int gen)
         {

@@ -30,13 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFaixas));
             this.dgvFaixas = new System.Windows.Forms.DataGridView();
-<<<<<<< HEAD
-=======
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracaoF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Album = new System.Windows.Forms.DataGridViewTextBoxColumn();
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbAlbum = new System.Windows.Forms.ComboBox();
@@ -55,20 +52,16 @@
             // dgvFaixas
             // 
             this.dgvFaixas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
-=======
             this.dgvFaixas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.nomeF,
             this.duracaoF,
             this.Album});
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             this.dgvFaixas.Location = new System.Drawing.Point(24, 91);
             this.dgvFaixas.Name = "dgvFaixas";
-            this.dgvFaixas.Size = new System.Drawing.Size(240, 240);
+            this.dgvFaixas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFaixas.Size = new System.Drawing.Size(240, 285);
             this.dgvFaixas.TabIndex = 11;
-<<<<<<< HEAD
-=======
             // 
             // Id
             // 
@@ -93,7 +86,6 @@
             this.Album.DataPropertyName = "idalbum";
             this.Album.HeaderText = "Album";
             this.Album.Name = "Album";
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             // 
             // pictureBox1
             // 
@@ -127,6 +119,7 @@
             this.cmbAlbum.Name = "cmbAlbum";
             this.cmbAlbum.Size = new System.Drawing.Size(167, 21);
             this.cmbAlbum.TabIndex = 39;
+            this.cmbAlbum.SelectedIndexChanged += new System.EventHandler(this.cmbAlbum_SelectedIndexChanged);
             this.cmbAlbum.SelectedValueChanged += new System.EventHandler(this.cmbAlbum_SelectedValueChanged);
             // 
             // btnCadastrar
@@ -209,7 +202,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(166, 25);
             this.button1.TabIndex = 44;
-            this.button1.Text = "Listar";
+            this.button1.Text = "Excluir";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -234,6 +227,7 @@
             this.Controls.Add(this.dgvFaixas);
             this.Name = "frmFaixas";
             this.Text = "Cadastro de Faixas";
+            this.Load += new System.EventHandler(this.frmFaixas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaixas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

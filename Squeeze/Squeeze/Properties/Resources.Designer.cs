@@ -63,6 +63,16 @@ namespace Squeeze.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _150000_hk_Website_Transparent_Chainsmokers_NEW {
+            get {
+                object obj = ResourceManager.GetObject("150000_hk_Website_Transparent_Chainsmokers_NEW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _32c9dec15f5b9bf92081e8ea7acb2527 {
             get {
                 object obj = ResourceManager.GetObject("32c9dec15f5b9bf92081e8ea7acb2527", resourceCulture);
@@ -76,6 +86,16 @@ namespace Squeeze.Properties {
         internal static System.Drawing.Bitmap _556942 {
             get {
                 object obj = ResourceManager.GetObject("556942", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alessia {
+            get {
+                object obj = ResourceManager.GetObject("alessia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +123,39 @@ namespace Squeeze.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap halsey_png_by_breathinparadise_d92vnik {
+            get {
+                object obj = ResourceManager.GetObject("halsey_png_by_breathinparadise-d92vnik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ico_noche {
             get {
                 object obj = ResourceManager.GetObject("ico_noche", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imageedit_5_9109841775 {
+            get {
+                object obj = ResourceManager.GetObject("imageedit_5_9109841775", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +193,59 @@ namespace Squeeze.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagine_dragon___png___lb1817_by_juanchoperez_d79z6wb {
+            get {
+                object obj = ResourceManager.GetObject("imagine_dragon___png___lb1817_by_juanchoperez-d79z6wb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Katy_Perry_PNG_Picture {
+            get {
+                object obj = ResourceManager.GetObject("Katy-Perry-PNG-Picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lana_del_rey_png_by_maarcopngs_da7zzlt {
+            get {
+                object obj = ResourceManager.GetObject("lana_del_rey_png_by_maarcopngs-da7zzlt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lorde_png_2_by_zkresources_d7r6pzg {
+            get {
+                object obj = ResourceManager.GetObject("lorde_png_2_by_zkresources-d7r6pzg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap move_to_apple_music_icon_100599692_large {
             get {
                 object obj = ResourceManager.GetObject("move-to-apple-music-icon-100599692-large", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap O_x39 {
+            get {
+                object obj = ResourceManager.GetObject("O-x39", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +266,26 @@ namespace Squeeze.Properties {
         internal static System.Drawing.Bitmap QEWDSDFSDFFXF {
             get {
                 object obj = ResourceManager.GetObject("QEWDSDFSDFFXF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sia_png_by_maarcopngs_da6y3v7 {
+            get {
+                object obj = ResourceManager.GetObject("sia_png_by_maarcopngs-da6y3v7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Steve_Aoki {
+            get {
+                object obj = ResourceManager.GetObject("Steve_Aoki", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

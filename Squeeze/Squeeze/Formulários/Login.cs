@@ -45,8 +45,8 @@ namespace Squeeze
                 this.Hide();
                 switch (perfil) {
                     case 0:
-                        Form1 nav = new Form1();
-                        nav.ShowDialog();
+                        Formulários.Squeeze s = new Formulários.Squeeze();
+                        s.ShowDialog();
                         break;
                     case 1:
                         Form2 cad = new Form2();

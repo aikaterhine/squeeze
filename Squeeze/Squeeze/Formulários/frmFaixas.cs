@@ -66,6 +66,8 @@ namespace Squeeze.Formulários
                 DAOFaixa df = new DAOFaixa();
                 df.salvar(f);
                 limpar();
+
+                dgvFaixas.DataSource = df.ListarDados();
             }
 
         }
@@ -95,13 +97,10 @@ namespace Squeeze.Formulários
             
             List<Album> listaAl = daoalb.ListarDados(al1);
 
-<<<<<<< HEAD
                 for (int x = 0; x < listaAl.Count; x++)
-=======
             cmbAlbum.Items.Clear();
 
             for (int x = 0; x < listaAl.Count; x++)
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
             {
 
                Album alb = daoalb.procurarId(listaAl[x].IdAlbum);
@@ -117,14 +116,27 @@ namespace Squeeze.Formulários
             txtDuracao.Text = ("");
 
         }
-<<<<<<< HEAD
-=======
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(dgvFaixas.CurrentRow.Cells[0].Value);
+
+            Faixa f = new Faixa(id);
             DAOFaixa df = new DAOFaixa();
+
+            df.excluirFaixa(f);
+
             dgvFaixas.DataSource = df.ListarDados();
         }
->>>>>>> 5786d558b8e7ab8755a49f5d5bde86217abbdb72
+
+        private void frmFaixas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbAlbum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

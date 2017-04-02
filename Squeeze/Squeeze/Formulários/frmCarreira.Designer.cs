@@ -33,7 +33,7 @@
             this.txtCarreira = new System.Windows.Forms.TextBox();
             this.dgvCarreira = new System.Windows.Forms.DataGridView();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnListar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarreira)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,6 +49,7 @@
             this.lblCarreira.Size = new System.Drawing.Size(85, 13);
             this.lblCarreira.TabIndex = 0;
             this.lblCarreira.Text = "Carreira Musical:";
+//            this.lblCarreira.Click += new System.EventHandler(this.lblCarreira_Click);
             // 
             // txtCarreira
             // 
@@ -56,34 +57,43 @@
             this.txtCarreira.Name = "txtCarreira";
             this.txtCarreira.Size = new System.Drawing.Size(134, 20);
             this.txtCarreira.TabIndex = 1;
+        //    this.txtCarreira.TextChanged += new System.EventHandler(this.txtCarreira_TextChanged);
             // 
             // dgvCarreira
             // 
             this.dgvCarreira.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarreira.Location = new System.Drawing.Point(60, 129);
             this.dgvCarreira.Name = "dgvCarreira";
+            this.dgvCarreira.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCarreira.Size = new System.Drawing.Size(244, 112);
             this.dgvCarreira.TabIndex = 2;
+            //      this.dgvCarreira.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCarreira_CellContentClick);
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
             this.btnCadastrar.Location = new System.Drawing.Point(60, 261);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(112, 30);
             this.btnCadastrar.TabIndex = 3;
             this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // btnListar
+            // btnExcluir
             // 
-            this.btnListar.Location = new System.Drawing.Point(192, 261);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(112, 30);
-            this.btnListar.TabIndex = 4;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(192, 261);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(112, 30);
+            this.btnExcluir.TabIndex = 4;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // pictureBox1
             // 
@@ -105,14 +115,14 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(357, 304);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnListar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.dgvCarreira);
             this.Controls.Add(this.txtCarreira);
             this.Controls.Add(this.lblCarreira);
             this.Name = "frmCarreira";
             this.Text = "Carreira Musical";
-//            this.Load += new System.EventHandler(this.frmCarreira_Load);
+         //   this.Load += new System.EventHandler(this.frmCarreira_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarreira)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -126,7 +136,7 @@
         private System.Windows.Forms.TextBox txtCarreira;
         private System.Windows.Forms.DataGridView dgvCarreira;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

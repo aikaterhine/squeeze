@@ -18,6 +18,8 @@ namespace Squeeze.DAO
         private Conexao conex = new Conexao();
         private bool result = false;
         private int perfil;
+        private Usuario usuario = new Usuario();
+
 
         public DAOUsuario()
         {
@@ -43,6 +45,8 @@ namespace Squeeze.DAO
 
         public bool validar(Usuario u)
         {
+            con = conex.obterConexao();
+
             comando = "select * from usuario where email = '" + u.Email + "' and senha = '" + u.Senha + "';";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
@@ -68,6 +72,24 @@ namespace Squeeze.DAO
             }
 
             return perfil;
+        }
+
+        public Usuario procurar(Usuario u)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from usuario where nome = '" + u.Nome + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                usuario = new Usuario(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("email"), cursor.GetString("senha"), cursor.GetInt32("tipo"));
+            }
+
+            return usuario;
         }
     }
 }

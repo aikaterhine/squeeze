@@ -99,7 +99,7 @@
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(199, 365);
+            this.button1.Location = new System.Drawing.Point(140, 365);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 24);
             this.button1.TabIndex = 26;
@@ -114,7 +114,7 @@
             this.dgvArtista.Location = new System.Drawing.Point(182, 111);
             this.dgvArtista.Name = "dgvArtista";
             this.dgvArtista.ReadOnly = true;
-            this.dgvArtista.Size = new System.Drawing.Size(417, 232);
+            this.dgvArtista.Size = new System.Drawing.Size(336, 232);
             this.dgvArtista.TabIndex = 27;
             this.dgvArtista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArtista_CellDoubleClick);
             // 
@@ -123,7 +123,7 @@
             this.btnListar.BackColor = System.Drawing.Color.Transparent;
             this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListar.ForeColor = System.Drawing.Color.White;
-            this.btnListar.Location = new System.Drawing.Point(415, 365);
+            this.btnListar.Location = new System.Drawing.Point(356, 365);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(162, 25);
             this.btnListar.TabIndex = 28;
@@ -186,7 +186,7 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(362, 22);
+            this.txtPesquisa.Location = new System.Drawing.Point(293, 22);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(206, 20);
             this.txtPesquisa.TabIndex = 34;
@@ -197,7 +197,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(557, 18);
+            this.pictureBox2.Location = new System.Drawing.Point(488, 18);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 27);
             this.pictureBox2.TabIndex = 35;
@@ -207,7 +207,7 @@
             // 
             this.BackgroundImage = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(614, 402);
+            this.ClientSize = new System.Drawing.Size(529, 402);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.groupBox1);
@@ -224,6 +224,7 @@
             this.Controls.Add(this.txtNome);
             this.Name = "frmArtista";
             this.Text = "Cadastro de Artista";
+            this.Load += new System.EventHandler(this.frmArtista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
