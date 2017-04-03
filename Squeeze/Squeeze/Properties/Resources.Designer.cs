@@ -113,6 +113,26 @@ namespace Squeeze.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Circled_Pause_64px {
+            get {
+                object obj = ResourceManager.GetObject("Circled Pause_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circulo_play_sem_ser_pintado {
+            get {
+                object obj = ResourceManager.GetObject("circulo play sem ser pintado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cropped_121256_papel_de_parede_psicodelico_1920x1200 {
             get {
                 object obj = ResourceManager.GetObject("cropped-121256_papel-de-parede-psicodelico_1920x1200", resourceCulture);
@@ -136,6 +156,16 @@ namespace Squeeze.Properties {
         internal static System.Drawing.Bitmap halsey_png_by_breathinparadise_d92vnik {
             get {
                 object obj = ResourceManager.GetObject("halsey_png_by_breathinparadise-d92vnik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hearts_52px {
+            get {
+                object obj = ResourceManager.GetObject("Hearts_52px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +286,16 @@ namespace Squeeze.Properties {
         internal static System.Drawing.Bitmap onlinelogomaker_101716_1546_7668 {
             get {
                 object obj = ResourceManager.GetObject("onlinelogomaker-101716-1546-7668", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Open_Folder_50px {
+            get {
+                object obj = ResourceManager.GetObject("Open Folder_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

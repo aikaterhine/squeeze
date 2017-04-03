@@ -63,14 +63,8 @@ namespace Squeeze.Formulários
             }
             catch (MySqlException)
             {
-                DialogResult confirm = MessageBox.Show("Há referências em outras tabelas. Prosseguir com a operação resultará"
-                    + " em perda de dados. Deseja continuar?", "Erro ao excluir registro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
-
-                if (confirm.ToString().ToUpper() == "YES")
-                {
-                    dg.excluirGeneroArtista(g);
-                    dg.excluirGenero(g);
-                }
+                DGenero dia = new DGenero(id);
+                dia.Show();
             }
             
             dgvGenero.DataSource = dg.ListarDados();

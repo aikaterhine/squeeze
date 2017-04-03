@@ -55,6 +55,19 @@ namespace Squeeze.DAO
             return lista;
         }
 
+        public void atualizarCarreiraArtista(int anterior, Carreira atual)
+        {
+            con = conex.obterConexao();
+
+            comando = "update carreiraartista set idcarreira = '" + atual.Id + "' where idcarreira = '" + anterior + "' ;";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
         public void excluirCarreira(Carreira c)
         {
             con = conex.obterConexao();

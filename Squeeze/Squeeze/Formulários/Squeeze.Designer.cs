@@ -42,28 +42,26 @@
             this.flatCheckBox4 = new FlatUI.FlatCheckBox();
             this.flatCheckBox3 = new FlatUI.FlatCheckBox();
             this.flatCheckBox2 = new FlatUI.FlatCheckBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.cmbUsuario = new System.Windows.Forms.ComboBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.flatCheckBox1 = new FlatUI.FlatCheckBox();
             this.txtArtista = new FlatUI.FlatLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.formSkin1 = new FlatUI.FormSkin();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.flatTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            this.formSkin1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -72,7 +70,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.formSkin1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flatClose1
@@ -284,6 +284,46 @@
             this.flatCheckBox2.TabIndex = 16;
             this.flatCheckBox2.Text = "Favoritar";
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Squeeze.Properties.Resources.imagine_dragon___png___lb1817_by_juanchoperez_d79z6wb;
+            this.pictureBox9.Location = new System.Drawing.Point(737, 232);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(119, 100);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 15;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Squeeze.Properties.Resources.lana_del_rey_png_by_maarcopngs_da7zzlt;
+            this.pictureBox8.Location = new System.Drawing.Point(632, 180);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(100, 154);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 14;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Squeeze.Properties.Resources.Katy_Perry_PNG_Picture;
+            this.pictureBox7.Location = new System.Drawing.Point(737, 36);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(119, 190);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 13;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Squeeze.Properties.Resources.Steve_Aoki;
+            this.pictureBox6.Location = new System.Drawing.Point(631, 36);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(102, 138);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
+            // 
             // cmbUsuario
             // 
             this.cmbUsuario.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -296,6 +336,46 @@
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.Size = new System.Drawing.Size(183, 25);
             this.cmbUsuario.TabIndex = 1;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Squeeze.Properties.Resources.sia_png_by_maarcopngs_da6y3v7;
+            this.pictureBox5.Location = new System.Drawing.Point(339, 169);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(127, 164);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Squeeze.Properties.Resources.lorde_png_2_by_zkresources_d7r6pzg;
+            this.pictureBox4.Location = new System.Drawing.Point(471, 36);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(155, 299);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Squeeze.Properties.Resources.alessia;
+            this.pictureBox3.Location = new System.Drawing.Point(211, 170);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(122, 165);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Squeeze.Properties.Resources.halsey_png_by_breathinparadise_d92vnik;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 300);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // axWindowsMediaPlayer1
             // 
@@ -334,6 +414,16 @@
             this.txtArtista.TabIndex = 2;
             this.txtArtista.Text = "Lorde";
             this.txtArtista.Click += new System.EventHandler(this.txtArtista_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Squeeze.Properties.Resources.imagine_dragon___png___lb1817_by_juanchoperez_d79z6wb;
+            this.pictureBox2.Location = new System.Drawing.Point(210, 36);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(256, 128);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // tabPage2
             // 
@@ -395,96 +485,6 @@
             this.formSkin1.Text = "Squeeze";
             this.formSkin1.Click += new System.EventHandler(this.formSkin1_Click);
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Squeeze.Properties.Resources.imagine_dragon___png___lb1817_by_juanchoperez_d79z6wb;
-            this.pictureBox9.Location = new System.Drawing.Point(737, 232);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(119, 100);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 15;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Squeeze.Properties.Resources.lana_del_rey_png_by_maarcopngs_da7zzlt;
-            this.pictureBox8.Location = new System.Drawing.Point(632, 180);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(100, 154);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 14;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Squeeze.Properties.Resources.Katy_Perry_PNG_Picture;
-            this.pictureBox7.Location = new System.Drawing.Point(737, 36);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(119, 190);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 13;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Squeeze.Properties.Resources.Steve_Aoki;
-            this.pictureBox6.Location = new System.Drawing.Point(631, 36);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(102, 138);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 12;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Squeeze.Properties.Resources.sia_png_by_maarcopngs_da6y3v7;
-            this.pictureBox5.Location = new System.Drawing.Point(339, 169);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(127, 164);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Squeeze.Properties.Resources.lorde_png_2_by_zkresources_d7r6pzg;
-            this.pictureBox4.Location = new System.Drawing.Point(471, 36);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(155, 299);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Squeeze.Properties.Resources.alessia;
-            this.pictureBox3.Location = new System.Drawing.Point(211, 170);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(122, 165);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Squeeze.Properties.Resources.halsey_png_by_breathinparadise_d92vnik;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 300);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Squeeze.Properties.Resources.imagine_dragon___png___lb1817_by_juanchoperez_d79z6wb;
-            this.pictureBox2.Location = new System.Drawing.Point(210, 36);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(256, 128);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
             // Squeeze
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -501,8 +501,6 @@
             this.flatTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
-            this.formSkin1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -511,7 +509,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.formSkin1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -62,14 +62,8 @@ namespace Squeeze.Formulários
             }
             catch (MySqlException)
             {
-                DialogResult confirm = MessageBox.Show("Há referências em outras tabelas. Prosseguir com a operação resultará"
-                    + "em perda de dados. Deseja continuar?", "Erro ao excluir registro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
-
-                if (confirm.ToString().ToUpper() == "YES") {
-
-                    da.excluirCarreiraArtista(c);
-                    dc.excluirCarreira(c);
-                }
+                DCarreira d = new DCarreira(id);
+                d.Show();
             }
 
             DAOCarreira dc1 = new DAOCarreira();

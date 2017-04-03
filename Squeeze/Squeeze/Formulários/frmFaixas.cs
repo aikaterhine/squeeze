@@ -138,5 +138,13 @@ namespace Squeeze.Formulários
         {
 
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgvFaixas.CurrentRow.Cells[0].Value);
+
+            dgvFaixas.
+
+        }
     }
 }

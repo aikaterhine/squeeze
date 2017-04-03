@@ -44,6 +44,21 @@ namespace Squeeze.DAO
             return lista;
         }
 
+
+        public void atualizarGeneroArtista(int anterior, int atual)
+        {
+            con = conex.obterConexao();
+
+            comando = "update generoartista set idgenero = '" + atual + "' where idgenero = '" + anterior + "' ;";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
+
         public void salvar(Genero g)
         {
             con = conex.obterConexao();

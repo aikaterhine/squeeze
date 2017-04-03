@@ -23,8 +23,17 @@ namespace Squeeze.Formulários
 
         private void btnArtista_Click(object sender, EventArgs e)
         {
-            PanelArtista art = new PanelArtista(); 
-            this.panelPrincipal.Controls.Add(art);
+            frmArtista frm = new frmArtista();
+            frm.TopLevel = false;
+            frm.AutoSize = true;
+            panelPrincipal.Controls.Add(frm);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
         }
     }
 }
