@@ -14,12 +14,20 @@ namespace Squeeze.Formulários
 {
     public partial class frmFaixas : Form
     {
+        DAOFaixa df = new DAOFaixa();
+        int anterior;
+
         public frmFaixas()
         {
             InitializeComponent();
 
+            btnCancelar.Hide();
+            btnConfirmar.Hide();
+
             DAOArtista da = new DAOArtista();
             List<Artista> listaG = da.ListarDados();
+            dgvFaixas.Rows[0].Selected = true;
+
             for (int x = 0; x < listaG.Count; x++)
             {
 
@@ -117,7 +125,7 @@ namespace Squeeze.Formulários
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(dgvFaixas.CurrentRow.Cells[0].Value);
 
@@ -129,22 +137,51 @@ namespace Squeeze.Formulários
             dgvFaixas.DataSource = df.ListarDados();
         }
 
-        private void frmFaixas_Load(object sender, EventArgs e)
+        private void dgvFaixas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnCadastrar.Hide();
+            btnExcluir.Hide();
+            btnConfirmar.Show();
+            btnCancelar.Show();
 
+
+            anterior = Convert.ToInt32(dgvFaixas.Rows[e.RowIndex].Cells[0].Value);
+
+            Faixa f = df.procurarId(anterior);
+
+            txtFaixa.Text = f.Nome;
+            txtDuracao.Text = f.Duracao;
         }
 
-        private void cmbAlbum_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            string faixa = txtFaixa.Text;
+            string duracao = txtDuracao.Text;
 
+            if (faixa.Equals("") || duracao.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+            }
+
+            else
+            {
+                df.atualizarFaixa(anterior, faixa, duracao);
+                limpar();
+                btnCancelar.Hide();
+                btnConfirmar.Hide();
+                btnCadastrar.Show();
+                btnExcluir.Show();
+                dgvFaixas.DataSource = df.ListarDados();
+            }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dgvFaixas.CurrentRow.Cells[0].Value);
-
-            dgvFaixas.
-
+            limpar();
+            btnCancelar.Hide();
+            btnConfirmar.Hide();
+            btnCadastrar.Show();
+            btnExcluir.Show();
         }
     }
 }

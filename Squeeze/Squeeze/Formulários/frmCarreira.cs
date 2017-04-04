@@ -17,12 +17,21 @@ namespace Squeeze.Formulários
     {
 
         DAOArtista da = new DAOArtista();
+        DAOCarreira dc = new DAOCarreira();
+
+        private int anterior;
 
         public frmCarreira()
         {
             InitializeComponent();
+
+            btnConfirmar.Hide();
+            btnCancelar.Hide();
+
             DAOCarreira dc = new DAOCarreira();
             dgvCarreira.DataSource = dc.ListarDados();
+            dgvCarreira.Rows[0].Selected = true;
+
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -75,6 +84,52 @@ namespace Squeeze.Formulários
             this.Hide();
             Form2 f = new Form2();
             f.Visible = true;
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string nome = txtCarreira.Text;
+
+            if (nome.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+            }
+
+            else
+            {
+                dc.atualizarCarreira(anterior, nome);
+
+                limpar();
+                btnCancelar.Hide();
+                btnConfirmar.Hide();
+                btnCadastrar.Show();
+                btnExcluir.Show();
+
+                dgvCarreira.DataSource = dc.ListarDados();
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpar();
+            btnCancelar.Hide();
+            btnConfirmar.Hide();
+            btnCadastrar.Show();
+            btnExcluir.Show();
+        }
+
+        private void dgvCarreira_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnCadastrar.Hide();
+            btnExcluir.Hide();
+            btnConfirmar.Show();
+            btnCancelar.Show();
+
+            anterior = Convert.ToInt32(dgvCarreira.Rows[e.RowIndex].Cells[1].Value);
+
+            Carreira c = dc.procurarId(anterior);
+
+            txtCarreira.Text = c.Nome;
         }
     }
 }

@@ -82,11 +82,12 @@ namespace Squeeze.DAO
             con.Close();
         }
 
-        public void desfavoritarArtista(Artista a)
+        public void desfavoritarArtista(Artista a, Usuario usu)
         {
             con = conex.obterConexao();
             
-            comando = "delete from artistafavorito where idartista = '" + a.Id + "';";
+            comando = "delete from artistafavorito where idartista = '" + a.Id + "' and idusuario = '" + usu.Idusuario + "';";
+
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
             comandoSQL.Parameters.AddWithValue("@ida", a.Id);
@@ -94,6 +95,37 @@ namespace Squeeze.DAO
             comandoSQL.Prepare();
             comandoSQL.ExecuteNonQuery();
             con.Close();
+        }
+
+        public void desfavoritarArtista(Artista a)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from artistafavorito where idartista = '" + a.Id + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public Artista procurarId(int anterior)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from artista where id = '" + anterior + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                art = new Artista(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("dtcarreira"));
+            }
+
+            return art;
         }
 
         public bool verificar(Artista a, Usuario u)
@@ -127,6 +159,31 @@ namespace Squeeze.DAO
             }
 
             return lista;
+        }
+
+        internal void excluirArtista(Artista art)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from artista where id = '" + art.Id + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void atualizarArtista(int anterior, string nome, string dt)
+        {
+            con = conex.obterConexao();
+
+            comando = "update artista set nome = '" + nome + "', dtcarreira = '" + dt + "' where id = '" + anterior + "' ;";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
         }
 
         public Artista procurar(Artista a)

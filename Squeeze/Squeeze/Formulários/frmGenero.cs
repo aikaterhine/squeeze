@@ -15,14 +15,20 @@ namespace Squeeze.Formulários
 {
     public partial class frmGenero : Form
     {
+        private DAOGenero dg = new DAOGenero();
+        private int anterior;
 
         public frmGenero()
         {
             InitializeComponent();
 
-            DAOGenero dg = new DAOGenero();
+            btnConfirmar.Hide();
+            btnCancelar.Hide();
+
 
             dgvGenero.DataSource = dg.ListarDados();
+            dgvGenero.Rows[0].Selected = true;
+
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -77,9 +83,50 @@ namespace Squeeze.Formulários
             f.Visible = true;
         }
 
-        private void frmGenero_Load(object sender, EventArgs e)
+        private void dgvGenero_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnCadastrar.Hide();
+            btnExcluir.Hide();
+            btnConfirmar.Show();
+            btnCancelar.Show();
 
+            anterior = Convert.ToInt32 (dgvGenero.Rows[e.RowIndex].Cells[1].Value);
+
+            Genero g = dg.procurarId(anterior);
+
+            txtNome.Text = g.NomeGen;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpar();
+            btnCancelar.Hide();
+            btnConfirmar.Hide();
+            btnCadastrar.Show();
+            btnExcluir.Show();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string nome = txtNome.Text;
+
+            if (nome.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+            }
+
+            else
+            {
+                dg.atualizarGenero(anterior, nome);
+
+                limpar();
+                btnCancelar.Hide();
+                btnConfirmar.Hide();
+                btnCadastrar.Show();
+                btnExcluir.Show();
+
+                dgvGenero.DataSource = dg.ListarDados();
+            }
         }
     }
     }

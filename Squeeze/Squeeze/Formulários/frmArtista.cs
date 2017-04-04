@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Documents;
+using MySql.Data.MySqlClient;
 
 namespace Squeeze
 {
@@ -19,12 +20,20 @@ namespace Squeeze
     {
         DAOGenero dg1 = new DAOGenero();
         DAOArtista da = new DAOArtista();
+        DAOFaixa df = new DAOFaixa();
+        DAOAlbum d = new DAOAlbum();
+        DAOCarreira dc = new DAOCarreira();
+        int anterior;
 
         public frmArtista()
         {
             
             InitializeComponent();
+            btnCancelar.Hide();
+            btnConfirmar.Hide();
+
             dgvArtista.DataSource = da.ListarDados();
+            dgvArtista.Rows[0].Selected = true;
 
             DAOGenero dg = new DAOGenero();
             List<Genero> listaG = dg.ListarDados();
@@ -84,17 +93,20 @@ namespace Squeeze
             cmbCarreira.Text = ("");
         }
 
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void dgvArtista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            /* AQUI TEM QUE PEGAR A ID DA LINHA SELECIONADA 
-             * E MANDAR COMO ARGUMENTO PARA EDITAR ARTISTA, 
-             * PARA ATUALIZAR OS CAMPOS
-             */            
+            btnCadastrar.Hide();
+            btnExcluir.Hide();
+            btnConfirmar.Show();
+            btnCancelar.Show();
+
+
+            anterior = Convert.ToInt32(dgvArtista.Rows[e.RowIndex].Cells[0].Value);
+
+            Artista a = da.procurarId(anterior);
+
+            txtNome.Text = a.Nome;
+            dtpNascimento.Text = a.Dt;
         }
         
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -116,6 +128,81 @@ namespace Squeeze
         private void frmArtista_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string nome = txtNome.Text;
+            string dt = dtpNascimento.Text;
+
+            if (nome.Equals("") || dt.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+            }
+
+            else
+            {
+                da.atualizarArtista(anterior, nome, dt);
+                limpar();
+                btnCancelar.Hide();
+                btnConfirmar.Hide();
+                btnCadastrar.Show();
+                btnExcluir.Show();
+                dgvArtista.DataSource = da.ListarDados();
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpar();
+            btnCancelar.Hide();
+            btnConfirmar.Hide();
+            btnCadastrar.Show();
+            btnExcluir.Show();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgvArtista.CurrentRow.Cells[0].Value);
+            Artista art = new Artista(id);
+
+            try
+            {
+                da.excluirArtista(art);
+            }
+            catch (MySqlException)
+            {
+                DialogResult confirm = MessageBox.Show("Há referências em outras tabelas. Prosseguir com a operação resultará"
+                    + "em perda de dados. Deseja continuar?", "Erro ao excluir registro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+                if (confirm.ToString().ToUpper() == "YES")
+                {
+
+                    List<Album> listaA = d.ListarDados(art);
+                    
+                    for (int x = 0; x < listaA.Count; x++)
+                    {
+                        Album dal = new Album(listaA[x].IdAlbum);
+                        df.excluirFaixa(dal);
+                    }
+                    for (int x = 0; x < listaA.Count; x++)
+                    {
+                        Album dal = new Album(listaA[x].IdAlbum);
+                        d.excluirAlbumArtista(dal);
+                    }
+                    for (int x = 0; x < listaA.Count; x++)
+                    {
+                        Album dal = new Album(listaA[x].IdAlbum);
+                        d.excluirAlbum(dal);
+                    }
+
+                    dc.excluirCarreiraArtista(art);
+                    dg1.excluirGeneroArtista(art);
+                    da.desfavoritarArtista(art);
+                    da.excluirArtista(art);
+                }
+            }
+            dgvArtista.DataSource = da.ListarDados();
         }
     }
 }

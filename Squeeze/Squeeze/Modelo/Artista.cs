@@ -18,7 +18,11 @@ namespace Squeeze.Modelo
             this.nome = n;
         }
 
-
+        public Artista(int id)
+        {
+            this.id = id;
+        }
+        
         public Artista(string n, string dt)
         {
             this.nome = n;

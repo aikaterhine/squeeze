@@ -405,3 +405,4 @@ C:\Users\CAT-CAR-TUL\Documents\GitHub\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.
 C:\Users\CAT-CAR-TUL\Documents\GitHub\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.csproj.GenerateResource.Cache
 C:\Users\CAT-CAR-TUL\Documents\GitHub\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.Formulários.DialogCarreira.resources
 C:\Users\CAT-CAR-TUL\Documents\GitHub\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.Formulários.DCarreira.resources
+C:\Users\CAT-CAR-TUL\Documents\GitHub\squeeze\Squeeze\Squeeze\obj\Debug\Squeeze.Formulários.DGenero.resources

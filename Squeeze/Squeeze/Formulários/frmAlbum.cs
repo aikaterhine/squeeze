@@ -19,12 +19,18 @@ namespace Squeeze
         DAOAlbum d = new DAOAlbum();
         DAOArtista da = new DAOArtista();
         DAOFaixa df = new DAOFaixa();
+        int anterior;
 
 
         public frmAlbum()
         {
             InitializeComponent();
+
+            btnConfirmar.Hide();
+            btnCancelar.Hide();
+
             dgvAlbum.DataSource = d.ListarDados();
+            dgvAlbum.Rows[0].Selected = true;
 
 
             List<Artista> listaG = da.ListarDados();
@@ -101,6 +107,57 @@ namespace Squeeze
         private void frmAlbum_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string album = txtAlbum.Text;
+            string estudio = txtEstudio.Text;
+            string lancamento = dtmLancamento.Text;
+
+            if (album.Equals("") || estudio.Equals("") || lancamento.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+            }
+
+            else
+            {
+                d.atualizarAlbum(anterior, album, estudio, lancamento);
+                limpar();
+
+                btnCancelar.Hide();
+                btnConfirmar.Hide();
+                btnCadastrar.Show();
+                btnExcluir.Show();
+                dgvAlbum.DataSource = da.ListarDados();
+
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpar();
+            btnCancelar.Hide();
+            btnConfirmar.Hide();
+            btnCadastrar.Show();
+            btnExcluir.Show();
+        }
+
+        private void dgvAlbum_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnCadastrar.Hide();
+            btnExcluir.Hide();
+            btnConfirmar.Show();
+            btnCancelar.Show();
+
+
+            anterior = Convert.ToInt32(dgvAlbum.Rows[e.RowIndex].Cells[0].Value);
+
+            Album a = d.procurarId(anterior);
+
+            txtAlbum.Text = a.Nome;
+            txtEstudio.Text = a.Estudio;
+            dtmLancamento.Text = a.Dt;
         }
     }
 }

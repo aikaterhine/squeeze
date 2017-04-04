@@ -44,12 +44,11 @@ namespace Squeeze.DAO
             return lista;
         }
 
-
-        public void atualizarGeneroArtista(int anterior, int atual)
+        public void atualizarGeneroArtista(int anterior, Genero genero)
         {
             con = conex.obterConexao();
 
-            comando = "update generoartista set idgenero = '" + atual + "' where idgenero = '" + anterior + "' ;";
+            comando = "update generoartista set idgenero = '" + genero.IdGenero + "' where idgenero = '" + anterior + "' ;";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
@@ -57,7 +56,6 @@ namespace Squeeze.DAO
             comandoSQL.ExecuteNonQuery();
             con.Close();
         }
-
 
         public void salvar(Genero g)
         {
@@ -85,11 +83,43 @@ namespace Squeeze.DAO
             con.Close();
         }
 
+        public Genero procurarId(int anterior)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from tipogenero where id = '" + anterior + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                cat = new Genero(cursor.GetInt32("id"), cursor.GetString("nome"));
+                lista.Add(cat);
+            }
+            return cat;
+        }
+    
+
         public void excluirGeneroArtista(Genero g)
         {
             con = conex.obterConexao();
 
             comando = "delete from generoartista where idgenero = '" + g.IdGenero + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void atualizarGenero(int anterior, string nome)
+        {
+            con = conex.obterConexao();
+
+            comando = "update tipogenero set nome = '" + nome + "' where id = '" + anterior + "' ;";
+
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
             comandoSQL.Prepare();
@@ -111,10 +141,19 @@ namespace Squeeze.DAO
                 cat = new Genero(cursor.GetInt32("id"), cursor.GetString("nome"));
                 lista.Add(cat);
             }
-
             return cat;
-
         }
 
+        public void excluirGeneroArtista(Artista art)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from generoartista where idartista = '" + art.Id + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

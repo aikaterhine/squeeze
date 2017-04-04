@@ -17,7 +17,7 @@ namespace Squeeze
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCarreira());
+            Application.Run(new frmArtista());
         }
     }
 }

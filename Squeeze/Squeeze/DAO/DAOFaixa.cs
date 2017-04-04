@@ -14,6 +14,7 @@ namespace Squeeze.DAO
         private MySqlDataReader cursor;
         private List<Faixa> lista = new List<Faixa>();
         private Conexao conex = new Conexao();
+        private Faixa f;
 
 
         public DAOFaixa()
@@ -65,7 +66,7 @@ namespace Squeeze.DAO
             con = conex.obterConexao();
 
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
-            comando = "select * from faixa where idalbum = '" + al.IdAlbum+ "';";
+            comando = "select * from faixa where idalbum = '" + al.IdAlbum + "';";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
@@ -99,6 +100,35 @@ namespace Squeeze.DAO
 
             return lista;
 
+        }
+
+        public Faixa procurarId(int anterior)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from faixa where id = '" + anterior + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+               f = new Faixa(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("duracao"), cursor.GetInt32("idalbum"));
+            }
+            return f;
+        }
+
+        public void atualizarFaixa(int anterior, string faixa, string duracao)
+        {
+            con = conex.obterConexao();
+
+            comando = "update faixa set nome = '" + faixa + "', duracao = '" + duracao + "' where id = '" + anterior + "' ;";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

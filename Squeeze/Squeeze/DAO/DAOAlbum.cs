@@ -54,6 +54,18 @@ namespace Squeeze
             con.Close();
         }
 
+        public void excluirAlbumArtista(Album a)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from albumartista where idalbum = '" + a.IdAlbum + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
 
         public void salvarAlbumArtista(Artista ar, Album al)
         {
@@ -129,6 +141,18 @@ namespace Squeeze
             return lista;
         }
 
+        public void atualizarAlbum(int anterior, string album, string estudio, string lancamento)
+        {
+            con = conex.obterConexao();
+
+            comando = "update album set nome = '" + album + "', estudio = '" + estudio + "', dtlancamento = '" + lancamento + "' where id = '" + anterior + "' ;";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
 
         public List<Album> ListarDados()
         {

@@ -34,15 +34,17 @@
             this.lblNascimento = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.dgvArtista = new System.Windows.Forms.DataGridView();
-            this.btnListar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.cmbCarreira = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.clbGenero = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtista)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -92,42 +94,44 @@
             this.txtNome.Size = new System.Drawing.Size(161, 20);
             this.txtNome.TabIndex = 18;
             // 
-            // button1
+            // btnCadastrar
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(212, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 24);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(78, 325);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(162, 24);
+            this.btnCadastrar.TabIndex = 26;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvArtista
             // 
             this.dgvArtista.AllowUserToAddRows = false;
             this.dgvArtista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArtista.Location = new System.Drawing.Point(254, 71);
+            this.dgvArtista.MultiSelect = false;
             this.dgvArtista.Name = "dgvArtista";
             this.dgvArtista.ReadOnly = true;
-            this.dgvArtista.Size = new System.Drawing.Size(336, 232);
+            this.dgvArtista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvArtista.Size = new System.Drawing.Size(336, 259);
             this.dgvArtista.TabIndex = 27;
             this.dgvArtista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArtista_CellDoubleClick);
             // 
-            // btnListar
+            // btnExcluir
             // 
-            this.btnListar.BackColor = System.Drawing.Color.Transparent;
-            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListar.ForeColor = System.Drawing.Color.White;
-            this.btnListar.Location = new System.Drawing.Point(428, 325);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(162, 25);
-            this.btnListar.TabIndex = 28;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = false;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(77, 358);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(162, 25);
+            this.btnExcluir.TabIndex = 28;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // cmbCarreira
             // 
@@ -189,19 +193,47 @@
             this.pictureBox2.TabIndex = 35;
             this.pictureBox2.TabStop = false;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(449, 348);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(101, 25);
+            this.btnCancelar.TabIndex = 50;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.Location = new System.Drawing.Point(310, 348);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(101, 25);
+            this.btnConfirmar.TabIndex = 49;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
             // frmArtista
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(669, 371);
+            this.ClientSize = new System.Drawing.Size(669, 395);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmbCarreira);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnListar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.dgvArtista);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblNascimento);
@@ -224,14 +256,16 @@
         private System.Windows.Forms.Label lblNascimento;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.DataGridView dgvArtista;
-        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.ComboBox cmbCarreira;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox clbGenero;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnConfirmar;
     }
 }

@@ -95,6 +95,35 @@ namespace Squeeze.DAO
             con.Close();
         }
 
+        public void atualizarCarreira(int anterior, string nome)
+        {
+            con = conex.obterConexao();
+
+            comando = "update tipocarreira set nome = '" + nome + "' where id = '" + anterior + "' ;";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public Carreira procurarId(int anterior)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from tipocarreira where id = '" + anterior + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                car = new Carreira(cursor.GetInt32("id"), cursor.GetString("nome"));
+            }
+            return car;
+        }
+
         public Carreira procurar(Carreira c)
         {
             con = conex.obterConexao();
@@ -108,6 +137,18 @@ namespace Squeeze.DAO
                 car = new Carreira(cursor.GetInt32("id"), cursor.GetString("nome"));
             }
             return car;
+        }
+
+        public void excluirCarreiraArtista(Artista art)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from carreiraartista where idartista = '" + art.Id + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

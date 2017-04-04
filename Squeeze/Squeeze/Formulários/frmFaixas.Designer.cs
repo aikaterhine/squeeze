@@ -44,8 +44,9 @@
             this.lblAlbum = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbArtistas = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaixas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,10 +60,13 @@
             this.duracaoF,
             this.Album});
             this.dgvFaixas.Location = new System.Drawing.Point(24, 91);
+            this.dgvFaixas.MultiSelect = false;
             this.dgvFaixas.Name = "dgvFaixas";
+            this.dgvFaixas.ReadOnly = true;
             this.dgvFaixas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFaixas.Size = new System.Drawing.Size(240, 240);
             this.dgvFaixas.TabIndex = 11;
+            this.dgvFaixas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFaixas_CellDoubleClick);
             // 
             // Id
             // 
@@ -120,7 +124,6 @@
             this.cmbAlbum.Name = "cmbAlbum";
             this.cmbAlbum.Size = new System.Drawing.Size(167, 21);
             this.cmbAlbum.TabIndex = 39;
-            this.cmbAlbum.SelectedIndexChanged += new System.EventHandler(this.cmbAlbum_SelectedIndexChanged);
             this.cmbAlbum.SelectedValueChanged += new System.EventHandler(this.cmbAlbum_SelectedValueChanged);
             // 
             // btnCadastrar
@@ -194,31 +197,43 @@
             this.cmbArtistas.TabIndex = 42;
             this.cmbArtistas.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button1
+            // btnExcluir
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(309, 351);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 25);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Excluir";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(309, 351);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(166, 25);
+            this.btnExcluir.TabIndex = 44;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
             // 
-            // btnEditar
+            // btnConfirmar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(58, 351);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(166, 25);
-            this.btnEditar.TabIndex = 45;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnConfirmar.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.Location = new System.Drawing.Point(24, 351);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(101, 25);
+            this.btnConfirmar.TabIndex = 45;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(163, 351);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(101, 25);
+            this.btnCancelar.TabIndex = 46;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmFaixas
             // 
@@ -227,8 +242,9 @@
             this.BackgroundImage = global::Squeeze.Properties.Resources._32c9dec15f5b9bf92081e8ea7acb2527;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(517, 388);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbArtistas);
             this.Controls.Add(this.pictureBox1);
@@ -242,7 +258,6 @@
             this.Controls.Add(this.dgvFaixas);
             this.Name = "frmFaixas";
             this.Text = "Cadastro de Faixas";
-            this.Load += new System.EventHandler(this.frmFaixas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaixas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -267,7 +282,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeF;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracaoF;
         private System.Windows.Forms.DataGridViewTextBoxColumn Album;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
