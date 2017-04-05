@@ -82,6 +82,24 @@ namespace Squeeze.DAO
             con.Close();
         }
 
+        public List<Artista> artistaAscencao()
+        {
+            con = conex.obterConexao();
+
+            comando = "select count(idartista)Qntd_Favoritos ,idartista from artistafavorito group by idartista order by Qntd_Favoritos DESC LIMIT 5;";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                Artista cat = new Artista(cursor.GetInt32("Qntd_Favoritos"), cursor.GetInt32("idartista"));
+                lista.Add(cat);
+            }
+            return lista;
+        }
+
         public void desfavoritarArtista(Artista a, Usuario usu)
         {
             con = conex.obterConexao();
@@ -147,6 +165,26 @@ namespace Squeeze.DAO
 
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
             comando = "Select * from artista";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                Artista cat = new Artista(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("dtcarreira"));
+                lista.Add(cat);
+            }
+
+            return lista;
+        }
+
+        public List<Artista> ListarDados(int id)
+        {
+            con = conex.obterConexao();
+
+            //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
+            comando = "select * from artista where id = '" + id + "';";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 

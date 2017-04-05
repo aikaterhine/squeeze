@@ -43,6 +43,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\Squeeze\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\..\..\..\..\Downloads\NAudio.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />

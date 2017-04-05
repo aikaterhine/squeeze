@@ -10,11 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
+using NAudio.Wave;
+using System.IO;
 
 namespace Squeeze.Formulários
 {
     public partial class Squeeze : Form
     {
+        string file;
+        IWavePlayer waveOutDevice;
+        WaveStream mainOutputStream;
+        WaveChannel32 volumeStream;
+
         public Squeeze()
         {
             InitializeComponent();
@@ -23,6 +30,7 @@ namespace Squeeze.Formulários
 
         private void Squeeze_Load(object sender, EventArgs e)
         {
+            waveOutDevice = new WaveOut();
         }
 
         private void flatCheckBox1_CheckedChanged(object sender)
@@ -91,5 +99,60 @@ namespace Squeeze.Formulários
         {
 
         }
-    }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DAOArtista da = new DAOArtista();
+            List<Artista> listaF = da.artistaAscencao();
+            List<Artista> listaA;
+            for (int x = 0; x < listaF.Count; x++)
+            {
+                listaA = da.ListarDados(listaF[x].Id);
+            }
+
+            MessageBox.Show(listaF[x].Nome);
+
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (File.Exists(openFileDialog.FileName))
+                {
+                    file = openFileDialog.FileName;
+                    mainOutputStream = CreateInputStream(openFileDialog.FileName);
+                }
+            }
+
+            btnPlay.Enabled = true;
+            btnPause.Enabled = true;
+        }
+
+        private WaveStream CreateInputStream(string fileName)
+        {
+            WaveChannel32 inputStream;
+            if (fileName.EndsWith(".mp3"))
+            {
+                WaveStream mp3Reader = new Mp3FileReader(fileName);
+                inputStream = new WaveChannel32(mp3Reader);
+            }
+            else
+            {
+                throw new InvalidOperationException("Unsupported extension");
+            }
+            volumeStream = inputStream;
+            return volumeStream;
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            waveOutDevice.Init(mainOutputStream);
+            waveOutDevice.Play();
+
+            btnPlay.Enabled = true;
+
+        }
+    } 
 }

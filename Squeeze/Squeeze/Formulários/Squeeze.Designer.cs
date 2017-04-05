@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Squeeze));
             this.flatClose1 = new FlatUI.FlatClose();
             this.flatMax1 = new FlatUI.FlatMax();
             this.flatMini1 = new FlatUI.FlatMini();
@@ -51,7 +50,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.flatCheckBox1 = new FlatUI.FlatCheckBox();
             this.txtArtista = new FlatUI.FlatLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -60,6 +58,12 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.formSkin1 = new FlatUI.FormSkin();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.PictureBox();
+            this.btnPlay = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.flatStatusBar1 = new FlatUI.FlatStatusBar();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.flatTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -70,9 +74,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.formSkin1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPause)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // flatClose1
@@ -135,6 +142,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage1.Controls.Add(this.btnPause);
+            this.tabPage1.Controls.Add(this.btnPlay);
+            this.tabPage1.Controls.Add(this.pictureBox12);
+            this.tabPage1.Controls.Add(this.flatStatusBar1);
             this.tabPage1.Controls.Add(this.flatCheckBox9);
             this.tabPage1.Controls.Add(this.flatCheckBox8);
             this.tabPage1.Controls.Add(this.flatCheckBox7);
@@ -152,7 +163,6 @@
             this.tabPage1.Controls.Add(this.pictureBox4);
             this.tabPage1.Controls.Add(this.pictureBox3);
             this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.axWindowsMediaPlayer1);
             this.tabPage1.Controls.Add(this.flatCheckBox1);
             this.tabPage1.Controls.Add(this.txtArtista);
             this.tabPage1.Controls.Add(this.pictureBox2);
@@ -377,15 +387,6 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(-1, 369);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(865, 44);
-            this.axWindowsMediaPlayer1.TabIndex = 4;
-            // 
             // flatCheckBox1
             // 
             this.flatCheckBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
@@ -448,6 +449,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -485,6 +487,71 @@
             this.formSkin1.Text = "Squeeze";
             this.formSkin1.Click += new System.EventHandler(this.formSkin1_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(107, 66);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(204, 34);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnPause
+            // 
+            this.btnPause.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.btnPause.BackgroundImage = global::Squeeze.Properties.Resources.Circled_Pause_64px;
+            this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPause.Enabled = false;
+            this.btnPause.Location = new System.Drawing.Point(432, 378);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(54, 35);
+            this.btnPause.TabIndex = 27;
+            this.btnPause.TabStop = false;
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.btnPlay.BackgroundImage = global::Squeeze.Properties.Resources.circulo_play_sem_ser_pintado;
+            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPlay.Enabled = false;
+            this.btnPlay.Location = new System.Drawing.Point(394, 382);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(38, 27);
+            this.btnPlay.TabIndex = 26;
+            this.btnPlay.TabStop = false;
+            this.btnPlay.Click += new System.EventHandler(this.pictureBox11_Click);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.pictureBox12.BackgroundImage = global::Squeeze.Properties.Resources.Open_Folder_50px;
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox12.Location = new System.Drawing.Point(345, 381);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(38, 27);
+            this.pictureBox12.TabIndex = 25;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            // 
+            // flatStatusBar1
+            // 
+            this.flatStatusBar1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flatStatusBar1.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.flatStatusBar1.ForeColor = System.Drawing.Color.White;
+            this.flatStatusBar1.Location = new System.Drawing.Point(3, 377);
+            this.flatStatusBar1.Name = "flatStatusBar1";
+            this.flatStatusBar1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatStatusBar1.ShowTimeDate = false;
+            this.flatStatusBar1.Size = new System.Drawing.Size(858, 36);
+            this.flatStatusBar1.TabIndex = 24;
+            this.flatStatusBar1.TextColor = System.Drawing.Color.White;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Squeeze
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -509,9 +576,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.formSkin1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnPause)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -532,7 +602,6 @@
         private System.Windows.Forms.TabPage tabPage5;
         private FlatUI.FormSkin formSkin1;
         private FlatUI.FlatCheckBox flatCheckBox1;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -550,5 +619,11 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox btnPause;
+        private System.Windows.Forms.PictureBox btnPlay;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private FlatUI.FlatStatusBar flatStatusBar1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
