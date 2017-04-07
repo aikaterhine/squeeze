@@ -114,6 +114,24 @@ namespace Squeeze.DAO
             con.Close();
         }
 
+        public List<Genero> recomendacoes(Genero gen)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from generoartista where idgenero = '" + gen.IdGenero + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                cat = new Genero(cursor.GetInt32("idartista"), cursor.GetInt32("idgenero"));
+                lista.Add(cat);
+            }
+            return lista;
+        }
+
         public void atualizarGenero(int anterior, string nome)
         {
             con = conex.obterConexao();
@@ -139,7 +157,6 @@ namespace Squeeze.DAO
             while (cursor.Read())
             {
                 cat = new Genero(cursor.GetInt32("id"), cursor.GetString("nome"));
-                lista.Add(cat);
             }
             return cat;
         }

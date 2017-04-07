@@ -37,7 +37,7 @@ namespace Squeeze
             for (int x = 0; x < listaG.Count; x++)
             {
 
-                cmbArtista.Items.Insert(x, listaG[x].Nome);
+                cmbArtista.Items.Insert(x, listaG[x].Id);
 
             }
         }

@@ -29,11 +29,12 @@ namespace Squeeze.DAO
         {
             con = conex.obterConexao();
 
-            comando = "insert into artista (nome, dtcarreira) values (@nome,@dt)";
+            comando = "insert into artista (nome, dtcarreira, img) values (@nome,@dt,@img)";
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
-            comandoSQL.Parameters.AddWithValue("@nome", a.Nome);
+            comandoSQL.Parameters.AddWithValue("@nome", a.Id);
             comandoSQL.Parameters.AddWithValue("@dt", a.Dt);
+            comandoSQL.Parameters.AddWithValue("@img", a.Img);
 
             comandoSQL.Prepare();
             comandoSQL.ExecuteNonQuery();
@@ -67,6 +68,26 @@ namespace Squeeze.DAO
             con.Close();
         }
 
+        public List<Artista> ListarDadosImagem(string result)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from artista where img = '" + result + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                art = new Artista(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("dtcarreira"), cursor.GetString("img"));
+                lista.Add(art);
+            }
+            con.Close();
+
+            return lista;
+        }
+        
         public void favoritarArtista(Artista a, Usuario u)
         {
             con = conex.obterConexao();
@@ -97,6 +118,8 @@ namespace Squeeze.DAO
                 Artista cat = new Artista(cursor.GetInt32("Qntd_Favoritos"), cursor.GetInt32("idartista"));
                 lista.Add(cat);
             }
+            con.Close();
+
             return lista;
         }
 
@@ -142,6 +165,7 @@ namespace Squeeze.DAO
             {
                 art = new Artista(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("dtcarreira"));
             }
+            con.Close();
 
             return art;
         }
@@ -155,6 +179,7 @@ namespace Squeeze.DAO
 
             cursor = comandoSQL.ExecuteReader();
             result = cursor.HasRows;
+            con.Close();
 
             return result;
         }
@@ -175,14 +200,17 @@ namespace Squeeze.DAO
                 Artista cat = new Artista(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("dtcarreira"));
                 lista.Add(cat);
             }
+            con.Close();
 
             return lista;
         }
 
         public List<Artista> ListarDados(int id)
         {
-            con = conex.obterConexao();
+            string strconexao = "server=localhost;userid=root;password=12345;database=squeezebd";
+            con = new MySqlConnection(strconexao);
 
+            con.Open();
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
             comando = "select * from artista where id = '" + id + "';";
 
@@ -195,6 +223,8 @@ namespace Squeeze.DAO
                 Artista cat = new Artista(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("dtcarreira"));
                 lista.Add(cat);
             }
+
+            con.Close();
 
             return lista;
         }
@@ -228,7 +258,7 @@ namespace Squeeze.DAO
         {
             con = conex.obterConexao();
 
-            comando = "select * from artista where nome = '" + a.Nome + "';";
+            comando = "select * from artista where nome = '" + a.Id + "';";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 
@@ -238,6 +268,7 @@ namespace Squeeze.DAO
             {
                 art = new Artista(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("dtcarreira"));
             }
+            con.Close();
 
             return art;
         }
@@ -254,6 +285,7 @@ namespace Squeeze.DAO
                 art = new Artista(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("dtcarreira"));
                 lista.Add(art);
             }
+            con.Close();
 
             return lista;
 

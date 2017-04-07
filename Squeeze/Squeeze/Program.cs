@@ -17,7 +17,7 @@ namespace Squeeze
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formulários.Squeeze());
+            Application.Run(new Formulários.Squeeze("Catarina"));
         }
     }
 }

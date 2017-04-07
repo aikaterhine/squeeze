@@ -15,6 +15,7 @@ namespace Squeeze.DAO
         private MySqlConnection con;
         private string comando;
         private MySqlDataReader cursor;
+        private List<Usuario> lista = new List<Usuario>();
         private Conexao conex = new Conexao();
         private bool result = false;
         private int perfil;
@@ -38,6 +39,19 @@ namespace Squeeze.DAO
 
 
 
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void preferencias(Usuario usuario, string genero)
+        {
+            comando = "insert into preferencias (idusuario, genero) values (@id,@genero)";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Parameters.AddWithValue("@id", usuario.Idusuario);
+            comandoSQL.Parameters.AddWithValue("@genero", genero);
+            
             comandoSQL.Prepare();
             comandoSQL.ExecuteNonQuery();
             con.Close();
@@ -90,6 +104,60 @@ namespace Squeeze.DAO
             }
 
             return usuario;
+        }
+
+        public List<Usuario> preferencias(Usuario usuario)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from preferencias where idusuario = '" + usuario.Idusuario + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                usuario = new Usuario(cursor.GetInt32("idusuario"), cursor.GetString("genero"));
+                lista.Add(usuario);
+            }
+            return lista;
+        }
+
+        public void excluirPreferencias(Usuario usu)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from preferencias where idusuario = '" + usu.Idusuario+ "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void excluirFavoritos(Usuario usu)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from artistafavorito where idusuario = '" + usu.Idusuario + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void excluirUsuario(Usuario usu)
+        {
+            con = conex.obterConexao();
+
+            comando = "delete from usuario where id = '" + usu.Idusuario + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

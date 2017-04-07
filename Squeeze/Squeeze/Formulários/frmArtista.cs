@@ -24,23 +24,23 @@ namespace Squeeze
         DAOAlbum d = new DAOAlbum();
         DAOCarreira dc = new DAOCarreira();
         int anterior;
+        string nomeimagem = "";
 
         public frmArtista()
         {
-            
+
             InitializeComponent();
             btnCancelar.Hide();
             btnConfirmar.Hide();
-
+            
             dgvArtista.DataSource = da.ListarDados();
             dgvArtista.Rows[0].Selected = true;
 
             DAOGenero dg = new DAOGenero();
             List<Genero> listaG = dg.ListarDados();
-            for (int x = 0; x < listaG.Count; x++) {
-                
+            for (int x = 0; x < listaG.Count; x++)
+            {
                 clbGenero.Items.Insert(x, listaG[x].NomeGen);
-
             }
 
             DAOCarreira dc = new DAOCarreira();
@@ -49,8 +49,10 @@ namespace Squeeze
             {
                 cmbCarreira.Items.Add(listaC[x].Nome);
             }
+            cmbCarreira.SelectedIndex = 0;
+
         }
-     
+
         private void button1_Click(object sender, EventArgs e)
         {
             string nome;
@@ -72,19 +74,18 @@ namespace Squeeze
 
                 DAOCarreira dc = new DAOCarreira();
 
-                Artista a = new Artista(nome, dt);
+                Artista a = new Artista(nome, dt, nomeimagem);
                 Carreira c = new Carreira(car);
                 da.salvar(a);
                 dc.salvarCarreiraArtista(da.procurar(a), dc.procurar(c));
 
                 foreach (object item in clbGenero.CheckedItems)
-                {                        
-                        da.salvarGeneroArtista(da.procurar(a), dg1.procurar(item.ToString()));
+                {
+                    da.salvarGeneroArtista(da.procurar(a), dg1.procurar(item.ToString()));
                 }
                 limpar();
-
-                dgvArtista.DataSource = da.ListarDados();
             }
+            dgvArtista.DataSource = da.ListarDados();
         }
 
         public void limpar()
@@ -108,7 +109,7 @@ namespace Squeeze
             txtNome.Text = a.Nome;
             dtpNascimento.Text = a.Dt;
         }
-        
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -179,7 +180,7 @@ namespace Squeeze
                 {
 
                     List<Album> listaA = d.ListarDados(art);
-                    
+
                     for (int x = 0; x < listaA.Count; x++)
                     {
                         Album dal = new Album(listaA[x].IdAlbum);
@@ -203,6 +204,18 @@ namespace Squeeze
                 }
             }
             dgvArtista.DataSource = da.ListarDados();
+        }
+
+        private void btnCarregar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            file.Filter = "jpg|*.jpg|png|*.png";
+                        
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                nomeimagem = System.IO.Path.GetFileName(openFileDialog1.FileName);
+                pic.ImageLocation = openFileDialog1.FileName;
+            }
         }
     }
 }

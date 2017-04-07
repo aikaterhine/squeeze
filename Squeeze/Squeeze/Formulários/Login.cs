@@ -45,7 +45,7 @@ namespace Squeeze
                 this.Hide();
                 switch (perfil) {
                     case 0:
-                        Formulários.Squeeze s = new Formulários.Squeeze();
+                        Formulários.Squeeze s = new Formulários.Squeeze(login);
                         s.ShowDialog();
                         break;
                     case 1:

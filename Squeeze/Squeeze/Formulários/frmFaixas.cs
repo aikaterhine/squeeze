@@ -31,7 +31,7 @@ namespace Squeeze.Formulários
             for (int x = 0; x < listaG.Count; x++)
             {
 
-                cmbArtistas.Items.Insert(x, listaG[x].Nome);
+                cmbArtistas.Items.Insert(x, listaG[x].Id);
 
             }
         }
@@ -98,27 +98,28 @@ namespace Squeeze.Formulários
 
             DAOArtista daoart = new DAOArtista();
             Artista al = new Artista(artista);
-          
+
             DAOAlbum daoalb = new DAOAlbum();
 
             Artista al1 = daoart.procurar(al);
-            
+
             List<Album> listaAl = daoalb.ListarDados(al1);
 
-                for (int x = 0; x < listaAl.Count; x++)
-            cmbAlbum.Items.Clear();
+            for (int x = 0; x < listaAl.Count; x++)
+                cmbAlbum.Items.Clear();
 
             for (int x = 0; x < listaAl.Count; x++)
             {
 
-               Album alb = daoalb.procurarId(listaAl[x].IdAlbum);
+                Album alb = daoalb.procurarId(listaAl[x].IdAlbum);
 
                 cmbAlbum.Items.Insert(x, alb.Nome);
             }
         }
 
-        public void limpar() {
-            txtFaixa .Text = ("");
+        public void limpar()
+        {
+            txtFaixa.Text = ("");
             cmbArtistas.Text = ("");
             cmbAlbum.Text = ("");
             txtDuracao.Text = ("");

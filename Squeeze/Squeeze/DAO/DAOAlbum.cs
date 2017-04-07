@@ -157,8 +157,7 @@ namespace Squeeze
         public List<Album> ListarDados()
         {
             con = conex.obterConexao();
-
-            //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
+            
             comando = "select * from album;";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);

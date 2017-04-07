@@ -17,6 +17,13 @@ namespace Squeeze.Formulários
         public CadastroUsuario()
         {
             InitializeComponent();
+
+            DAOGenero dg = new DAOGenero();
+            List<Genero> listaG = dg.ListarDados();
+            for (int x = 0; x < listaG.Count; x++)
+            {
+                clbPreferencias.Items.Insert(x, listaG[x].NomeGen);
+            }
         }
 
         private void btnSal_Click(object sender, EventArgs e)
@@ -31,6 +38,11 @@ namespace Squeeze.Formulários
             Usuario u = new Usuario(nome, email, senha, 0);
             DAOUsuario d = new DAOUsuario();
             d.salvar(u);
+
+            foreach (object item in clbPreferencias.CheckedItems)
+            {
+                d.preferencias(d.procurar(u), item.ToString());
+            }
 
             Login login = new Login();
             this.Hide();
@@ -55,6 +67,11 @@ namespace Squeeze.Formulários
             this.Hide();
             Login log = new Login();
             log.ShowDialog();
+        }
+
+        private void CadastroUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

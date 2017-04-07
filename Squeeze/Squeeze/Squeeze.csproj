@@ -41,7 +41,7 @@
     <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Squeeze\MySql.Data.dll</HintPath>
+      <HintPath>..\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="NAudio">
       <HintPath>..\..\..\..\..\Downloads\NAudio.dll</HintPath>
@@ -218,7 +218,12 @@
     <None Include="Resources\circle-made-of-music-instruments_23-2147509304.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cropped-121256_papel-de-parede-psicodelico_1920x1200.jpg" />
+    <Content Include="Resources\Artistas\720x405-George-Ezra---Bricks6.png" />
+    <Content Include="Resources\Artistas\blog_vitrola-hozierclipe-700x420.jpg" />
+    <Content Include="Resources\Artistas\james-bay.jpg" />
+    <Content Include="Resources\Artistas\kygobill.jpg" />
+    <Content Include="Resources\Artistas\tumblr_n7fxv6P0RP1qgpn6lo1_1280.jpg" />
+    <Content Include="Resources\cropped-121256_papel-de-parede-psicodelico_1920x1200.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\556942.jpg" />
@@ -286,6 +291,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
