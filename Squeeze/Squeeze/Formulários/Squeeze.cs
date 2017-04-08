@@ -146,8 +146,7 @@ namespace Squeeze.Formulários
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+        private void aleat() {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -198,20 +197,7 @@ namespace Squeeze.Formulários
                 this.Dispose();
             }
         }
-
-        private void flatCheckBox1_CheckedChanged(object sender)
-        {
-            string art = flatCheckBox1.Text;
-            if (art.Equals(""))
-            {
-                MessageBox.Show("Nenhum artista selecionado. Tente novamente.");
-            }
-            else
-            {
-                checkFavorito(art);
-            }
-        }
-
+        
         private void flatCheckBox2_CheckedChanged(object sender)
         {
             string art = flatCheckBox2.Text;
@@ -224,99 +210,7 @@ namespace Squeeze.Formulários
                 checkFavorito(art);
             }
         }
-
-        private void flatCheckBox3_CheckedChanged(object sender)
-        {
-
-            string art = flatCheckBox3.Text;
-            if (art.Equals(""))
-            {
-                MessageBox.Show("Nenhum artista selecionado. Tente novamente.");
-            }
-            else
-            {
-                checkFavorito(art);
-            }
-        }
-
-        private void flatCheckBox4_CheckedChanged(object sender)
-        {
-            string art = flatCheckBox4.Text;
-            if (art.Equals(""))
-            {
-                MessageBox.Show("Nenhum artista selecionado. Tente novamente.");
-            }
-            else
-            {
-                checkFavorito(art);
-            }
-        }
-
-        private void flatCheckBox5_CheckedChanged(object sender)
-        {
-            string art = flatCheckBox5.Text;
-            if (art.Equals(""))
-            {
-                MessageBox.Show("Nenhum artista selecionado. Tente novamente.");
-            }
-            else
-            {
-                checkFavorito(art);
-            }
-        }
-
-        private void flatCheckBox6_CheckedChanged(object sender)
-        {
-            string art = flatCheckBox6.Text;
-            if (art.Equals(""))
-            {
-                MessageBox.Show("Nenhum artista selecionado. Tente novamente.");
-            }
-            else
-            {
-                checkFavorito(art);
-            }
-        }
-
-        private void flatCheckBox7_CheckedChanged(object sender)
-        {
-            string art = flatCheckBox7.Text;
-            if (art.Equals(""))
-            {
-                MessageBox.Show("Nenhum artista selecionado. Tente novamente.");
-            }
-            else
-            {
-                checkFavorito(art);
-            }
-        }
-
-        private void flatCheckBox8_CheckedChanged(object sender)
-        {
-            string art = flatCheckBox8.Text;
-            if (art.Equals(""))
-            {
-                MessageBox.Show("Nenhum artista selecionado. Tente novamente.");
-            }
-            else
-            {
-                checkFavorito(art);
-            }
-        }
-
-        private void flatCheckBox9_CheckedChanged(object sender)
-        {
-            string art = flatCheckBox9.Text;
-            if (art.Equals(""))
-            {
-                MessageBox.Show("Nenhum artista selecionado. Tente novamente.");
-            }
-            else
-            {
-                checkFavorito(art);
-            }
-        }
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
             File.Copy("C:\\Users\\CAT-CAR-TUL\\Pictures\tabela.png", "C:\\Users\\CAT-CAR-TUL\\Documents\\GitHub\\squeeze\\Squeeze\\Squeeze\\Resources\\Artistas\tabela_copia.png", true);
@@ -351,8 +245,11 @@ namespace Squeeze.Formulários
         {
             List<Genero> listaGeneros = new List<Genero>();
             List<Genero> listaGeneroArtista = new List<Genero>();
+            List<Artista> listaRecomendacoes = new List<Artista>();
             DAOUsuario daousuario = new DAOUsuario();
             DAOArtista daoartista = new DAOArtista();
+            var Pic = new Button();
+            var Lab = new Label();
 
             Usuario usuarioNome = new Usuario(nome);
 
@@ -374,15 +271,39 @@ namespace Squeeze.Formulários
 
             for (int i = 0; i < listaGeneroArtista.Count; i++)
             {
-                List<Artista> listaRecomendacoes = daoartista.ListarDados(listaGeneroArtista[i].IdArtista);
-                MessageBox.Show("Recomendacao: " + listaRecomendacoes[i].Nome);
+                listaRecomendacoes = daoartista.ListarDados(listaGeneroArtista[i].IdArtista);
+            }
+
+            for (int i = 1; i <= listaRecomendacoes.Count; i++)
+            {
+                    Pic = new Button();
+                    Pic.Name = "Picture" + i;
+                    Pic.Text = listaRecomendacoes[i - 1].Nome;
+                    Pic.BackColor = Color.BlueViolet;
+                    Pic.Size = new System.Drawing.Size(166, 150);
+                    Pic.Location = new System.Drawing.Point(i * 120, 50);
+                   panelRecomendacao.Controls.Add(Pic);
             }
         }
 
         private void cmbArtistas_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void cmbAlbum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbArtistas_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+            panelAlbuns.Controls.Clear();
+
             DAOArtista daoartista = new DAOArtista();
             Artista artNome = new Artista(cmbArtistas.Text);
+
             Artista artista = daoartista.procurar(artNome);
 
             DAOAlbum daoalbum = new DAOAlbum();
@@ -408,8 +329,10 @@ namespace Squeeze.Formulários
             }
         }
 
-        private void cmbAlbum_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbAlbum_SelectedValueChanged(object sender, EventArgs e)
         {
+            panelFaixa.Controls.Clear();
+
             Album albNome = new Album(cmbAlbum.Text);
             Album album = daoalbum.procurar(albNome);
 
@@ -428,16 +351,6 @@ namespace Squeeze.Formulários
                 Pic.Location = new System.Drawing.Point(i * 100, 100);
                 this.panelFaixa.Controls.Add(Pic);
             }
-        }
-
-        private void cmbAlbum_SelectedValueChanged(object sender, EventArgs e)
-        {
-            panelFaixa.Controls.Clear();
-        }
-
-        private void cmbArtistas_SelectedValueChanged(object sender, EventArgs e)
-        {
-            panelAlbuns.Controls.Clear();
         }
     }
 }
