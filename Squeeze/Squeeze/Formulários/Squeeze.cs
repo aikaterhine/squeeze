@@ -26,11 +26,9 @@ namespace Squeeze.Formulários
         private WaveStream mainOutputStream;
         private WaveChannel32 volumeStream;
 
-        private DAOArtista daoartista = new DAOArtista();
         private DAOAlbum daoalbum = new DAOAlbum();
         private DAOUsuario daousuario = new DAOUsuario();
         private DAOGenero daogenero = new DAOGenero();
-        private DAOFaixa daofaixa = new DAOFaixa();
 
         public Squeeze(string nomeusuario)
         {
@@ -42,6 +40,7 @@ namespace Squeeze.Formulários
             for (int x = 0; x < listaAlbum.Count; x++)
             { cmbAlbum.Items.Insert(x, listaAlbum[x].Nome); }
 
+            DAOArtista daoartista = new DAOArtista();
             List<Artista> listaArtista = daoartista.ListarDados();
             for (int x = 0; x < listaArtista.Count; x++)
             { cmbArtistas.Items.Insert(x, listaArtista[x].Nome); }
@@ -51,6 +50,8 @@ namespace Squeeze.Formulários
             cmbUsuario.Items.Add("Sair");
 
             artistasAscencao();
+            artistasRecomendacao();
+
         }
 
         private void Squeeze_Load(object sender, EventArgs e)
@@ -103,7 +104,7 @@ namespace Squeeze.Formulários
         {
             MessageBox.Show("Download efetuado!");
         }
-        
+
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -316,16 +317,107 @@ namespace Squeeze.Formulários
             }
         }
 
-        private void cmbAlbum_SelectedIndexChanged(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            Album album = new Album(cmbAlbum.Text);
-            List<Faixa> listaFaixa = daofaixa.ListarDados(daoalbum.procurar(album));
+            File.Copy("C:\\Users\\CAT-CAR-TUL\\Pictures\tabela.png", "C:\\Users\\CAT-CAR-TUL\\Documents\\GitHub\\squeeze\\Squeeze\\Squeeze\\Resources\\Artistas\tabela_copia.png", true);
+        }
+
+        private void artistasAscencao()
+        {
+            DAOArtista daoartista = new DAOArtista();
+            List<Artista> listaAscencao = daoartista.artistaAscencao();
+            List<Artista> listaAscencaoNome = new List<Artista>();
+            for (int x = 0; x < listaAscencao.Count; x++)
+            {
+                listaAscencaoNome.Add(daoartista.procurarId(listaAscencao[x].Id));
+            }
+
+            var Pic = new Button();
+            var Lab = new Label();
+
+            for (int i = 1; i <= listaAscencaoNome.Count; i++)
+            {
+                Pic = new Button();
+                Pic.Name = "Picture" + i;
+                Pic.Text = listaAscencaoNome[i - 1].Nome;
+                Pic.BackColor = Color.BlueViolet;
+                Pic.Size = new System.Drawing.Size(166, 300);
+                Pic.Location = new System.Drawing.Point(i * 120, 50);
+                this.panelAscencao.Controls.Add(Pic);
+            }
+        }
+
+        private void artistasRecomendacao()
+        {
+            List<Genero> listaGeneros = new List<Genero>();
+            List<Genero> listaGeneroArtista = new List<Genero>();
+            DAOUsuario daousuario = new DAOUsuario();
+            DAOArtista daoartista = new DAOArtista();
+
+            Usuario usuarioNome = new Usuario(nome);
+
+            Usuario usuario = daousuario.procurar(usuarioNome);
+
+            List<Usuario> listaPreferencias = daousuario.preferencias(usuario);
+
+            for (int i = 0; i < listaPreferencias.Count; i++)
+            {
+                DAOGenero daogenero = new DAOGenero();
+
+                listaGeneros.Add(daogenero.procurar(listaPreferencias[i].Gen));
+            }
+
+            for (int i = 0; i < listaGeneros.Count; i++)
+            {
+                listaGeneroArtista = daogenero.recomendacoes(listaGeneros[i]);
+            }
+
+            for (int i = 0; i < listaGeneroArtista.Count; i++)
+            {
+                List<Artista> listaRecomendacoes = daoartista.ListarDados(listaGeneroArtista[i].IdArtista);
+                MessageBox.Show("Recomendacao: " + listaRecomendacoes[i].Nome);
+            }
+        }
+
+        private void cmbArtistas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DAOArtista daoartista = new DAOArtista();
+            Artista artNome = new Artista(cmbArtistas.Text);
+            Artista artista = daoartista.procurar(artNome);
+
+            DAOAlbum daoalbum = new DAOAlbum();
+            List<Album> listaAlbumArtista = daoalbum.ListarDados(artista);
+
+            List<Album> listaAlbum = new List<Album>();
+            for (int x = 0; x < listaAlbumArtista.Count; x++)
+            {
+                listaAlbum.Add(daoalbum.procurarId(listaAlbumArtista[x].IdAlbum));
+            }
+
             var Pic = new Button();
 
-            foreach (Control item in panelFaixa.Controls.OfType<Button>())
+            for (int i = 1; i <= listaAlbum.Count; i++)
             {
-                panelFaixa.Controls.Remove(item);
+                Pic = new Button();
+                Pic.Name = "Pic" + i;
+                Pic.Text = listaAlbum[i - 1].Nome;
+                Pic.BackColor = Color.BlueViolet;
+                Pic.Size = new System.Drawing.Size(100, 130);
+                Pic.Location = new System.Drawing.Point(i * 100, 100);
+                this.panelAlbuns.Controls.Add(Pic);
             }
+        }
+
+        private void cmbAlbum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Album albNome = new Album(cmbAlbum.Text);
+            Album album = daoalbum.procurar(albNome);
+
+            DAOFaixa daofaixa = new DAOFaixa();
+            List<Faixa> listaFaixa = daofaixa.ListarDados(album);
+
+            var Pic = new Button();
+
             for (int i = 1; i <= listaFaixa.Count; i++)
             {
                 Pic = new Button();
@@ -338,62 +430,14 @@ namespace Squeeze.Formulários
             }
         }
 
-        private void cmbArtistas_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbAlbum_SelectedValueChanged(object sender, EventArgs e)
         {
-            Artista artista = new Artista(cmbArtistas.Text);
-            List<Album> lista = daoalbum.ListarDados(daoartista.procurar(artista));
-
-            for (int x = 1; x < lista.Count; x++)
-            {
-                Album album = daoalbum.procurarId(lista[x - 1].IdAlbum);
-
-                var Pic = new Button();
-
-                Pic = new Button();
-                Pic.Name = "Pict" + x;
-                Pic.Text = lista[x - 1].Nome;
-                Pic.BackColor = Color.BlueViolet;
-                Pic.Size = new System.Drawing.Size(100, 130);
-                Pic.Location = new System.Drawing.Point(x * 100, 100);
-                this.panelAlbuns.Controls.Add(Pic);
-            }
-
+            panelFaixa.Controls.Clear();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void cmbArtistas_SelectedValueChanged(object sender, EventArgs e)
         {
-            File.Copy("C:\\Users\\CAT-CAR-TUL\\Pictures\tabela.png", "C:\\Users\\CAT-CAR-TUL\\Documents\\GitHub\\squeeze\\Squeeze\\Squeeze\\Resources\\Artistas\tabela_copia.png", true);
-        }
-
-        private void artistasAscencao() {
-
-            List<Artista> listaF = daoartista.artistaAscencao();
-            List<Artista> listaA = new List<Artista>();
-
-            for (int x = 0; x < listaF.Count; x++)
-            {
-                listaA = daoartista.ListarDados(listaF[x].Id);
-            }
-            var Pic = new Button();
-            var Lab = new Label();
-
-            for (int i = 1; i <= listaA.Count; i++)
-            {
-                Pic = new Button();
-                Pic.Name = "Picture" + i;
-                Pic.Text = listaA[i - 1].Nome;
-                Pic.BackColor = Color.BlueViolet;
-                Pic.Size = new System.Drawing.Size(174, 352);
-                Pic.Location = new System.Drawing.Point(i * 7, 35);
-                this.panelAscencao.Controls.Add(Pic);
-
-                Lab = new Label();
-                Lab.Name = "Label" + i;
-                Lab.Text = listaA[i - 1].Nome;
-                Lab.Size = new System.Drawing.Size(45, 19);
-                Lab.Location = new System.Drawing.Point(i * 68, 378);
-                this.panelAscencao.Controls.Add(Lab);
-            }
+            panelAlbuns.Controls.Clear();
         }
     }
 }

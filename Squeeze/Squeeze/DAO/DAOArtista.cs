@@ -207,10 +207,7 @@ namespace Squeeze.DAO
 
         public List<Artista> ListarDados(int id)
         {
-            string strconexao = "server=localhost;userid=root;password=12345;database=squeezebd";
-            con = new MySqlConnection(strconexao);
-
-            con.Open();
+            con = conex.obterConexao();
             //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
             comando = "select * from artista where id = '" + id + "';";
 
@@ -258,7 +255,7 @@ namespace Squeeze.DAO
         {
             con = conex.obterConexao();
 
-            comando = "select * from artista where nome = '" + a.Id + "';";
+            comando = "select * from artista where nome = '" + a.Nome + "';";
 
             MySqlCommand comandoSQL = new MySqlCommand(comando, con);
 

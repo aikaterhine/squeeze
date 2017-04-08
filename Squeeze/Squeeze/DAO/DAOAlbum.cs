@@ -38,8 +38,8 @@ namespace Squeeze
 
             comandoSQL.Prepare();
             comandoSQL.ExecuteNonQuery();
-            conex.fecharConexao();
 
+            con.Close();
         }
 
         public void excluirAlbum(Album a)
@@ -99,6 +99,7 @@ namespace Squeeze
             {
                 al = new Album(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("estudio"), cursor.GetString("dtlancamento"));
             }
+            con.Close();
 
             return al;
         }
@@ -117,6 +118,7 @@ namespace Squeeze
             {
                 al = new Album(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("estudio"), cursor.GetString("dtlancamento"));
             }
+            con.Close();
 
             return al;
         }
@@ -137,6 +139,28 @@ namespace Squeeze
                 Album cat = new Album(cursor.GetInt32("idartista"), cursor.GetInt32("idalbum"));
                 lista.Add(cat);
             }
+            con.Close();
+
+            return lista;
+        }
+
+        public List<Album> ListarDados(Album album)
+        {
+            con = conex.obterConexao();
+
+            //cria um novo objeto de comandos para serem executados no SQL, usando o comando SQL digitado e a conexão com o banco de dados
+            comando = "select * from album where id = '" + album.IdAlbum + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+            
+            while (cursor.Read())
+            {
+                Album cat = new Album(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("estudio"), cursor.GetString("dtlancamento"));
+                lista.Add(cat);
+            }
+            con.Close();
 
             return lista;
         }
@@ -169,8 +193,11 @@ namespace Squeeze
                 Album cat = new Album(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("estudio"), cursor.GetString("dtlancamento"));
                 lista.Add(cat);
             }
+            con.Close();
 
             return lista;
         }
+
+
     }
 }

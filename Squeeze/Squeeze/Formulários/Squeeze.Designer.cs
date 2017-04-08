@@ -61,14 +61,10 @@
             this.cmbArtistas = new FlatUI.FlatComboBox();
             this.panelAlbuns = new System.Windows.Forms.Panel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panelFaixa = new System.Windows.Forms.Panel();
             this.cmbAlbum = new FlatUI.FlatComboBox();
+            this.panelFaixa = new System.Windows.Forms.Panel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.pic5 = new System.Windows.Forms.PictureBox();
-            this.pic4 = new System.Windows.Forms.PictureBox();
-            this.pic3 = new System.Windows.Forms.PictureBox();
-            this.pic2 = new System.Windows.Forms.PictureBox();
-            this.pic1 = new System.Windows.Forms.PictureBox();
+            this.panelAscencao = new System.Windows.Forms.Panel();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.flatCheckBox18 = new FlatUI.FlatCheckBox();
             this.flatCheckBox10 = new FlatUI.FlatCheckBox();
@@ -91,8 +87,6 @@
             this.flatMini1 = new FlatUI.FlatMini();
             this.flatMax1 = new FlatUI.FlatMax();
             this.flatClose1 = new FlatUI.FlatClose();
-            this.panelAscencao = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.formSkin1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.flatTabControl.SuspendLayout();
@@ -112,11 +106,6 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -127,7 +116,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            this.panelAscencao.SuspendLayout();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -237,7 +225,7 @@
             this.cmbUsuario.FormattingEnabled = true;
             this.cmbUsuario.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.cmbUsuario.ItemHeight = 18;
-            this.cmbUsuario.Location = new System.Drawing.Point(661, 384);
+            this.cmbUsuario.Location = new System.Drawing.Point(738, 384);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.Size = new System.Drawing.Size(195, 24);
             this.cmbUsuario.TabIndex = 29;
@@ -530,10 +518,12 @@
             this.cmbArtistas.FormattingEnabled = true;
             this.cmbArtistas.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.cmbArtistas.ItemHeight = 18;
-            this.cmbArtistas.Location = new System.Drawing.Point(28, 31);
+            this.cmbArtistas.Location = new System.Drawing.Point(18, 15);
             this.cmbArtistas.Name = "cmbArtistas";
-            this.cmbArtistas.Size = new System.Drawing.Size(186, 24);
-            this.cmbArtistas.TabIndex = 0;
+            this.cmbArtistas.Size = new System.Drawing.Size(171, 24);
+            this.cmbArtistas.TabIndex = 3;
+            this.cmbArtistas.SelectedIndexChanged += new System.EventHandler(this.cmbArtistas_SelectedIndexChanged);
+            this.cmbArtistas.SelectedValueChanged += new System.EventHandler(this.cmbArtistas_SelectedValueChanged);
             // 
             // panelAlbuns
             // 
@@ -545,21 +535,14 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.tabPage3.Controls.Add(this.panelFaixa);
             this.tabPage3.Controls.Add(this.cmbAlbum);
+            this.tabPage3.Controls.Add(this.panelFaixa);
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(941, 416);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Faixas";
-            // 
-            // panelFaixa
-            // 
-            this.panelFaixa.Location = new System.Drawing.Point(8, 58);
-            this.panelFaixa.Name = "panelFaixa";
-            this.panelFaixa.Size = new System.Drawing.Size(848, 255);
-            this.panelFaixa.TabIndex = 1;
             // 
             // cmbAlbum
             // 
@@ -572,15 +555,23 @@
             this.cmbAlbum.FormattingEnabled = true;
             this.cmbAlbum.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.cmbAlbum.ItemHeight = 18;
-            this.cmbAlbum.Location = new System.Drawing.Point(28, 31);
+            this.cmbAlbum.Location = new System.Drawing.Point(18, 15);
             this.cmbAlbum.Name = "cmbAlbum";
-            this.cmbAlbum.Size = new System.Drawing.Size(186, 24);
-            this.cmbAlbum.TabIndex = 0;
+            this.cmbAlbum.Size = new System.Drawing.Size(171, 24);
+            this.cmbAlbum.TabIndex = 2;
+            this.cmbAlbum.SelectedIndexChanged += new System.EventHandler(this.cmbAlbum_SelectedIndexChanged);
+            this.cmbAlbum.SelectedValueChanged += new System.EventHandler(this.cmbAlbum_SelectedValueChanged);
+            // 
+            // panelFaixa
+            // 
+            this.panelFaixa.Location = new System.Drawing.Point(8, 58);
+            this.panelFaixa.Name = "panelFaixa";
+            this.panelFaixa.Size = new System.Drawing.Size(848, 255);
+            this.panelFaixa.TabIndex = 1;
             // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.tabPage4.Controls.Add(this.pic5);
             this.tabPage4.Controls.Add(this.panelAscencao);
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
             this.tabPage4.Name = "tabPage4";
@@ -588,45 +579,12 @@
             this.tabPage4.TabIndex = 5;
             this.tabPage4.Text = "Ascenção";
             // 
-            // pic5
+            // panelAscencao
             // 
-            this.pic5.Location = new System.Drawing.Point(760, 36);
-            this.pic5.Name = "pic5";
-            this.pic5.Size = new System.Drawing.Size(174, 352);
-            this.pic5.TabIndex = 4;
-            this.pic5.TabStop = false;
-            // 
-            // pic4
-            // 
-            this.pic4.Location = new System.Drawing.Point(566, 21);
-            this.pic4.Name = "pic4";
-            this.pic4.Size = new System.Drawing.Size(174, 352);
-            this.pic4.TabIndex = 3;
-            this.pic4.TabStop = false;
-            // 
-            // pic3
-            // 
-            this.pic3.Location = new System.Drawing.Point(377, 21);
-            this.pic3.Name = "pic3";
-            this.pic3.Size = new System.Drawing.Size(174, 352);
-            this.pic3.TabIndex = 2;
-            this.pic3.TabStop = false;
-            // 
-            // pic2
-            // 
-            this.pic2.Location = new System.Drawing.Point(189, 21);
-            this.pic2.Name = "pic2";
-            this.pic2.Size = new System.Drawing.Size(174, 352);
-            this.pic2.TabIndex = 1;
-            this.pic2.TabStop = false;
-            // 
-            // pic1
-            // 
-            this.pic1.Location = new System.Drawing.Point(3, 21);
-            this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(174, 352);
-            this.pic1.TabIndex = 0;
-            this.pic1.TabStop = false;
+            this.panelAscencao.Location = new System.Drawing.Point(4, 3);
+            this.panelAscencao.Name = "panelAscencao";
+            this.panelAscencao.Size = new System.Drawing.Size(934, 410);
+            this.panelAscencao.TabIndex = 5;
             // 
             // tabPage5
             // 
@@ -910,27 +868,6 @@
             this.flatClose1.Text = "flatClose1";
             this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
-            // panelAscencao
-            // 
-            this.panelAscencao.Controls.Add(this.label1);
-            this.panelAscencao.Controls.Add(this.pic4);
-            this.panelAscencao.Controls.Add(this.pic3);
-            this.panelAscencao.Controls.Add(this.pic2);
-            this.panelAscencao.Controls.Add(this.pic1);
-            this.panelAscencao.Location = new System.Drawing.Point(4, 14);
-            this.panelAscencao.Name = "panelAscencao";
-            this.panelAscencao.Size = new System.Drawing.Size(938, 402);
-            this.panelAscencao.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 378);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 19);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
-            // 
             // Squeeze
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -963,11 +900,6 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -978,8 +910,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            this.panelAscencao.ResumeLayout(false);
-            this.panelAscencao.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1016,17 +946,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private FlatUI.FlatStatusBar flatStatusBar1;
         private System.Windows.Forms.TabPage tabPage2;
-        private FlatUI.FlatComboBox cmbArtistas;
         private System.Windows.Forms.Panel panelAlbuns;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panelFaixa;
-        private FlatUI.FlatComboBox cmbAlbum;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.PictureBox pic5;
-        private System.Windows.Forms.PictureBox pic4;
-        private System.Windows.Forms.PictureBox pic3;
-        private System.Windows.Forms.PictureBox pic2;
-        private System.Windows.Forms.PictureBox pic1;
         private System.Windows.Forms.TabPage tabPage5;
         private FlatUI.FlatCheckBox flatCheckBox18;
         private FlatUI.FlatCheckBox flatCheckBox10;
@@ -1050,6 +973,7 @@
         private FlatUI.FlatMax flatMax1;
         private FlatUI.FlatClose flatClose1;
         private System.Windows.Forms.Panel panelAscencao;
-        private System.Windows.Forms.Label label1;
+        private FlatUI.FlatComboBox cmbArtistas;
+        private FlatUI.FlatComboBox cmbAlbum;
     }
 }
