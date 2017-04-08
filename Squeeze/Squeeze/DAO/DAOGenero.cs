@@ -132,6 +132,23 @@ namespace Squeeze.DAO
             return lista;
         }
 
+        public Genero generoArtista(Artista art)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from generoartista where idartista = '" + art.Id + "';";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                cat = new Genero(cursor.GetInt32("idartista"), cursor.GetInt32("idgenero"));
+            }
+            return cat;
+        }
+
         public void atualizarGenero(int anterior, string nome)
         {
             con = conex.obterConexao();

@@ -118,85 +118,97 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lana_del_rey_png_by_maarcopngs-da7zzlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lana_del_rey_png_by_maarcopngs-da7zzlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sia_png_by_maarcopngs-da6y3v7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sia_png_by_maarcopngs-da6y3v7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="32c9dec15f5b9bf92081e8ea7acb2527" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\32c9dec15f5b9bf92081e8ea7acb2527.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cropped-121256_papel-de-parede-psicodelico_1920x1200" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cropped-121256_papel-de-parede-psicodelico_1920x1200.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="halsey_png_by_breathinparadise-d92vnik" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\halsey_png_by_breathinparadise-d92vnik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Imagem11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Imagem11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="circle-made-of-music-instruments_23-2147509304" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circle-made-of-music-instruments_23-2147509304.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="556942" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\556942.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imageedit_5_9109841775" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imageedit_5_9109841775.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="QEWDSDFSDFFXF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QEWDSDFSDFFXF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Steve_Aoki" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Steve_Aoki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lorde_png_2_by_zkresources-d7r6pzg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lorde_png_2_by_zkresources-d7r6pzg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="move-to-apple-music-icon-100599692-large" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\move-to-apple-music-icon-100599692-large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Katy-Perry-PNG-Picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Katy-Perry-PNG-Picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="onlinelogomaker-101716-1546-7668" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\onlinelogomaker-101716-1546-7668.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ico_noche" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ico_noche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="150000_hk_Website_Transparent_Chainsmokers_NEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\150000_hk_Website_Transparent_Chainsmokers_NEW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="alessia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alessia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sia_png_by_maarcopngs-da6y3v7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sia_png_by_maarcopngs-da6y3v7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="O-x39" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\O-x39.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="circle-made-of-music-instruments_23-2147509304" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle-made-of-music-instruments_23-2147509304.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imagine_dragon___png___lb1817_by_juanchoperez-d79z6wb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagine_dragon___png___lb1817_by_juanchoperez-d79z6wb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Imagem1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Imagem1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Circled Pause_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circled Pause_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Open Folder_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Open Folder_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imagine_dragon___png___lb1817_by_juanchoperez-d79z6wb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagine_dragon___png___lb1817_by_juanchoperez-d79z6wb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="halsey_png_by_breathinparadise-d92vnik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\halsey_png_by_breathinparadise-d92vnik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cropped-121256_papel-de-parede-psicodelico_1920x1200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cropped-121256_papel-de-parede-psicodelico_1920x1200.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_noche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_noche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="move-to-apple-music-icon-100599692-large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\move-to-apple-music-icon-100599692-large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Imagem11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagem11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Katy-Perry-PNG-Picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Katy-Perry-PNG-Picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imageedit_5_9109841775" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imageedit_5_9109841775.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Imagem1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagem1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="circulo play sem ser pintado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circulo play sem ser pintado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="O-x39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\O-x39.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="onlinelogomaker-101716-1546-7668" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\onlinelogomaker-101716-1546-7668.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lana_del_rey_png_by_maarcopngs-da7zzlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lana_del_rey_png_by_maarcopngs-da7zzlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="556942" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\556942.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lorde_png_2_by_zkresources-d7r6pzg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lorde_png_2_by_zkresources-d7r6pzg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="32c9dec15f5b9bf92081e8ea7acb2527" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32c9dec15f5b9bf92081e8ea7acb2527.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Steve_Aoki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Steve_Aoki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hearts_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hearts_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Open Folder_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Open Folder_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alessia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alessia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resume" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resume.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

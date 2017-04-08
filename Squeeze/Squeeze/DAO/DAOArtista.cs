@@ -270,6 +270,19 @@ namespace Squeeze.DAO
             return art;
         }
 
+        public bool verificarFavorito(Usuario u, Artista a)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from artistaFavorito where idusuario = '" + u.Idusuario + "' and idartista = '" + a.Id + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+            result = cursor.HasRows;
+
+            return result;
+        }
+
         public List<Artista> pesquisar(string nome) {
             comando = "select * from artista where nome like '" + nome + "';";
 

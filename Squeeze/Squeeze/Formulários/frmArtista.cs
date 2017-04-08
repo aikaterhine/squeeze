@@ -76,6 +76,8 @@ namespace Squeeze
 
                 Artista a = new Artista(nome, dt, nomeimagem);
                 Carreira c = new Carreira(car);
+                string direcImagem = "" + openFileDialog1.FileName + "";
+
                 da.salvar(a);
                 dc.salvarCarreiraArtista(da.procurar(a), dc.procurar(c));
 

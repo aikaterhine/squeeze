@@ -224,6 +224,10 @@
     <Content Include="Resources\Artistas\kygobill.jpg" />
     <Content Include="Resources\Artistas\tumblr_n7fxv6P0RP1qgpn6lo1_1280.jpg" />
     <Content Include="Resources\cropped-121256_papel-de-parede-psicodelico_1920x1200.jpg" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\open.png" />
+    <None Include="Resources\resume.png" />
+    <None Include="Resources\play.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\556942.jpg" />

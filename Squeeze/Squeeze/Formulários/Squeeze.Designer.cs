@@ -30,43 +30,43 @@
         {
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.formSkin1 = new FlatUI.FormSkin();
+            this.btnStop = new System.Windows.Forms.PictureBox();
+            this.cmbUsuario = new FlatUI.FlatComboBox();
             this.flatTabControl = new FlatUI.FlatTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.cmbUsuario = new FlatUI.FlatComboBox();
-            this.btnPause = new System.Windows.Forms.PictureBox();
-            this.btnPlay = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.flatCheckBox2 = new FlatUI.FlatCheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.flatStatusBar1 = new FlatUI.FlatStatusBar();
+            this.panelInfo = new System.Windows.Forms.Panel();
+            this.panelArtista = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.flatStatusBar5 = new FlatUI.FlatStatusBar();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelAlbuns = new System.Windows.Forms.FlowLayoutPanel();
             this.cmbArtistas = new FlatUI.FlatComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.flatStatusBar4 = new FlatUI.FlatStatusBar();
+            this.panelFaixa = new System.Windows.Forms.FlowLayoutPanel();
             this.cmbAlbum = new FlatUI.FlatComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.flatStatusBar3 = new FlatUI.FlatStatusBar();
+            this.panelAscencao = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.flatStatusBar2 = new FlatUI.FlatStatusBar();
             this.panelRecomendacao = new System.Windows.Forms.FlowLayoutPanel();
             this.flatMini1 = new FlatUI.FlatMini();
+            this.btnPlay = new System.Windows.Forms.PictureBox();
             this.flatMax1 = new FlatUI.FlatMax();
+            this.btnOpen = new System.Windows.Forms.PictureBox();
             this.flatClose1 = new FlatUI.FlatClose();
-            this.panelAlbuns = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelFaixa = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelAscencao = new System.Windows.Forms.FlowLayoutPanel();
+            this.flatStatusBar1 = new FlatUI.FlatStatusBar();
+            this.panelInfoAlbum = new System.Windows.Forms.Panel();
             this.formSkin1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnStop)).BeginInit();
             this.flatTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPause)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOpen)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -78,12 +78,17 @@
             this.formSkin1.BackColor = System.Drawing.Color.White;
             this.formSkin1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.formSkin1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.formSkin1.Controls.Add(this.btnStop);
+            this.formSkin1.Controls.Add(this.cmbUsuario);
             this.formSkin1.Controls.Add(this.flatTabControl);
             this.formSkin1.Controls.Add(this.flatMini1);
+            this.formSkin1.Controls.Add(this.btnPlay);
             this.formSkin1.Controls.Add(this.flatMax1);
+            this.formSkin1.Controls.Add(this.btnOpen);
             this.formSkin1.Controls.Add(this.flatClose1);
+            this.formSkin1.Controls.Add(this.flatStatusBar1);
             this.formSkin1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.formSkin1.FlatColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.formSkin1.FlatColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(120)))));
             this.formSkin1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.formSkin1.HeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.formSkin1.HeaderMaximize = false;
@@ -93,40 +98,18 @@
             this.formSkin1.TabIndex = 3;
             this.formSkin1.Text = "Squeeze";
             // 
-            // flatTabControl
+            // btnStop
             // 
-            this.flatTabControl.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.flatTabControl.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.flatTabControl.Controls.Add(this.tabPage1);
-            this.flatTabControl.Controls.Add(this.tabPage2);
-            this.flatTabControl.Controls.Add(this.tabPage3);
-            this.flatTabControl.Controls.Add(this.tabPage4);
-            this.flatTabControl.Controls.Add(this.tabPage5);
-            this.flatTabControl.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.flatTabControl.ItemSize = new System.Drawing.Size(120, 40);
-            this.flatTabControl.Location = new System.Drawing.Point(0, 52);
-            this.flatTabControl.Name = "flatTabControl";
-            this.flatTabControl.SelectedIndex = 0;
-            this.flatTabControl.Size = new System.Drawing.Size(1097, 495);
-            this.flatTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.flatTabControl.TabIndex = 4;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.tabPage1.Controls.Add(this.cmbUsuario);
-            this.tabPage1.Controls.Add(this.btnPause);
-            this.tabPage1.Controls.Add(this.btnPlay);
-            this.tabPage1.Controls.Add(this.pictureBox12);
-            this.tabPage1.Controls.Add(this.flatCheckBox2);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.flatStatusBar1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 44);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1089, 447);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Artistas";
+            this.btnStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.btnStop.BackgroundImage = global::Squeeze.Properties.Resources.stop;
+            this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStop.Enabled = false;
+            this.btnStop.Location = new System.Drawing.Point(618, 520);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(41, 23);
+            this.btnStop.TabIndex = 30;
+            this.btnStop.TabStop = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // cmbUsuario
             // 
@@ -139,111 +122,94 @@
             this.cmbUsuario.FormattingEnabled = true;
             this.cmbUsuario.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.cmbUsuario.ItemHeight = 18;
-            this.cmbUsuario.Location = new System.Drawing.Point(886, 415);
+            this.cmbUsuario.Location = new System.Drawing.Point(892, 518);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.Size = new System.Drawing.Size(195, 24);
             this.cmbUsuario.TabIndex = 29;
             // 
-            // btnPause
+            // flatTabControl
             // 
-            this.btnPause.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.btnPause.BackgroundImage = global::Squeeze.Properties.Resources.Circled_Pause_64px;
-            this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPause.Enabled = false;
-            this.btnPause.Location = new System.Drawing.Point(485, 407);
-            this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(54, 35);
-            this.btnPause.TabIndex = 27;
-            this.btnPause.TabStop = false;
+            this.flatTabControl.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(120)))));
+            this.flatTabControl.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatTabControl.Controls.Add(this.tabPage1);
+            this.flatTabControl.Controls.Add(this.tabPage2);
+            this.flatTabControl.Controls.Add(this.tabPage3);
+            this.flatTabControl.Controls.Add(this.tabPage4);
+            this.flatTabControl.Controls.Add(this.tabPage5);
+            this.flatTabControl.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.flatTabControl.ItemSize = new System.Drawing.Size(120, 40);
+            this.flatTabControl.Location = new System.Drawing.Point(0, 52);
+            this.flatTabControl.Name = "flatTabControl";
+            this.flatTabControl.SelectedIndex = 0;
+            this.flatTabControl.Size = new System.Drawing.Size(1097, 463);
+            this.flatTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.flatTabControl.TabIndex = 4;
             // 
-            // btnPlay
+            // tabPage1
             // 
-            this.btnPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.btnPlay.BackgroundImage = global::Squeeze.Properties.Resources.circulo_play_sem_ser_pintado;
-            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPlay.Enabled = false;
-            this.btnPlay.Location = new System.Drawing.Point(539, 409);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(48, 29);
-            this.btnPlay.TabIndex = 26;
-            this.btnPlay.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.pictureBox12.BackgroundImage = global::Squeeze.Properties.Resources.Open_Folder_50px;
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox12.Location = new System.Drawing.Point(594, 408);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(41, 30);
-            this.pictureBox12.TabIndex = 25;
-            this.pictureBox12.TabStop = false;
-            // 
-            // flatCheckBox2
-            // 
-            this.flatCheckBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.flatCheckBox2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.flatCheckBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.flatCheckBox2.Checked = false;
-            this.flatCheckBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.flatCheckBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.flatCheckBox2.Location = new System.Drawing.Point(55, 319);
-            this.flatCheckBox2.Name = "flatCheckBox2";
-            this.flatCheckBox2.Options = FlatUI.FlatCheckBox._Options.Style1;
-            this.flatCheckBox2.Size = new System.Drawing.Size(178, 22);
-            this.flatCheckBox2.TabIndex = 16;
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.panelInfo);
+            this.tabPage1.Controls.Add(this.panelArtista);
+            this.tabPage1.Location = new System.Drawing.Point(4, 44);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1089, 415);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Artistas";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Squeeze.Properties.Resources.halsey_png_by_breathinparadise_d92vnik;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 44);
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.pictureBox1.Location = new System.Drawing.Point(802, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 300);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.Size = new System.Drawing.Size(10, 442);
+            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // flatStatusBar1
+            // panelInfo
             // 
-            this.flatStatusBar1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.flatStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flatStatusBar1.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.flatStatusBar1.ForeColor = System.Drawing.Color.White;
-            this.flatStatusBar1.Location = new System.Drawing.Point(3, 408);
-            this.flatStatusBar1.Name = "flatStatusBar1";
-            this.flatStatusBar1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.flatStatusBar1.ShowTimeDate = false;
-            this.flatStatusBar1.Size = new System.Drawing.Size(1083, 36);
-            this.flatStatusBar1.TabIndex = 24;
-            this.flatStatusBar1.TextColor = System.Drawing.Color.White;
+            this.panelInfo.Location = new System.Drawing.Point(818, 7);
+            this.panelInfo.Name = "panelInfo";
+            this.panelInfo.Size = new System.Drawing.Size(268, 403);
+            this.panelInfo.TabIndex = 31;
+            // 
+            // panelArtista
+            // 
+            this.panelArtista.Location = new System.Drawing.Point(5, 5);
+            this.panelArtista.Name = "panelArtista";
+            this.panelArtista.Size = new System.Drawing.Size(797, 406);
+            this.panelArtista.TabIndex = 30;
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage2.Controls.Add(this.panelInfoAlbum);
+            this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.panelAlbuns);
-            this.tabPage2.Controls.Add(this.flatStatusBar5);
             this.tabPage2.Controls.Add(this.cmbArtistas);
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1089, 447);
+            this.tabPage2.Size = new System.Drawing.Size(1089, 415);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Albuns";
             // 
-            // flatStatusBar5
+            // pictureBox2
             // 
-            this.flatStatusBar5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.flatStatusBar5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flatStatusBar5.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.flatStatusBar5.ForeColor = System.Drawing.Color.White;
-            this.flatStatusBar5.Location = new System.Drawing.Point(3, 421);
-            this.flatStatusBar5.Name = "flatStatusBar5";
-            this.flatStatusBar5.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.flatStatusBar5.ShowTimeDate = false;
-            this.flatStatusBar5.Size = new System.Drawing.Size(1083, 23);
-            this.flatStatusBar5.TabIndex = 4;
-            this.flatStatusBar5.Text = "flatStatusBar5";
-            this.flatStatusBar5.TextColor = System.Drawing.Color.White;
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.pictureBox2.Location = new System.Drawing.Point(802, -3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(10, 442);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panelAlbuns
+            // 
+            this.panelAlbuns.Location = new System.Drawing.Point(19, 50);
+            this.panelAlbuns.Name = "panelAlbuns";
+            this.panelAlbuns.Size = new System.Drawing.Size(777, 358);
+            this.panelAlbuns.TabIndex = 5;
             // 
             // cmbArtistas
             // 
@@ -266,29 +232,20 @@
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.tabPage3.Controls.Add(this.panelFaixa);
-            this.tabPage3.Controls.Add(this.flatStatusBar4);
             this.tabPage3.Controls.Add(this.cmbAlbum);
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1089, 447);
+            this.tabPage3.Size = new System.Drawing.Size(1089, 415);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Faixas";
             // 
-            // flatStatusBar4
+            // panelFaixa
             // 
-            this.flatStatusBar4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.flatStatusBar4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flatStatusBar4.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.flatStatusBar4.ForeColor = System.Drawing.Color.White;
-            this.flatStatusBar4.Location = new System.Drawing.Point(3, 421);
-            this.flatStatusBar4.Name = "flatStatusBar4";
-            this.flatStatusBar4.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.flatStatusBar4.ShowTimeDate = false;
-            this.flatStatusBar4.Size = new System.Drawing.Size(1083, 23);
-            this.flatStatusBar4.TabIndex = 3;
-            this.flatStatusBar4.Text = "flatStatusBar4";
-            this.flatStatusBar4.TextColor = System.Drawing.Color.White;
+            this.panelFaixa.Location = new System.Drawing.Point(11, 52);
+            this.panelFaixa.Name = "panelFaixa";
+            this.panelFaixa.Size = new System.Drawing.Size(1067, 353);
+            this.panelFaixa.TabIndex = 6;
             // 
             // cmbAlbum
             // 
@@ -311,59 +268,34 @@
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.tabPage4.Controls.Add(this.panelAscencao);
-            this.tabPage4.Controls.Add(this.flatStatusBar3);
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1089, 447);
+            this.tabPage4.Size = new System.Drawing.Size(1089, 415);
             this.tabPage4.TabIndex = 5;
             this.tabPage4.Text = "Ascenção";
             // 
-            // flatStatusBar3
+            // panelAscencao
             // 
-            this.flatStatusBar3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.flatStatusBar3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flatStatusBar3.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.flatStatusBar3.ForeColor = System.Drawing.Color.White;
-            this.flatStatusBar3.Location = new System.Drawing.Point(0, 424);
-            this.flatStatusBar3.Name = "flatStatusBar3";
-            this.flatStatusBar3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.flatStatusBar3.ShowTimeDate = false;
-            this.flatStatusBar3.Size = new System.Drawing.Size(1089, 23);
-            this.flatStatusBar3.TabIndex = 1;
-            this.flatStatusBar3.Text = "flatStatusBar3";
-            this.flatStatusBar3.TextColor = System.Drawing.Color.White;
+            this.panelAscencao.Location = new System.Drawing.Point(109, 65);
+            this.panelAscencao.Name = "panelAscencao";
+            this.panelAscencao.Size = new System.Drawing.Size(889, 319);
+            this.panelAscencao.TabIndex = 2;
             // 
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.tabPage5.Controls.Add(this.flatStatusBar2);
             this.tabPage5.Controls.Add(this.panelRecomendacao);
             this.tabPage5.Location = new System.Drawing.Point(4, 44);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1089, 447);
+            this.tabPage5.Size = new System.Drawing.Size(1089, 415);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Recomendações";
-            // 
-            // flatStatusBar2
-            // 
-            this.flatStatusBar2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.flatStatusBar2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flatStatusBar2.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.flatStatusBar2.ForeColor = System.Drawing.Color.White;
-            this.flatStatusBar2.Location = new System.Drawing.Point(0, 424);
-            this.flatStatusBar2.Name = "flatStatusBar2";
-            this.flatStatusBar2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.flatStatusBar2.ShowTimeDate = false;
-            this.flatStatusBar2.Size = new System.Drawing.Size(1089, 23);
-            this.flatStatusBar2.TabIndex = 1;
-            this.flatStatusBar2.Text = "flatStatusBar2";
-            this.flatStatusBar2.TextColor = System.Drawing.Color.White;
             // 
             // panelRecomendacao
             // 
             this.panelRecomendacao.Location = new System.Drawing.Point(3, 3);
             this.panelRecomendacao.Name = "panelRecomendacao";
-            this.panelRecomendacao.Size = new System.Drawing.Size(1083, 415);
+            this.panelRecomendacao.Size = new System.Drawing.Size(1083, 405);
             this.panelRecomendacao.TabIndex = 0;
             // 
             // flatMini1
@@ -379,6 +311,19 @@
             this.flatMini1.Text = "flatMini1";
             this.flatMini1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.btnPlay.BackgroundImage = global::Squeeze.Properties.Resources.resume;
+            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPlay.Enabled = false;
+            this.btnPlay.Location = new System.Drawing.Point(571, 520);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(41, 23);
+            this.btnPlay.TabIndex = 26;
+            this.btnPlay.TabStop = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
             // flatMax1
             // 
             this.flatMax1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -391,6 +336,18 @@
             this.flatMax1.TabIndex = 1;
             this.flatMax1.Text = "flatMax1";
             this.flatMax1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.btnOpen.BackgroundImage = global::Squeeze.Properties.Resources.open;
+            this.btnOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnOpen.Location = new System.Drawing.Point(524, 520);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(41, 23);
+            this.btnOpen.TabIndex = 25;
+            this.btnOpen.TabStop = false;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // flatClose1
             // 
@@ -405,26 +362,26 @@
             this.flatClose1.Text = "flatClose1";
             this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
-            // panelAlbuns
+            // flatStatusBar1
             // 
-            this.panelAlbuns.Location = new System.Drawing.Point(19, 50);
-            this.panelAlbuns.Name = "panelAlbuns";
-            this.panelAlbuns.Size = new System.Drawing.Size(1067, 365);
-            this.panelAlbuns.TabIndex = 5;
+            this.flatStatusBar1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flatStatusBar1.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.flatStatusBar1.ForeColor = System.Drawing.Color.White;
+            this.flatStatusBar1.Location = new System.Drawing.Point(0, 516);
+            this.flatStatusBar1.Name = "flatStatusBar1";
+            this.flatStatusBar1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(120)))));
+            this.flatStatusBar1.ShowTimeDate = false;
+            this.flatStatusBar1.Size = new System.Drawing.Size(1097, 31);
+            this.flatStatusBar1.TabIndex = 25;
+            this.flatStatusBar1.TextColor = System.Drawing.Color.White;
             // 
-            // panelFaixa
+            // panelInfoAlbum
             // 
-            this.panelFaixa.Location = new System.Drawing.Point(11, 52);
-            this.panelFaixa.Name = "panelFaixa";
-            this.panelFaixa.Size = new System.Drawing.Size(1067, 365);
-            this.panelFaixa.TabIndex = 6;
-            // 
-            // panelAscencao
-            // 
-            this.panelAscencao.Location = new System.Drawing.Point(109, 65);
-            this.panelAscencao.Name = "panelAscencao";
-            this.panelAscencao.Size = new System.Drawing.Size(889, 319);
-            this.panelAscencao.TabIndex = 2;
+            this.panelInfoAlbum.Location = new System.Drawing.Point(818, 50);
+            this.panelInfoAlbum.Name = "panelInfoAlbum";
+            this.panelInfoAlbum.Size = new System.Drawing.Size(268, 358);
+            this.panelInfoAlbum.TabIndex = 32;
             // 
             // Squeeze
             // 
@@ -440,16 +397,17 @@
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.Load += new System.EventHandler(this.Squeeze_Load);
             this.formSkin1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnStop)).EndInit();
             this.flatTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnPause)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOpen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -461,28 +419,27 @@
         private FlatUI.FlatTabControl flatTabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private FlatUI.FlatComboBox cmbUsuario;
-        private System.Windows.Forms.PictureBox btnPause;
         private System.Windows.Forms.PictureBox btnPlay;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private FlatUI.FlatCheckBox flatCheckBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private FlatUI.FlatStatusBar flatStatusBar1;
+        private System.Windows.Forms.PictureBox btnOpen;
         private System.Windows.Forms.TabPage tabPage2;
         private FlatUI.FlatComboBox cmbArtistas;
         private System.Windows.Forms.TabPage tabPage3;
         private FlatUI.FlatComboBox cmbAlbum;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private FlatUI.FlatStatusBar flatStatusBar2;
         private System.Windows.Forms.FlowLayoutPanel panelRecomendacao;
         private FlatUI.FlatMini flatMini1;
         private FlatUI.FlatMax flatMax1;
         private FlatUI.FlatClose flatClose1;
-        private FlatUI.FlatStatusBar flatStatusBar4;
-        private FlatUI.FlatStatusBar flatStatusBar3;
-        private FlatUI.FlatStatusBar flatStatusBar5;
         private System.Windows.Forms.FlowLayoutPanel panelAlbuns;
         private System.Windows.Forms.FlowLayoutPanel panelFaixa;
         private System.Windows.Forms.FlowLayoutPanel panelAscencao;
+        private System.Windows.Forms.FlowLayoutPanel panelArtista;
+        private FlatUI.FlatStatusBar flatStatusBar1;
+        private System.Windows.Forms.PictureBox btnStop;
+        private System.Windows.Forms.Panel panelInfo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panelInfoAlbum;
     }
 }

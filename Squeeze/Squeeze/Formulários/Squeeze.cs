@@ -21,10 +21,14 @@ namespace Squeeze.Formulários
     {
         private string file;
         private string nome;
+        private string estado;
 
         private IWavePlayer waveOutDevice;
         private WaveStream mainOutputStream;
         private WaveChannel32 volumeStream;
+        private WaveChannel32 inputStream;
+        private OpenFileDialog openFileDialog = new OpenFileDialog();
+
 
         private DAOAlbum daoalbum = new DAOAlbum();
         private DAOUsuario daousuario = new DAOUsuario();
@@ -49,9 +53,12 @@ namespace Squeeze.Formulários
             cmbUsuario.Items.Add("Excluir Conta");
             cmbUsuario.Items.Add("Sair");
 
+            btnPlay.Enabled = false;
+            btnStop.Enabled = false;
+
+            artistasGeral();
             artistasAscencao();
             artistasRecomendacao();
-
         }
 
         private void Squeeze_Load(object sender, EventArgs e)
@@ -105,25 +112,9 @@ namespace Squeeze.Formulários
             MessageBox.Show("Download efetuado!");
         }
 
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                if (File.Exists(openFileDialog.FileName))
-                {
-                    file = openFileDialog.FileName;
-                    mainOutputStream = CreateInputStream(openFileDialog.FileName);
-                }
-            }
-
-            btnPlay.Enabled = true;
-            btnPause.Enabled = true;
-        }
-
         private WaveStream CreateInputStream(string fileName)
         {
-            WaveChannel32 inputStream;
+
             if (fileName.EndsWith(".mp3"))
             {
                 WaveStream mp3Reader = new Mp3FileReader(fileName);
@@ -131,22 +122,15 @@ namespace Squeeze.Formulários
             }
             else
             {
-                throw new InvalidOperationException("Unsupported extension");
+                flatStatusBar1.Text = "Formato inválido.";
             }
             volumeStream = inputStream;
             return volumeStream;
         }
 
-        private void pictureBox11_Click(object sender, EventArgs e)
+
+        private void aleat()
         {
-            waveOutDevice.Init(mainOutputStream);
-            waveOutDevice.Play();
-
-            btnPlay.Enabled = true;
-
-        }
-
-        private void aleat() {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -197,20 +181,7 @@ namespace Squeeze.Formulários
                 this.Dispose();
             }
         }
-        
-        private void flatCheckBox2_CheckedChanged(object sender)
-        {
-            string art = flatCheckBox2.Text;
-            if (art.Equals(""))
-            {
-                MessageBox.Show("Nenhum artista selecionado. Tente novamente.");
-            }
-            else
-            {
-                checkFavorito(art);
-            }
-        }
-        
+
         private void button3_Click(object sender, EventArgs e)
         {
             File.Copy("C:\\Users\\CAT-CAR-TUL\\Pictures\tabela.png", "C:\\Users\\CAT-CAR-TUL\\Documents\\GitHub\\squeeze\\Squeeze\\Squeeze\\Resources\\Artistas\tabela_copia.png", true);
@@ -276,24 +247,14 @@ namespace Squeeze.Formulários
 
             for (int i = 1; i <= listaRecomendacoes.Count; i++)
             {
-                    Pic = new Button();
-                    Pic.Name = "Picture" + i;
-                    Pic.Text = listaRecomendacoes[i - 1].Nome;
-                    Pic.BackColor = Color.BlueViolet;
-                    Pic.Size = new System.Drawing.Size(166, 150);
-                    Pic.Location = new System.Drawing.Point(i * 120, 50);
-                   panelRecomendacao.Controls.Add(Pic);
+                Pic = new Button();
+                Pic.Name = "Picture" + i;
+                Pic.Text = listaRecomendacoes[i - 1].Nome;
+                Pic.BackColor = Color.BlueViolet;
+                Pic.Size = new System.Drawing.Size(166, 150);
+                Pic.Location = new System.Drawing.Point(i * 120, 50);
+                panelRecomendacao.Controls.Add(Pic);
             }
-        }
-
-        private void cmbArtistas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cmbAlbum_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void cmbArtistas_SelectedValueChanged(object sender, EventArgs e)
@@ -320,13 +281,47 @@ namespace Squeeze.Formulários
             for (int i = 1; i <= listaAlbum.Count; i++)
             {
                 Pic = new Button();
-                Pic.Name = "Pic" + i;
+                Pic.Name = listaAlbum[i - 1].Nome;
                 Pic.Text = listaAlbum[i - 1].Nome;
                 Pic.BackColor = Color.BlueViolet;
+                Pic.Click += new EventHandler(btnAlbum_click);
                 Pic.Size = new System.Drawing.Size(100, 130);
                 Pic.Location = new System.Drawing.Point(i * 100, 100);
                 this.panelAlbuns.Controls.Add(Pic);
             }
+        }
+
+        private void btnAlbum_click(object sender, EventArgs e)
+        {
+            panelInfoAlbum.Controls.Clear();
+
+            DAOAlbum daoalbum = new DAOAlbum();
+
+            var Label = new Label();
+            var Label2 = new Label();
+
+            var check = (dynamic)sender;
+            string btnAlbum = check.Name;
+
+            Album albNome = new Album(btnAlbum);
+            Album album = daoalbum.procurar(albNome);
+
+            Label = new Label();
+            Label.Name = btnAlbum + "1";
+            Label.Text = "Estudio: " + album.Estudio;
+            Label.ForeColor = Color.FromArgb(45, 47, 49);
+            Label.Size = new System.Drawing.Size(200, 50);
+            Label.Location = new System.Drawing.Point(0, 0);
+            this.panelInfoAlbum.Controls.Add(Label);
+
+            Label = new Label();
+            Label.Name = btnAlbum + "2";
+            Label.Text = "Lançamento: " + album.Dt;
+            Label.ForeColor = Color.FromArgb(45, 47, 49);
+            Label.Size = new System.Drawing.Size(200, 100);
+            Label.Location = new System.Drawing.Point(0, 60);
+            this.panelInfoAlbum.Controls.Add(Label);
+
         }
 
         private void cmbAlbum_SelectedValueChanged(object sender, EventArgs e)
@@ -351,6 +346,127 @@ namespace Squeeze.Formulários
                 Pic.Location = new System.Drawing.Point(i * 100, 100);
                 this.panelFaixa.Controls.Add(Pic);
             }
+        }
+
+        private void artistasGeral()
+        {
+            DAOArtista daoartista = new DAOArtista();
+            List<Artista> listaArtistas = daoartista.ListarDados();
+            var PicB = new Button();
+            var panelDetalhes = new Panel();
+            for (int i = 1; i <= listaArtistas.Count; i++)
+            {
+                PicB = new Button();
+                PicB.Name = listaArtistas[i - 1].Nome;
+                PicB.Text = listaArtistas[i - 1].Nome;
+                PicB.BackColor = Color.BlueViolet;
+                PicB.Click += new EventHandler(btnArtista_click);
+                PicB.Size = new System.Drawing.Size(100, 130);
+                PicB.Location = new System.Drawing.Point(i * 100, 100);
+                this.panelArtista.Controls.Add(PicB);
+            }
+        }
+
+        private void btnArtista_click(object sender, EventArgs e)
+        {
+            panelInfo.Controls.Clear();
+
+            DAOArtista daoartista = new DAOArtista();
+            
+            var Check = new FlatUI.FlatCheckBox();
+            var Label = new Label();
+            var Label2 = new Label();
+
+            var check = (dynamic)sender;
+            string btnArtista = check.Name;
+
+            Artista artNome = new Artista(btnArtista);
+            Artista artista = daoartista.procurar(artNome);
+            Genero generoArt = daogenero.generoArtista(artista);
+            Genero genero = daogenero.procurarId(generoArt.IdGenero);
+
+            Check = new FlatUI.FlatCheckBox();
+            Check.Name = btnArtista;
+            Check.Text = btnArtista;
+            Check.Click += new EventHandler(checkbox_Checked);
+            Check.Size = new System.Drawing.Size(100, 20);
+            Check.Location = new System.Drawing.Point(0, 0);
+            this.panelInfo.Controls.Add(Check);
+
+            Label = new Label();
+            Label.Name = btnArtista + "1";
+            Label.Text = "Inicio de Carreira: " + artista.Dt;
+            Label.ForeColor = Color.FromArgb(45, 47, 49);
+            Label.Size = new System.Drawing.Size(200, 50);
+            Label.Location = new System.Drawing.Point(0, 30);
+            this.panelInfo.Controls.Add(Label);
+
+            Label = new Label();
+            Label.Name = btnArtista + "2";
+            Label.Text = "Gênero Musical: " + genero.NomeGen;
+            Label.ForeColor = Color.FromArgb(45, 47, 49);
+            Label.Size = new System.Drawing.Size(200, 50);
+            Label.Location = new System.Drawing.Point(0, 100);
+            this.panelInfo.Controls.Add(Label);
+            
+        }
+
+        private void checkbox_Checked(object sender, EventArgs e)
+        {
+            var check = (dynamic)sender;
+
+            Artista artNome = new Artista(check.Text);
+
+            DAOArtista daoartista = new DAOArtista();
+            Artista art = daoartista.procurar(artNome);
+
+            MessageBox.Show("Id artista: " + art.Id);
+
+
+            Usuario usuNome = new Usuario(nome);
+            Usuario usu = daousuario.procurar(usuNome);
+
+            MessageBox.Show("Id usuario: " + usu.Idusuario);
+            
+
+            if (daoartista.verificarFavorito(usu, art) == false)
+            {
+                daoartista.favoritarArtista(art, usu);
+            }
+            else {
+                daoartista.desfavoritarArtista(art);
+            }
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            waveOutDevice.Init(mainOutputStream);
+            waveOutDevice.Play();
+            flatStatusBar1.Text = openFileDialog.FileName;
+
+            btnStop.Enabled = true;
+            btnPlay.Enabled = false;
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            flatStatusBar1.Text = "";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (File.Exists(openFileDialog.FileName))
+                {
+                    file = openFileDialog.FileName;
+                    mainOutputStream = CreateInputStream(openFileDialog.FileName);
+                }
+            }
+
+            btnPlay.Enabled = true;
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            waveOutDevice.Stop();
+            flatStatusBar1.Text = "";
         }
     }
 }
