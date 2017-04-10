@@ -70,6 +70,32 @@ namespace Squeeze.DAO
             return result;
         }
 
+        public bool editarPerfil(Usuario u)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from usuario where email = '" + u.Email + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+            result = cursor.HasRows;
+
+            return result;
+        }
+
+        public void atualizarUsuario(Usuario usu, Usuario usuAntigo)
+        {
+            con = conex.obterConexao();
+
+            comando = "update usuario set nome = '" + usu.Nome + "', email = '" + usu.Email + "', senha = '" + usu.Senha + "' where id = '" + usuAntigo.Idusuario + "' ;";
+
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            comandoSQL.Prepare();
+            comandoSQL.ExecuteNonQuery();
+            con.Close();
+        }
+
         public int acesso(Usuario u)
         {
             con = conex.obterConexao();

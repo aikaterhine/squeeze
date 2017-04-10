@@ -21,7 +21,6 @@ namespace Squeeze.Formulários
     {
         private string file;
         private string nome;
-        private string estado;
 
         private IWavePlayer waveOutDevice;
         private WaveStream mainOutputStream;
@@ -55,6 +54,7 @@ namespace Squeeze.Formulários
 
             btnPlay.Enabled = false;
             btnStop.Enabled = false;
+            btnConfirmarPerfil.Hide();
 
             artistasGeral();
             artistasAscencao();
@@ -92,26 +92,7 @@ namespace Squeeze.Formulários
                 d.desfavoritarArtista(d.procurar(ar)); ;
             }
         }
-
-
-        private void btnDownload_Click(object sender, EventArgs e)
-        {
-            WebClient webClient = new WebClient();
-            webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completo);
-            webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressoFeito);
-            webClient.DownloadFileAsync(new Uri("https://mega.nz/fm/QMsWQBwS"), @"C:\Users\CAT-CAR-TUL\Music");
-        }
-
-        private void ProgressoFeito(object sender, DownloadProgressChangedEventArgs e)
-        {
-            //   progressBar.Value = e.ProgressPercentage;
-        }
-
-        private void Completo(object sender, AsyncCompletedEventArgs e)
-        {
-            MessageBox.Show("Download efetuado!");
-        }
-
+        
         private WaveStream CreateInputStream(string fileName)
         {
 
@@ -126,34 +107,6 @@ namespace Squeeze.Formulários
             }
             volumeStream = inputStream;
             return volumeStream;
-        }
-
-
-        private void aleat()
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                if (File.Exists(openFileDialog.FileName))
-                {
-                    file = openFileDialog.FileName;
-
-
-                    //Diretório do projeto onde o arquivo Resource está  
-                    string BASE_PATH = @"C:\Users\CAT-CAR-TUL\Documents\GitHub\squeeze\Squeeze\Squeeze\Resources";
-
-                    FileInfo fileInfo = new FileInfo(Path.Combine(BASE_PATH, @"Resource.jpg"));
-                    using (System.Resources.ResXResourceWriter resWriter = new ResXResourceWriter(fileInfo.FullName))
-                    {
-                        //Inclui arquivo de imagem  
-                        System.Drawing.Image img = System.Drawing.Bitmap.FromFile(Path.Combine(BASE_PATH, @"C:\Users\CAT-CAR-TUL\Pictures\jpgteste.jpg"));
-                        resWriter.AddResource("jpgteste", img);
-
-                        //Fecha Resource Writer  
-                        resWriter.Close();
-                    }
-                }
-            }
         }
 
         private void flatComboBox1_SelectedValueChanged(object sender, EventArgs e)
@@ -180,11 +133,6 @@ namespace Squeeze.Formulários
                 MessageBox.Show("Deslogado com sucesso");
                 this.Dispose();
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            File.Copy("C:\\Users\\CAT-CAR-TUL\\Pictures\tabela.png", "C:\\Users\\CAT-CAR-TUL\\Documents\\GitHub\\squeeze\\Squeeze\\Squeeze\\Resources\\Artistas\tabela_copia.png", true);
         }
 
         private void artistasAscencao()
@@ -276,18 +224,17 @@ namespace Squeeze.Formulários
                 listaAlbum.Add(daoalbum.procurarId(listaAlbumArtista[x].IdAlbum));
             }
 
-            var Pic = new Button();
+            var PicAlbum = new Button();
 
             for (int i = 1; i <= listaAlbum.Count; i++)
             {
-                Pic = new Button();
-                Pic.Name = listaAlbum[i - 1].Nome;
-                Pic.Text = listaAlbum[i - 1].Nome;
-                Pic.BackColor = Color.BlueViolet;
-                Pic.Click += new EventHandler(btnAlbum_click);
-                Pic.Size = new System.Drawing.Size(100, 130);
-                Pic.Location = new System.Drawing.Point(i * 100, 100);
-                this.panelAlbuns.Controls.Add(Pic);
+                PicAlbum = new Button();
+                PicAlbum.Name = listaAlbum[i - 1].Nome;
+                PicAlbum.Image = new Bitmap(Properties.Resources.album, 80, 80);
+                PicAlbum.Click += new EventHandler(btnAlbum_click);
+                PicAlbum.Size = new System.Drawing.Size(100, 130);
+                PicAlbum.Location = new System.Drawing.Point(i * 100, 100);
+                this.panelAlbuns.Controls.Add(PicAlbum);
             }
         }
 
@@ -308,18 +255,26 @@ namespace Squeeze.Formulários
 
             Label = new Label();
             Label.Name = btnAlbum + "1";
-            Label.Text = "Estudio: " + album.Estudio;
-            Label.ForeColor = Color.FromArgb(45, 47, 49);
-            Label.Size = new System.Drawing.Size(200, 50);
+            Label.Text = "Nome: " + album.Nome;
+            Label.ForeColor = Color.White;
+            Label.Size = new System.Drawing.Size(200, 80);
             Label.Location = new System.Drawing.Point(0, 0);
             this.panelInfoAlbum.Controls.Add(Label);
 
             Label = new Label();
             Label.Name = btnAlbum + "2";
+            Label.Text = "Estudio: " + album.Estudio;
+            Label.ForeColor = Color.White;
+            Label.Size = new System.Drawing.Size(200, 80);
+            Label.Location = new System.Drawing.Point(0, 80);
+            this.panelInfoAlbum.Controls.Add(Label);
+            
+            Label = new Label();
+            Label.Name = btnAlbum + "3";
             Label.Text = "Lançamento: " + album.Dt;
-            Label.ForeColor = Color.FromArgb(45, 47, 49);
-            Label.Size = new System.Drawing.Size(200, 100);
-            Label.Location = new System.Drawing.Point(0, 60);
+            Label.ForeColor = Color.White;
+            Label.Size = new System.Drawing.Size(200, 80);
+            Label.Location = new System.Drawing.Point(0, 160);
             this.panelInfoAlbum.Controls.Add(Label);
 
         }
@@ -339,13 +294,44 @@ namespace Squeeze.Formulários
             for (int i = 1; i <= listaFaixa.Count; i++)
             {
                 Pic = new Button();
-                Pic.Name = "Pic" + i;
-                Pic.Text = listaFaixa[i - 1].Nome;
-                Pic.BackColor = Color.BlueViolet;
+                Pic.Name = listaFaixa[i - 1].Nome;
+                Pic.Click += new EventHandler(btnFaixa_click);
+                Pic.Image = new Bitmap(Properties.Resources.Mp3_Player_icon, 80, 80);
                 Pic.Size = new System.Drawing.Size(100, 130);
                 Pic.Location = new System.Drawing.Point(i * 100, 100);
                 this.panelFaixa.Controls.Add(Pic);
             }
+        }
+
+        private void btnFaixa_click(object sender, EventArgs e)
+        {
+            panelInfoFaixa.Controls.Clear();
+
+            DAOFaixa daofaixa = new DAOFaixa();
+
+            var Label = new Label();
+
+            var check = (dynamic)sender;
+            string btnFaixa = check.Name;
+
+            Faixa faixaNome = new Faixa(btnFaixa);
+            Faixa faixa = daofaixa.procurar(faixaNome);
+            
+            Label = new Label();
+            Label.Name = btnFaixa + "1";
+            Label.Text = "Nome: " + faixa.Nome;
+            Label.ForeColor = Color.White;
+            Label.Size = new System.Drawing.Size(200, 50);
+            Label.Location = new System.Drawing.Point(0, 0);
+            this.panelInfoFaixa.Controls.Add(Label);
+
+            Label = new Label();
+            Label.Name = btnFaixa + "2";
+            Label.Text = "Duração: " + faixa.Duracao;
+            Label.ForeColor = Color.White;
+            Label.Size = new System.Drawing.Size(200, 50);
+            Label.Location = new System.Drawing.Point(0, 50);
+            this.panelInfoFaixa.Controls.Add(Label);
         }
 
         private void artistasGeral()
@@ -358,8 +344,7 @@ namespace Squeeze.Formulários
             {
                 PicB = new Button();
                 PicB.Name = listaArtistas[i - 1].Nome;
-                PicB.Text = listaArtistas[i - 1].Nome;
-                PicB.BackColor = Color.BlueViolet;
+                PicB.Image = new Bitmap(Properties.Resources.artista, 80, 80);
                 PicB.Click += new EventHandler(btnArtista_click);
                 PicB.Size = new System.Drawing.Size(100, 130);
                 PicB.Location = new System.Drawing.Point(i * 100, 100);
@@ -395,20 +380,28 @@ namespace Squeeze.Formulários
 
             Label = new Label();
             Label.Name = btnArtista + "1";
-            Label.Text = "Inicio de Carreira: " + artista.Dt;
-            Label.ForeColor = Color.FromArgb(45, 47, 49);
+            Label.Text = "Nome: " + artNome.Nome;
+            Label.ForeColor = Color.White;
             Label.Size = new System.Drawing.Size(200, 50);
             Label.Location = new System.Drawing.Point(0, 30);
             this.panelInfo.Controls.Add(Label);
 
             Label = new Label();
             Label.Name = btnArtista + "2";
-            Label.Text = "Gênero Musical: " + genero.NomeGen;
-            Label.ForeColor = Color.FromArgb(45, 47, 49);
+            Label.Text = "Inicio de Carreira: " + artista.Dt;
+            Label.ForeColor = Color.White;
             Label.Size = new System.Drawing.Size(200, 50);
             Label.Location = new System.Drawing.Point(0, 100);
             this.panelInfo.Controls.Add(Label);
-            
+
+            Label = new Label();
+            Label.Name = btnArtista + "3";
+            Label.Text = "Gênero Musical: " + genero.NomeGen;
+            Label.ForeColor = Color.White;
+            Label.Size = new System.Drawing.Size(200, 50);
+            Label.Location = new System.Drawing.Point(0, 170);
+            this.panelInfo.Controls.Add(Label);
+
         }
 
         private void checkbox_Checked(object sender, EventArgs e)
@@ -467,6 +460,56 @@ namespace Squeeze.Formulários
         {
             waveOutDevice.Stop();
             flatStatusBar1.Text = "";
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string nome = txtNome.Text;
+            string email = txtEmail.Text;
+            string senha = txtSenha.Text;
+
+            Usuario usuario = new Usuario(nome, email, senha);
+            DAOUsuario daousuario = new DAOUsuario();
+
+            Usuario usuarioAntigoNome = new Usuario(nome);
+            Usuario usuarioAntigo = daousuario.procurar(usuarioAntigoNome);
+
+            bool validacao = daousuario.editarPerfil(usuario);
+
+            if (nome.Equals("") || email.Equals("") || senha.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+            }
+            else
+            {
+                if (validacao)
+                {
+                    alertaEmail.Show();
+                }
+                else
+                {
+                    daousuario.atualizarUsuario(usuario, usuarioAntigo);
+                }
+            }
+
+            btnConfirmarPerfil.Hide();
+            btnEditarPerfil.Show();
+        }
+
+        private void btnEditarPerfil_Click(object sender, EventArgs e)
+        {
+            btnConfirmarPerfil.Show();
+            btnEditarPerfil.Hide();
+
+            DAOUsuario daousuario = new DAOUsuario();
+            Usuario usuNome = new Usuario(nome);
+
+            Usuario usuario = daousuario.procurar(usuNome);
+
+            txtNome.Text = usuario.Nome;
+            txtEmail.Text = usuario.Email;
+            txtSenha.Text = usuario.Senha;
+
         }
     }
 }

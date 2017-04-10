@@ -130,5 +130,21 @@ namespace Squeeze.DAO
             comandoSQL.ExecuteNonQuery();
             con.Close();
         }
+
+        internal Faixa procurar(Faixa artNome)
+        {
+            con = conex.obterConexao();
+
+            comando = "select * from faixa where nome = '" + artNome.Nome + "';";
+            MySqlCommand comandoSQL = new MySqlCommand(comando, con);
+
+            cursor = comandoSQL.ExecuteReader();
+
+            while (cursor.Read())
+            {
+                f = new Faixa(cursor.GetInt32("id"), cursor.GetString("nome"), cursor.GetString("duracao"), cursor.GetInt32("idalbum"));
+            }
+            return f;
+        }
     }
 }

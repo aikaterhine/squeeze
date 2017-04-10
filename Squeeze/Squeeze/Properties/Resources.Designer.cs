@@ -93,9 +93,39 @@ namespace Squeeze.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap album {
+            get {
+                object obj = ResourceManager.GetObject("album", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap alessia {
             get {
                 object obj = ResourceManager.GetObject("alessia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap artista {
+            get {
+                object obj = ResourceManager.GetObject("artista", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bestlinkedinmarketingplugin7 {
+            get {
+                object obj = ResourceManager.GetObject("bestlinkedinmarketingplugin7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,6 +303,26 @@ namespace Squeeze.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Mp3_Player_icon {
+            get {
+                object obj = ResourceManager.GetObject("Mp3-Player-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Multimedia_communication_flat_mobile_Technology_08_24_512 {
+            get {
+                object obj = ResourceManager.GetObject("Multimedia_communication_flat_mobile_Technology-08-24-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap O_x39 {
             get {
                 object obj = ResourceManager.GetObject("O-x39", resourceCulture);
@@ -366,6 +416,16 @@ namespace Squeeze.Properties {
         internal static System.Drawing.Bitmap stop {
             get {
                 object obj = ResourceManager.GetObject("stop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_icon_big {
+            get {
+                object obj = ResourceManager.GetObject("user_icon_big", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -15,6 +15,7 @@ namespace Squeeze.Modelo
         int tipo;
 
         string gen;
+        private string senha1;
 
         public Usuario() { }
 
@@ -49,6 +50,13 @@ namespace Squeeze.Modelo
         {
             this.idusuario = id;
             this.gen = gen;
+        }
+
+        public Usuario(string n, string e, string s)
+        {
+            this.nome = n;
+            this.email = e;
+            this.senha = s;
         }
 
         public int Idusuario { get { return this.idusuario; } set { idusuario = value; } }

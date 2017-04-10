@@ -73,5 +73,10 @@ namespace Squeeze.Formulários
         {
 
         }
+
+        private void formSkin1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

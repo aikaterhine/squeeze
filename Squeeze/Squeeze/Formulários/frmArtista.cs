@@ -219,5 +219,10 @@ namespace Squeeze
                 pic.ImageLocation = openFileDialog1.FileName;
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

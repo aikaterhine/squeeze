@@ -12,6 +12,11 @@
             this.id = id;
         }
 
+        public Faixa(string nome)
+        {
+            this.nome = nome;
+        }
+
         public Faixa(string nome, string duracao, int album)
         {
             this.nome = nome;

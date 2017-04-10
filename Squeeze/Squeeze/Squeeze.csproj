@@ -218,11 +218,17 @@
     <None Include="Resources\circle-made-of-music-instruments_23-2147509304.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Multimedia_communication_flat_mobile_Technology-08-24-512.png" />
+    <None Include="Resources\user_icon_big.png" />
+    <None Include="Resources\Mp3-Player-icon.png" />
+    <None Include="Resources\album.png" />
+    <None Include="Resources\artista.png" />
     <Content Include="Resources\Artistas\720x405-George-Ezra---Bricks6.png" />
     <Content Include="Resources\Artistas\blog_vitrola-hozierclipe-700x420.jpg" />
     <Content Include="Resources\Artistas\james-bay.jpg" />
     <Content Include="Resources\Artistas\kygobill.jpg" />
     <Content Include="Resources\Artistas\tumblr_n7fxv6P0RP1qgpn6lo1_1280.jpg" />
+    <None Include="Resources\bestlinkedinmarketingplugin7.png" />
     <Content Include="Resources\cropped-121256_papel-de-parede-psicodelico_1920x1200.jpg" />
     <None Include="Resources\stop.png" />
     <None Include="Resources\open.png" />

@@ -127,11 +127,17 @@
   <data name="sia_png_by_maarcopngs-da6y3v7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sia_png_by_maarcopngs-da6y3v7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="circle-made-of-music-instruments_23-2147509304" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circle-made-of-music-instruments_23-2147509304.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Circled Pause_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circled Pause_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -144,6 +150,9 @@
   </data>
   <data name="halsey_png_by_breathinparadise-d92vnik" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\halsey_png_by_breathinparadise-d92vnik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bestlinkedinmarketingplugin7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bestlinkedinmarketingplugin7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cropped-121256_papel-de-parede-psicodelico_1920x1200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cropped-121256_papel-de-parede-psicodelico_1920x1200.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +172,9 @@
   <data name="imageedit_5_9109841775" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imageedit_5_9109841775.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user_icon_big" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_icon_big.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Imagem1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagem1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,17 +187,17 @@
   <data name="onlinelogomaker-101716-1546-7668" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\onlinelogomaker-101716-1546-7668.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="artista" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\artista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lana_del_rey_png_by_maarcopngs-da7zzlt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lana_del_rey_png_by_maarcopngs-da7zzlt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="open" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="556942" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\556942.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,13 +214,19 @@
   <data name="Hearts_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hearts_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Mp3-Player-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mp3-Player-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="alessia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alessia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="album" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\album.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="resume" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resume.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Multimedia_communication_flat_mobile_Technology-08-24-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Multimedia_communication_flat_mobile_Technology-08-24-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
